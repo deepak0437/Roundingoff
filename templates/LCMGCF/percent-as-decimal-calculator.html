@@ -1,0 +1,202 @@
+{% extends 'LCMGCF/new_base.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://onlinecalculator.guru/static/images/logo/LCMGCF-Com-Fevicon.png" type="icon">
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://onlinecalculator.guru/static/style.css">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<!-- Meta Title, Description and Canonical URL Starts --->
+
+<title> Percent as Decimal Calculator - How to Convert Percent to Decimal?
+</title>
+<meta name="description"
+    content=" Access the Percent as Decimal Calculator to quickly find out the decimal value for the percent value you enter in a matter of seconds." />
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS --->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="Percent as Decimal Calculator | Find the Percent as Decimal of the given numbers" />
+<meta property="og:description"
+    content=" Access the Percent as Decimal Calculator to quickly find out the decimal value for the percent value you enter in a matter of seconds." />
+
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="Percent as Decimal Calculator | Find the Percent as Decimal of the given numbers" />
+<meta name="twitter:description"
+    content=" Access the Percent as Decimal Calculator to quickly find out the decimal value for the percent value you enter in a matter of seconds." />
+
+<meta name="twitter:image:src" content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<meta property='og:title' content="Percent as Decimal Calculator | Find the Percent as Decimal of the given numbers" />
+<meta property='og:description'
+    content=" Access the Percent as Decimal Calculator to quickly find out the decimal value for the percent value you enter in a matter of seconds." />
+
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+<style>
+    input {
+        text-align: left;
+    }
+</style>
+
+
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Percent as a Decimal Calculator Online</h1>
+        </div>
+        <div class="card-body">
+            <div class="card-body">
+
+                <ul class="messages">
+
+                </ul>
+                <p>Access the handy and easy to use Percent as a Decimal Calculator over here and find out What is the
+                    Decimal Equivalent for given Percent Value. Just type in the input percent value and hit the
+                    calculate button to obtain the decimal value easily.
+                </p> <br>
+
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+
+                    <div class="form-floating mb-3">
+                        <input name="aa" type="number" class="form-control" min="0.00001"
+                            onkeypress="return isNumberKey(event)" required required step="any" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="32.67" {% endif %} placeholder="Product:" name='aa'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="6">
+
+                        <label for="floatingInput">Enter number to convert percent as decimal </label>
+                    </div>
+
+
+
+                    <div class=" center col mt-2 ">
+                        <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                        </center>
+                    </div>
+                </form> <br>
+
+            </div>
+
+            <p><strong>Percent as a Decimal Calculator:</strong><span style="font-weight: 400;"> If you have any doubts
+                    while solving the problems related to Percent as a Decimal Conversion then you have come the right
+                    way. This Online Calculator for Percent as Decimal is created to cater all your needs. You can
+                    obtain the decimal value in a fraction of second and even get the entire procedure for doing so from
+                    here. Continue reading the further sections to learn about the steps to convert percent as decimal,
+                    worked out examples for converting percent as decimal below.</span></p>
+            <h2><span style="font-weight: 400;">How do you Write Percentage as a Decimal?</span></h2>
+            
+            <p><span style="font-weight: 400;">To convert percent to decimal you need to follow the below steps and
+                    arrive at the solution easily. They are along the lines</span></p>
+            
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">The first step to do is
+                        divide the given percent value by 100.</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Then, remove the % sign
+                        after that.</span></li>
+            </ul>
+            
+            <p><span style="font-weight: 400;">You can convert from percent to decimal using another shortcut method
+                    too. In this method, all you have to do is move the decimal point to two places to the left.</span>
+            </p>
+            <h3><span style="font-weight: 400;">Solved Examples on Percent to Decimal Conversion</span></h3>
+            
+            <p><strong>Example 1:</strong></p>
+            <p><span style="font-weight: 400;">Convert 15% to Decimal?</span></p>
+            <p><strong>Solution:</strong></p>
+            <p><span style="font-weight: 400;">Given Percent = 15%</span></p>
+            <p><span style="font-weight: 400;">To convert from percent to decimal simply divide the percent value by 100
+                    = 15/100</span></p>
+            <p><span style="font-weight: 400;">= 0.15</span></p>
+            <p><span style="font-weight: 400;">Thus, 15% to decimal is 0.15</span></p>
+            
+            <p><strong>Example 2:</strong></p>
+            <p><span style="font-weight: 400;">Write 62.5% as Decimal?</span></p>
+            <p><strong>Solution:</strong></p>
+            <p><span style="font-weight: 400;">Given Percent Value = 62.5%</span></p>
+            <p><span style="font-weight: 400;">To change from Percentage Value to Decimal divide by 100 i.e. 62.5/100 =
+                    0.625</span></p>
+            <p><span style="font-weight: 400;">Keeping % sign after this we have 0.625%</span></p>
+            <p><span style="font-weight: 400;">Therefore, 62.5% expressed as decimal is 0.625</span></p>
+            
+            <p><span style="font-weight: 400;">For more solved examples or other complex calculations, you can use our
+                    free online calculator or else visit our website </span><a href="https://lcmgcf.com/"><span
+                        style="font-weight: 400;">lcmgcf.com</span></a><span style="font-weight: 400;"> and get other
+                    math concepts calculators too.&nbsp;</span></p>
+            <h3><span style="font-weight: 400;">FAQs on Percent to Decimal Conversion Calculator</span></h3>
+            
+                <p><strong>1. How to convert percent to decimal?</strong></p>
+            
+            <p><span style="font-weight: 400;">You can convert percent value by dividing it with 100 and keeping the
+                    percentage sign % after that.</span></p>
+            
+                <p><strong>2. What is 10% as decimal?</strong></p>
+            
+            <p><span style="font-weight: 400;">10% as decimal is 0.1</span></p>
+            
+                <p><strong>3. What is the easiest way to express percent as decimal?</strong></p>
+            
+            <p><span style="font-weight: 400;">The easiest way to express percent as decimal is to simply move the
+                    decimal point to two places left. </span></p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    <script>
+        function myFunction() {
+
+            document.getElementsByName("OR")[0].value = "";
+        document.getElementsByName("D")[0].value = "";
+        document.getElementById("clear").innerHTML = "";
+            }
+</script>
+<br>
+
+
+{% endblock %}

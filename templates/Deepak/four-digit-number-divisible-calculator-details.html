@@ -1,0 +1,254 @@
+{% extends 'base/numbers_base3.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- Meta Title, Description and Canonical URL Starts -->
+<title> what is {{aa}} Digit Numbers Divisible By Calculator ? </title>
+<meta name="description"
+    content="Four Digit Numbers Divisible By  Calculator makes it easy for you to find Four Digit Numbers Divisible By" />
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS -->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title"
+    content="Four Digit Numbers Divisible By  Calculator | Free Calculator to find Four Digit Numbers Divisible By " />
+<meta property="og:description"
+    content="Get the answer for Four Digit Numbers Divisible By. {{aa}} crores can be expressed in numbers as {{r}}. Also, check what is {{aa}} crore in words." />
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title"
+    content="Four Digit Numbers Divisible By  Calculator | Free Calculator to find Four Digit Numbers Divisible By " />
+<meta name="twitter:description"
+    content="Four Digit Numbers Divisible By  Calculator makes it easy for you to find Four Digit Numbers Divisible By " />
+<meta name="twitter:image:src"
+    content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<tittle></tittle>
+<meta property='og:title' content="Four Digit Numbers Divisible By  Calculator | Four Digit Numbers Divisible By " />
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property='og:description'
+    content="Four Digit Numbers Divisible By  Calculator makes it easy for you to find Four Digit Numbers Divisible By " />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+
+<style>
+
+</style>
+
+
+<div class="container" style="height: auto !important;">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Four-Digit Numbers Divisible By {{aa}} ?</h1>
+
+        </div>
+
+        <div class="card-body">
+
+            <ul class="messages">
+                {% if messages %}
+                <p id="message_container" class="alert alert-danger text-center" style="color:red">{{ messages }}</p>
+                {% endif %}
+            </ul>
+
+            <form action="" method="POST" id="my_form">
+                {% csrf_token %}
+                <p>Finding Four Digit Numbers Divisible by {{aa}} is easy with our free <a href="/four-digit-number-divisible-calculator/">Four Digit Numbers Divisible
+                    by Calculator</a>. The tool produces the list of divisible numbers in a fraction of seconds</p>
+
+
+                <div class="form-floating mb-3">
+                    <input name="aa" type="number" class="form-control" onkeypress="return isNumberKey(event)" min = "1"
+                        required required step="1"  class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="78" {% endif %} placeholder="Product:" name='aa'
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="4">
+                    <label for="floatingInput">Enter number to check Four Digit Numbers Divisible By</label>
+                </div>
+
+                <div class=" center col mt-2 ">
+                    <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                    </center>
+                </div>
+            </form> <br>
+
+            <h3>Examples of Four Digit Numbers Divisible By </h3> <br>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList1 %}
+
+                            <li>
+                                <a href="/4-digit-number-divisible-by-{{a}}/">
+                                    4-digit Number divisible by {{a}}
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList2 %}
+
+                            <li>
+                                <a href="/4-digit-number-divisible-by-{{a}}/">
+                                    4-digit Number divisible by {{a}}
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    {% if id == 1 %}
+
+    <div id="clear">
+
+        <div class="card" id="magnetic-Change in temperature">
+            <div class="card-header">
+                <h2 class="h2">What are 4-Digit Numbers Divisible
+                    by {{aa}}?</h2>
+            </div>
+
+
+            <div class="card-body">
+                <p>How to Find Four Digit Numbers Divisible By {{aa}}?</p>
+                <p>Here the divisor is {{aa}} and dividend is all Four digit numbers between 1000 and 9999.
+                </p>
+                <p>Divide each Four digit number by {{aa}} and check whether it is divisible or not.</p>
+                <p>The first 4-digit number divisible by {{aa}} is {{one}}.</p>
+                <p>The sum of {{aa}} and {{one}} is the next number.</p>
+                
+                {% if length > 1 %}
+                <p>{{aa}} + {{one}} = {{two}}</p>
+                <p>Continue addition to get other numbers.</p>
+                {% else %}
+                 <p>Sum of these {{aa}} and {{one}} is more than 4-digit.</p>
+                {% endif %} 
+                <p>So, the list of Four digit numbers divisible by {{aa}} are : </p>
+
+                   <p class="card-body">
+                    {% for i in lst1 %}
+                    {% if forloop.last %}
+                     {{i}} <b>.</b>
+                    {% else %}
+                  {{i}} <b>,</b>
+                    {% endif %} 
+                    {% endfor %}  
+                   </p>           
+                
+                   <hr>
+                   <h3>FAQs on 4 Digit Numbers Divisible By {{aa}}? </h3> 
+                   <p><b>1.  What are three digit numbers that are divisible by 87?</b></p>  
+                   <p><b>1.  What are Four digit numbers that are divisible by {{aa}}?</b></p>  
+                   <p>The 4 digit numbers that are divisible by {{aa}} are : {% for i in lst1 %}
+                       {% if forloop.last %}
+                        {{i}} <b>.</b>
+                       {% else %}
+                     {{i}} <b>,</b>
+                       {% endif %} 
+                       {% endfor %} </p>
+                  
+                   <p><b>2. How many 4 digit numbers are divisible by {{aa}}?</b></p>
+                   <p>{{c}} Four digit numbers are divisible by {{aa}}</p>
+                  
+                   <p><b>What is the sum of all Four digit numbers divisible by {{aa}}?</b></p>
+                   <p>The sum of all 4 digit numbers divisible by {{aa}} is {{sum}}.</p>
+                  
+                   <p><b>What is the smallest 4-digit number divisible by {{aa}}?</b></p>
+                   <p>The smallest or lowest 4-digit number divisible by {{aa}} is the first number on the list above . As you can see, that number is {{one}}.</p>
+                  
+                   <p><b>What is the largest 4-digit number divisible by {{aa}}?</b></p>
+                   <p>The largest or greatest 4-digit number divisible by {{aa}} is the last number on the list above . As you can see, that number is {{l}}.</p>
+                  
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+{% endif %}
+
+
+
+
+<script>
+
+    {% if id == 1 %}
+
+    var scrollDiv = document.getElementById("clear").offsetTop;
+    console.log(scrollDiv)
+    window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+
+    {% endif %}
+
+</script>
+
+<script>
+    function myFunction() {
+        document.getElementById("clear").innerHTML = "";
+        document.getElementsName("aa")[0].value = "";
+        document.getElementsName("cc")[0].value = "";
+    }
+</script>
+<br>
+
+</div>
+</div>
+{% endblock %}

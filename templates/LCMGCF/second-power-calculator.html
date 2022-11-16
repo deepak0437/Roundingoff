@@ -1,0 +1,343 @@
+{% extends 'LCMGCF/new_base.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://onlinecalculator.guru/static/images/logo/LCMGCF-Com-Fevicon.png" type="icon">
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://onlinecalculator.guru/static/style.css">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<!-- Meta Title, Description and Canonical URL Starts --->
+
+<title> Second Power Calculator | How to calculate Second Power?
+</title>
+<meta name="description"
+    content=" Second Power Calculator helps to find the 2nd power of any number quickly. Get the steps to obtain second power." />
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS --->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="Second Power Calculator | Find the Second Power of the given numbers" />
+<meta property="og:description"
+    content=" Second Power Calculator helps to find the 2nd power of any number quickly. Get the steps to obtain second power." />
+
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="Second Power Calculator | Find the Second Power of the given numbers" />
+<meta name="twitter:description"
+    content=" Second Power Calculator helps to find the 2nd power of any number quickly. Get the steps to obtain second power." />
+
+<meta name="twitter:image:src" content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<meta property='og:title' content="Second Power Calculator | Find the Second Power of the given numbers" />
+<meta property='og:description'
+    content=" Second Power Calculator helps to find the 2nd power of any number quickly. Get the steps to obtain second power." />
+
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+<style>
+    input {
+        text-align: left;
+    }
+</style>
+
+
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Second Power Calculator Online</h1>
+        </div>
+        <div class="card-body">
+            <p>The second power calculator will calculate the power of 2 for the given numbers. You can easily
+                calculate the power of 2 even for negative numbers. The calculator can be easily used by anyone in
+                just simple steps, and you will get the result on your screen in no time. You are just required to
+                put the required inputs in the given boxes and click on calculate, and you will get the solution.
+            </p>
+            <div class="card-body">
+
+              
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+
+                    <div class="form-floating mb-3">
+                        <input name="aa" type="number" class="form-control" min="0"
+                            onkeypress="return isNumberKey(event)" required required step="any" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="55" {% endif %} placeholder="" name='aa'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="6">
+
+                        <label for="floatingInput">Enter number to convert Second Power </label>
+                    </div>
+
+
+
+                    <div class=" center col mt-2 ">
+                        <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                        </center>
+                    </div>
+                </form> <br>
+
+            </div>
+
+            <p><strong>Second Power Calculator:</strong><span style="font-weight: 400;"> Second Power means when we will
+                    calculate the product of two given numbers to the power of two. It also means when two same numbers
+                    are multiplied by each other. Thus, this task for the exponents of the second power seems to be
+                    difficult and can be sorted using eh second power calculator. To know how to calculate the second
+                    power refer to the below article.&nbsp;</span></p>
+            <h3><span style="font-weight: 400;">What is Second Power?&nbsp;</span></h3>
+            <p><span style="font-weight: 400;">Second Power means when two equal numbers are multiplied with each other
+                    to get the product. Three are various ways to show second power but the common one is X</span><span
+                    style="font-weight: 400;">2</span><span style="font-weight: 400;">. This power is commonly known as
+                    the exponent and the number on which it is applied is called the base such as X is the base and 2 is
+                    the exponent or power.&nbsp;</span></p>
+           
+            <p><span style="font-weight: 400;">The second power is also denoted by X&sup2;. It can be used where the
+                    superscript is not available. Another way to denote second power is by using a multiplication sign
+                    in between the two numbers A x A.&nbsp;</span></p>
+            <h3><span style="font-weight: 400;">Second Power Formula&nbsp;</span></h3>
+            <p><span style="font-weight: 400;">The second power can be written as &lsquo;a</span><span
+                    style="font-weight: 400;">n</span><span style="font-weight: 400;">&rsquo; which tells you to
+                    multiply a number by itself,</span></p>
+            <p><span style="font-weight: 400;">So the n of the given a&rsquo;s are written as</span></p>
+           
+            <h3><span style="font-weight: 400;">How to Use a Second Power Calculator?&nbsp;</span></h3>
+            <p><span style="font-weight: 400;">There are a few simple steps following which you can easily use the 2nd
+                    power calculator.&nbsp;</span></p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Write the required numbers
+                        in the given box.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Click on the given button
+                        &lsquo;calculate&rsquo;.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">The result will be on your
+                        computer screen in no time.&nbsp;</span></li>
+            </ul>
+            <h3><span style="font-weight: 400;">How to Find out Second Power Manually?&nbsp;</span></h3>
+            <p><span style="font-weight: 400;">If you want to find out the second power manually then just multiply the
+                    given numbers twice. Follow the steps given below.&nbsp;</span></p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">First you need to write
+                        a</span><span style="font-weight: 400;">n</span><span style="font-weight: 400;"> = Given
+                        number&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Now, a</span><span
+                        style="font-weight: 400;">n</span><span style="font-weight: 400;"> = b</span><span
+                        style="font-weight: 400;">x</span><span style="font-weight: 400;"> Where b is the given number
+                        and x=2.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Multiply the given number
+                        twice such as b x b.</span></li>
+            </ul>
+            <h3><span style="font-weight: 400;">Illustrated Examples of Second Power&nbsp;</span></h3>
+            <p><strong>Example:&nbsp;</strong></p>
+           
+            <p><span style="font-weight: 400;">What is 3 to the 2nd power?</span></p>
+           
+            <p><strong>Solution:&nbsp;</strong></p>
+           
+            <p><span style="font-weight: 400;">Given: What is 3 to the 2nd power</span></p>
+           
+            <p><span style="font-weight: 400;">Now, we will multiply 3 twice by itself to find its 2nd
+                    power.&nbsp;</span></p>
+           
+            <p><span style="font-weight: 400;">=&gt;&nbsp; a</span><span style="font-weight: 400;">n</span><span
+                    style="font-weight: 400;"> = 3 x 3&nbsp;</span></p>
+            <p><span style="font-weight: 400;">=&gt;&nbsp; a</span><span style="font-weight: 400;">n </span><span
+                    style="font-weight: 400;">&nbsp;= 9&nbsp;</span></p>
+           
+            <p><span style="font-weight: 400;">Thus, 3 to the 2nd power is 9.&nbsp;</span></p>
+            <p><span style="font-weight: 400;">Visit </span><a href="https://roundingcalculator.guru/"><span
+                        style="font-weight: 400;">RoundingCalculator.guru</span></a><span style="font-weight: 400;">,
+                    where you can perform the calculations to find the second power of the given numbers using the
+                    calculator available for free.</span></p>
+            <h3><span style="font-weight: 400;">Second Power Table&nbsp;</span></h3>
+            <p><span style="font-weight: 400;">Here, you can find out the second power of the few given
+                    numbers.&nbsp;</span></p>
+           
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><strong>Base Number</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>2nd Power</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">1</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">1</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">2</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">4</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">3</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">9</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">4</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">16</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">5</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">25</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">6</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">36</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">7</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">49</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">8</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">64</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">9</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">81</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">10</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">100</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">11</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">121</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">12</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">144</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+         <hr>
+            <h3><span style="font-weight: 400;">FAQs on Second Power Calculator&nbsp;</span></h3>
+            
+                <p><strong>1. What is power in mathematics?&nbsp;</strong></p>
+            <p><span style="font-weight: 400;">Power defined the base numbers which are raised to the exponents. The
+                    power can be 2, 3, 4, etc. It shows the number of the times base number is multiplied.&nbsp;</span>
+            </p>
+           
+                <p><strong>2. How do we denote the second power of the given numbers?&nbsp;</strong></p>
+           
+            <p><span style="font-weight: 400;">We denote the powers by a</span><span
+                    style="font-weight: 400;">n</span><span style="font-weight: 400;">. To denote the base number to the
+                    second power the n replaces the value 2 such as a</span><span
+                    style="font-weight: 400;">2</span><span style="font-weight: 400;">.&nbsp;</span></p>
+           
+                <p><strong>3. What is 12 to the 2nd power?&nbsp;</strong></p>
+            <p><span style="font-weight: 400;">To find the 12 to the 2nd power we will multiply 12 two times by itself.
+                    Such as 12 x 12 = 144. Thus, 144 is the second power of 12.&nbsp;</span></p>
+           
+                <p><strong>4. How do we calculate the second power?&nbsp;</strong></p>
+           
+            <p><span style="font-weight: 400;">You can either calculate the second power using a second power calculator
+                    or by multiplying the number twice by itself.</span></p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    <script>
+        function myFunction() {
+
+            document.getElementsByName("OR")[0].value = "";
+        document.getElementsByName("D")[0].value = "";
+        document.getElementById("clear").innerHTML = "";
+            }
+</script>
+<br>
+
+
+{% endblock %}

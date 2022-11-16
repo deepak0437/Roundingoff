@@ -1,0 +1,485 @@
+{% extends 'Deepak/new_base.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://onlinecalculator.guru/static/images/logo/LCMGCF-Com-Fevicon.png"
+    type="icon">
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://onlinecalculator.guru/static/style.css">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+   
+<!-- Meta Title, Description and Canonical URL Starts --->
+
+<title>  A number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}% | Find how it can be calculated.?</title>
+<meta name="description" content="The Sequential Percentage Calculator helps you to find out how a number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}% quickly and results in {{ans}}% in no time." />
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS --->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content=" A number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}% | Find how it can be calculated.?" />
+<meta property="og:description" content="The Sequential Percentage Calculator helps you to find out how a number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}% quickly and results in {{ans}}% in no time." />
+
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg"
+    property="og:image" />
+    <meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content=" A number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}% | Find how it can be calculated.?" />
+<meta name="twitter:description" content="The Sequential Percentage Calculator helps you to find out how a number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}% quickly and results in {{ans}}% in no time." />
+
+<meta name="twitter:image:src"
+    content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<meta property='og:title' content=" A number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}% | Find how it can be calculated.?" />
+<meta property='og:description' content="The Sequential Percentage Calculator helps you to find out how a number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}% quickly and results in {{ans}}% in no time." />
+
+<meta property='og:image'
+    content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+<style>
+    input {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 768px) {
+
+
+.solveout2 {
+             margin-left: 80px;
+      }
+
+.box {
+             padding-left: 15px;
+             padding-right: 15px;
+             padding-bottom: 10px;
+             width: 30%;
+             font-size: 18px;
+             line-height: 1.8;
+             background-color: white;
+             border-radius: 9px;
+             margin-left: 0px;
+             margin-right: 10px;
+             margin-bottom: 20px;
+             border-style: groove;
+
+             margin-left: auto;
+             margin-right: auto;
+      }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+.solveout2 {
+             margin-left: 55px;
+      }
+
+  .box {
+             padding-left: 15px;
+             padding-right: 15px;
+             padding-bottom: 10px;
+             width: 90%;
+             font-size: 18px;
+             line-height: 1.8;
+             background-color: white;
+             border-radius: 9px;
+             margin-left: 0px;
+             margin-right: 10px;
+             margin-bottom: 20px;
+             border-style: groove;
+
+             margin-left: auto;
+             margin-right: auto;
+      }
+      .solveout {
+             margin-left: 30px;
+      }
+
+}
+
+.in1 {
+      padding-left: 5px;
+      width: 90px;
+      height: 35px;
+      text-align: left;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+}
+.in11 {
+      padding-left: 5px;
+      width: 90px;
+      height: 50px;
+      text-align: left;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+}
+.out {
+      padding-left: 5px;
+      width: 130px;
+      height: 35px;
+      text-align: left;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      margin-bottom: 5px;
+}
+
+.fraction {
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.lines1 {
+      height: 3px;
+      border: none;
+      color: #000;
+      background-color: #000;
+      font-size: 2px;
+}
+
+.solve {
+      background-color: #3574e9;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 0px 15px 0px 15px;
+      -moz-border-radius: 10px;
+      height: 35px;
+      vertical-align: bottom;
+      margin-bottom: 5px;
+}
+.frac {
+display: inline-block;
+position: relative;
+vertical-align: middle;
+letter-spacing: 0.001em;
+text-align: center;
+}
+.frac > span {
+display: block;
+padding: 0.1em;
+}
+.frac span.bottom {
+border-top: thin solid black;
+}
+.frac span.symbol {
+display: none;
+} 
+    
+</style>
+
+
+<div class="container" style="height: auto !important;">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">How to Find Out A number {{nm}} is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}%?</h1>
+        </div>
+
+        <div class="card-body">
+            <p>With the help of roundingcalculator.guru portal, you can use a <a href="/sequential-percentage-calculator/">sequential percentage calculator</a> and easily find out if a number {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}%. Also, have a look below for the detailed solution for the desired question and obtain the result of {{ans}}% accurately. </p>
+
+            <form action="" method="POST" id="my_form">
+                {% csrf_token %}
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text" style="padding: 6px 40px;"><strong>Enter number to find
+                                sequential percentage</strong></div>
+                    </div>
+                    <input name="nm" type="number" class="form-control" min="0.00001" id="inlineFormInputGroup"
+                        onkeypress="return isNumberKey(event)" required required step="any" class="nm" id="nm" {% if nm %} value="{{nm}}" {% else %} value="136.98" {% endif %} placeholder=":" name='nm'
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="7">
+
+                </div>
+
+                <div class="input-group mb-2">
+                    <select class="select form-control" id="inlineFormInputGroup" name="aa_op" id="aa_op">
+                        {% if aa_op == 'increased' %}
+                        <option value="increased" selected="selected"> increased by </option>
+                        {% else %}
+                        <option value="increased"> increased by </option>
+                        {% endif %}
+
+                        {% if aa_op == 'decreased' %}
+                        <option value="decreased" selected="selected"> decreased by </option>
+                        {% else %}
+                        <option value="decreased">decreased by </option>
+                        {% endif %}
+                    </select>
+                    <input name="aa" type="number" class="form-control" min="1" id="inlineFormInputGroup"
+                        onkeypress="return isNumberKey(event)" required required step="1" class="aa" id="aa" {% if aa %} value="{{aa}}" {% else %} value="31" {% endif %} placeholder=":" name='aa'
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text" style="padding: 6px 40px;"><strong>% </strong></div>
+                    </div>
+                </div>
+
+                <div class="input-group mb-2">
+                    <select class="select form-control" id="inlineFormInputGroup" name="bb_op" id="bb_op">
+                        {% if bb_op == 'increased' %}
+                        <option value="increased" selected="selected"> then increased by </option>
+                        {% else %}
+                        <option value="increased"> then increased by </option>
+                        {% endif %}
+
+                        {% if bb_op == 'decreased' %}
+                        <option value="decreased" selected="selected"> then decreased by </option>
+                        {% else %}
+                        <option value="decreased">then decreased by </option>
+                        {% endif %}
+                    </select>
+                    <input name="bb" type="number" class="form-control" min="1" id="inlineFormInputGroup"
+                        onkeypress="return isNumberKey(event)" required required step="1" class="bb" id="bb" {% if bb %} value="{{bb}}" {% else %} value="22" {% endif %} placeholder=":" name='bb'
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text" style="padding: 6px 40px;"><strong>% </strong></div>
+                    </div>
+                </div><br>
+
+
+
+                <div class=" center col mt-2 ">
+                    <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                    </center>
+                </div>
+            </form> <br>
+
+
+            <h3>Examples of Sequential Percentage </h3> <br>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <ul>
+                            {% for a,b in dict1 %}
+
+                            <li>
+                                <a href="/a-number-{{a}}-is-{{aa_op}}-by-{{b}}%-and-then-{{bb_op}}-by-{{bb}}%/">
+                                    {{a}} is {{aa_op}} by {{b}}% and then {{bb_op}} by {{bb}}%
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <ul>
+                            {% for a,b in dict2 %}
+                            <li>
+                                <a href="/a-number-{{a}}-is-{{aa_op}}-by-{{aa}}%-and-then-{{bb_op}}-by-{{b}}%/">
+                                    {{a}} is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{b}}%
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    {% if id == 1 %}
+
+    <div id="clear">
+
+        <div class="card" id="magnetic-Change in temperature">
+            <div class="card-header">
+                <h2 class="h2">Detailed Solution for A number {{nm}} is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}%?</h2>
+            </div>
+
+
+            <div class="card-body">
+                <p>Given data,</p>
+                <p>A number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}%. 
+                </p>
+                <p>According to the question, you may observe that first there is a {{aa_op}} which is {{a1}} percent then an {{bb_op}} of {{b1}} percent. </p>
+                <p>Hence, {{a1}}% + {{b1}}% = {{ans}}% but you cannot simply take {{ans}}% of a number to get the correct answer. As the sequence percentage brings the change in base number.</p>
+                <p>So, for the same, you need to first {{aa_op}} the number by {{aa}}% and then {{bb_op}} the result by {{bb}}%.</p>
+                <p>Original number = {{nm}}</p>
+                {% if aa_op == "increased" %}
+                <p>{{aa_op}} by {{aa}}%</p>
+                <p>=> {{nm}} + <span class="frac"><span>{{aa}}</span><span class="symbol">/</span><span class="bottom">100</span></span> x {{nm}}</p>
+                <p>=> {{nm}} + {{p1}}</p>
+                <p>=> {{xy}}</p>
+                {% else %}
+                <p>{{aa_op}} by {{aa}}%</p>
+                <p>=> {{nm}} - <span class="frac"><span>{{aa}}</span><span class="symbol">/</span><span class="bottom">100</span></span> x {{nm}}</p>
+                <p>=> {{nm}} - {{p1}}</p>
+                <p>=> {{xy}}</p>
+                {% endif %}
+                <br>
+                
+                {% if bb_op == "increased" %}
+                <p>Then {{bb_op}} by {{bb}}%</p>
+                <p>=> {{xy}} + <span class="frac"><span>{{bb}}</span><span class="symbol">/</span><span class="bottom">100</span></span> x {{xy}}</p>
+                <p>=> {{xy}} + {{p2}}</p>
+                <p>=> {{yx}}</p>
+                {% else %}
+                <p>Then {{bb_op}} by {{bb}}%</p>
+                <p>=> {{xy}} - <span class="frac"><span>{{bb}}</span><span class="symbol">/</span><span class="bottom">100</span></span> x {{xy}}</p>
+                <p>=> {{xy}} - {{p2}}</p>
+                <p>=> {{yx}}</p>
+                {% endif %} <br>
+                <p>Increase or Decrease = Original number - New number</p>
+                <p>=> {{nm}} - {{yx}}</p>
+                <p>=> {{x1}}</p>
+                <p>Thus, {{add}} % = <span class="frac"><span>{{x2}}</span><span class="symbol">/</span><span class="bottom">{{nm}}</span></span> x 100</p>
+                <p>=> {{ad}} %</p>
+                <p>Hence, when a number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}% you will get {{ad}}%</p>
+                <hr>
+                <h3>FAQs on A number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}%</h3><br>
+                <p><strong>1. What will be the resultant number when A number {{nm}} is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}%?</strong></p>
+                <p>The result will be {{ad}}% when A number is {{aa_op}} by {{aa}}% and then {{bb_op}} by {{bb}}%.</p>
+
+                <p><strong>2. How can we {{aa_op}} the number by {{aa}}%?</strong></p>
+                <p>When you add half the value of the current value, to the original value then you can {{aa_op}} the number by {{aa}}%. This can be understood by example: 
+                </p>
+                {% if aa_op == "increased" %}
+                <p>{{aa_op}} by {{aa}}%</p>
+                <p>=> {{nm}} + <span class="frac"><span>{{aa}}</span><span class="symbol">/</span><span class="bottom">100</span></span> x {{nm}}</p>
+                <p>=> {{nm}} + {{p1}}</p>
+                <p>=> {{xy}}</p>
+                {% else %}
+                <p>{{aa_op}} by {{aa}}%</p>
+                <p>=> {{nm}} - <span class="frac"><span>{{aa}}</span><span class="symbol">/</span><span class="bottom">100</span></span> x {{nm}}</p>
+                <p>=> {{nm}} - {{p1}}</p>
+                <p>=> {{xy}}</p>
+                {% endif %}
+                <hr>
+                <h3>Table of Sequential Percentage</h3><br>
+                <div class="row">
+                    <div class="column col-sm-6">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="border: 1px solid;">Number {{aa_op}} by % </th>
+                                    <th style="border: 1px solid; padding: 0px 30px;">Value</th>
+                                    <th style="border: 1px solid;">Then {{bb_op}} by % </th>
+                                    <th style="border: 1px solid; padding: 0px 30px;">Final Value</th>
+                                </tr>
+                            </thead>
+                            {% for x,y,z in new1 %}
+                            <tr style="border: 1px solid;">  
+                                <td style="border-right: 1px solid;">{{nm}} {{aa_op}} by {{x}}%</td>                     
+                                <td style="border-right: 1px solid;">{{y}}</td>
+                                <td style="border-right: 1px solid;">Then {{bb_op}} by {{bb}}%</td>                     
+                                <td>{{z}}</td>     
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="column col-sm-6">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="border: 1px solid;">Number {{aa_op}} by % </th>
+                                    <th style="border: 1px solid; padding: 0px 30px;">Value</th>
+                                    <th style="border: 1px solid;">Then {{bb_op}} by % </th>
+                                    <th style="border: 1px solid; padding: 0px 30px;">Final Value</th>
+                                </tr>
+                            </thead>
+                            {% for x,y,z in new2 %}
+                            <tr style="border: 1px solid;">  
+                                <td style="border-right: 1px solid;">{{nm}} {{aa_op}} by {{x}}%</td>                     
+                                <td style="border-right: 1px solid;">{{y}}</td>
+                                <td style="border-right: 1px solid;">Then {{bb_op}} by {{bb}}%</td>                     
+                                <td>{{z}}</td>      
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    
+                  </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+{% endif %}
+
+
+
+
+<script>
+
+    {% if id == 1 %}
+
+    var scrollDiv = document.getElementById("clear").offsetTop;
+    console.log(scrollDiv)
+    window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+
+    {% endif %}
+
+</script>
+
+<script>
+    function myFunction() {
+        document.getElementById("clear").innerHTML = "";
+        document.getElementsName("aa")[0].value = "";
+        document.getElementsName("cc")[0].value = "";
+    }
+</script>
+<br>
+
+</div>
+</div>
+    
+    
+    {% endblock %}

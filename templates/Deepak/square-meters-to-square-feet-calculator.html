@@ -1,0 +1,346 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS -->
+<title>Square Meters to Square Feet Converter | Sq m to sq ft Conversion Formula - RoundingCalculator.Guru
+</title>
+<meta name=description
+    content="Use the Square Meters to Square Feet Converter to convert sq m to sq ft. Obtain the calculation steps and formulas.">
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS -->
+
+<!-- FACEBOOK -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title"
+    content="Square Meters to Square Feet Converter  Calculator Online - RoundingCalculator.Guru" />
+<meta property="og:description"
+    content="Use the Square Meters to Square Feet Converter to convert sq m to sq ft. Obtain the calculation steps and formulas. " />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title"
+    content="Square Meters to Square Feet Converter  Calculator Online - RoundingCalculator.Guru" />
+<meta name="twitter:description"
+    content="Use the Square Meters to Square Feet Converter to convert sq m to sq ft. Obtain the calculation steps and formulas. " />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin -->
+<meta property='og:title'
+    content="Square Meters to Square Feet Converter  Calculator Online - RoundingCalculator.Guru" />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description'
+    content="Use the Square Meters to Square Feet Converter to convert sq m to sq ft. Obtain the calculation steps and formulas." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+
+{% endblock %}
+
+{% block content %}
+
+
+{%if go_to %}
+<a href="{{go_to}}" id="ddd"></a>
+{%endif%}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('ddd').click();
+    });
+</script>
+<style>
+
+</style>
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Square Meters to Square Feet Converter Calculator Online</h1>
+        </div>
+        <div class="card-body">
+            <p><span style="font-weight: 400;">The Square Meters to square Feet Converter is an amazing tool that will
+                    help you in the conversion of the sq m to sq ft in just a few seconds. The converter tool is easy to
+                    use and helps in performing the conversion of bigger digits in sq m to sq ft.
+                </span></p>
+            <div class="card-body">
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+
+
+                    <div class="form-floating mb-3">
+                        <input name="aa" type="number" class="form-control" min="0.000001"
+                            onkeypress="return isNumberKey(event)" required required step="any" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="152" {% endif %} placeholder="" name='aa'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="6">
+
+                        <label for="floatingInput">Enter square meter to convert square feet </label>
+                    </div>
+
+
+                        <div class=" center col mt-2 ">
+                            <button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+
+                        </div>
+                </form> <br>
+
+
+
+            </div>
+            <p><strong>Square Meters to Square Feet Converter: </strong><span style="font-weight: 400;">The sq m to sq
+                    ft calculator will save you time in the calculations by just giving you the required result in a few
+                    seconds. You can also convert the digits manually but it takes time to perform the calculations.
+                    Thus, the tool plays a major role in the conversion of the digits easily and for accurate
+                    results.&nbsp;</span></p>
+            <h2><span style="font-weight: 400;">Square Meters to Square Feet Conversion Formula&nbsp;</span></h2>
+            <p><span style="font-weight: 400;">As you know 1 square meter = 10.76391 square feet, thus, you can use this
+                    simple formula to convert which is:&nbsp;</span></p>
+            <p><strong>Square Feet = Square Meters &times; 10.76391</strong></p>
+            
+            <p><span style="font-weight: 400;">Hence, to convert the area to sq ft from sq m the square meters
+                    multiplied by 10.76391.</span></p>
+            <h3><span style="font-weight: 400;">How to Convert Square Meters to Square Feet?&nbsp;</span></h3>
+            <p><span style="font-weight: 400;">You can simply use the sq m to sq ft calculator or perform manual
+                    calculations to convert the area from sq m to sq ft. The manual steps are listed below:&nbsp;</span>
+            </p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Use the formula Square Feet
+                        = Square Meters &times; 10.76391</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Now, multiply the numbers
+                        by simple calculations.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">The product is the
+                        result.&nbsp;</span></li>
+            </ul>
+            
+            <h3><span style="font-weight: 400;">Examples to Convert sq m to sq ft</span></h3>
+            <p><strong>Example:&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">Convert 5 Square Meters to Square Feet&nbsp;</span></p>
+            
+            <p><strong>Solution:&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">Given: Sq m = 5&nbsp;</span></p>
+            
+            <p><span style="font-weight: 400;">To convert 5 sq m into sq ft, we will follow the defined
+                    process.&nbsp;</span></p>
+            
+            <p><span style="font-weight: 400;">As we know 1 sq m = 10.76391041671 square feet</span></p>
+            
+            <p><span style="font-weight: 400;">=&gt; Square Feet = Square Meters &times; 10.76391</span></p>
+            <p><span style="font-weight: 400;">=&gt; Square Feet = 5 &times; 10.76391</span></p>
+            <p><span style="font-weight: 400;">=&gt; Square Feet = 53.819552 sq ft</span></p>
+            
+            <p><span style="font-weight: 400;">Thus, we will get 5 sq m = 53.819552 sq ft</span></p>
+            <h3><span style="font-weight: 400;">Square Meter to square Feet Conversion Table&nbsp;</span></h3>
+            <p><span style="font-weight: 400;">You can refer to the below table for the conversion digits from sq m to
+                    sq ft&nbsp; and remember them.&nbsp;</span></p>
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><strong>Square Meters</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>Square Feet</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">1 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">10.76 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">2 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">21.53 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">3 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">32.29 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">4 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">43.06 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">5 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">53.82 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">6 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">64.58 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">7 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">75.35 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">8 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">86.11 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">9 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">96.88 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">10 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">107.64 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">11 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">118.4 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">12 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">129.17 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">13 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">139.93 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">14 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">150.69 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">15 sq m</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">161.46 sq ft</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3><span style="font-weight: 400;">FAQs on Square Meters to Square Feet Calculator</span></h3>
+            
+                <p><strong>1. What is the formula used to convert square meters to square feet?&nbsp;</strong></p>
+            
+            
+            <p><span style="font-weight: 400;">The formula used to convert sq m to sq ft is Square Feet = Square Meters
+                    &times; 10.76391.&nbsp;</span></p>
+            
+           
+                <p><strong>2. How can we convert sq m to sq ft?&nbsp;</strong></p>
+            
+            
+            <p><span style="font-weight: 400;">To convert square meters to square feet we will multiply the number
+                    (square meters) by 10.76391041671.&nbsp;</span></p>
+          
+            <p><strong>3. What are the relationships between square feet and square meters?&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">The relationship between square feet and square meters is defined as
+                    below:&nbsp;</span></p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">1 Square Metre =&nbsp;
+                        10.76391042 Square Feet.</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">And in Square Metres terms,
+                        1 square foot is 0.09290304.</span></li>
+            </ul>
+            
+           
+                <p><strong>4. Which is bigger unit square feet or square meters?&nbsp;</strong></p>
+            
+            
+            <p><span style="font-weight: 400;">The Square meter is a bigger unit than square feet.</span></p>
+        </div>
+    </div>
+</div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+    {% endblock %}

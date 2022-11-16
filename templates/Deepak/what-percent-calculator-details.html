@@ -1,0 +1,395 @@
+{% extends 'base/numbers_base3.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- Meta Title, Description and Canonical URL Starts -->
+<title>{{aa}} is What Percent of {{bb}}? </title>
+<meta name="description"
+    content=" The answer for {{aa}} is What Percent of {{bb}} is {{ans}}. Check the manual process to compute {{aa}} is what % of {{bb}}. " />
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS -->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title"
+    content="What Percent  Calculator | Free Calculator to find What Percent " />
+<meta property="og:description"
+    content=" The answer for {{aa}} is What Percent of {{bb}} is {{ans}}. Check the manual process to compute {{aa}} is what % of {{bb}}." />
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title"
+    content="What Percent  Calculator | Free Calculator to find What Percent " />
+<meta name="twitter:description"
+    content=" The answer for {{aa}} is What Percent of {{bb}} is {{ans}}. Check the manual process to compute {{aa}} is what % of {{bb}}.  " />
+<meta name="twitter:image:src"
+    content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<tittle></tittle>
+<meta property='og:title' content="What Percent  Calculator | What Percent " />
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property='og:description'
+    content=" The answer for {{aa}} is What Percent of {{bb}} is {{ans}}. Check the manual process to compute {{aa}} is what % of {{bb}}.  ." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+
+<style>
+    
+    @media screen and (min-width: 768px) {
+
+
+.solveout2 {
+             margin-left: 80px;
+      }
+
+.box {
+             padding-left: 15px;
+             padding-right: 15px;
+             padding-bottom: 10px;
+             width: 30%;
+             font-size: 18px;
+             line-height: 1.8;
+             background-color: white;
+             border-radius: 9px;
+             margin-left: 0px;
+             margin-right: 10px;
+             margin-bottom: 20px;
+             border-style: groove;
+
+             margin-left: auto;
+             margin-right: auto;
+      }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+.solveout2 {
+             margin-left: 55px;
+      }
+
+  .box {
+             padding-left: 15px;
+             padding-right: 15px;
+             padding-bottom: 10px;
+             width: 90%;
+             font-size: 18px;
+             line-height: 1.8;
+             background-color: white;
+             border-radius: 9px;
+             margin-left: 0px;
+             margin-right: 10px;
+             margin-bottom: 20px;
+             border-style: groove;
+
+             margin-left: auto;
+             margin-right: auto;
+      }
+      .solveout {
+             margin-left: 30px;
+      }
+
+}
+
+.in1 {
+      padding-left: 5px;
+      width: 90px;
+      height: 35px;
+      text-align: left;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+}
+.in11 {
+      padding-left: 5px;
+      width: 90px;
+      height: 50px;
+      text-align: left;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+}
+.out {
+      padding-left: 5px;
+      width: 130px;
+      height: 35px;
+      text-align: left;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      margin-bottom: 5px;
+}
+
+.fraction {
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.lines1 {
+      height: 3px;
+      border: none;
+      color: #000;
+      background-color: #000;
+      font-size: 2px;
+}
+
+.solve {
+      background-color: #3574e9;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 0px 15px 0px 15px;
+      -moz-border-radius: 10px;
+      height: 35px;
+      vertical-align: bottom;
+      margin-bottom: 5px;
+}
+.frac {
+display: inline-block;
+position: relative;
+vertical-align: middle;
+letter-spacing: 0.001em;
+text-align: center;
+}
+.frac > span {
+display: block;
+padding: 0.1em;
+}
+.frac span.bottom {
+border-top: thin solid black;
+}
+.frac span.symbol {
+display: none;
+} 
+
+
+</style>
+
+
+<div class="container" style="height: auto !important;">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">{{aa}} is What Percent of {{bb}}?</h1>
+
+        </div>
+
+        <div class="card-body">
+
+
+            <form action="" method="POST" id="my_form">
+                {% csrf_token %}
+                <p>Here we will give the detailed process to calculate {{aa}} is What Percent of {{bb}}? Or you can use <a href="/what-percent-calculator/">What Percent Calculator</a> to get the instant result. </p>
+
+                <div>
+                    <input name="aa" type="number" class="form-control" id="aa"
+                        onkeypress="return isNumberKey(event)" required required step="1" min="1" class="aa" id="aa"
+                        {% if aa%} value="{{aa}}" {% else %} value="36" {% endif %} placeholder="" name='aa'
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="6">
+
+                    <p>Is what percent of</p>
+
+                    <input name="bb" type="number" class="form-control" id="bb"
+                        onkeypress="return isNumberKey(event)" required required step="1" min="1" class="bb" id="bb"
+                        {% if bb%} value="{{bb}}" {% else %} value="549" {% endif %} placeholder="" name='bb'
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="12">
+                </div>
+
+                <div class=" center col mt-2 ">
+                    <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                    </center>
+                </div>
+            </form> <br>
+
+            <h3>Examples of X is what percent of Y </h3> <br>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList1 %}
+
+                            <li>
+                                <a href="/{{a}}-is-what-percent-of-{{bb}}/">
+                                    {{a}} is what percent of {{bb}}
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList2 %}
+
+                            <li>
+                                <a href="/{{aa}}-is-what-percent-of-{{a}}/">
+                                    {{aa}} is what percent of {{a}}
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    {% if id == 1 %}
+
+    <div id="clear">
+
+        <div class="card" id="magnetic-Change in temperature">
+            <div class="card-header">
+                <h2 class="h2">{{aa}} is What Percent of {{bb}}?</h2>
+            </div>
+
+
+            <div class="card-body">
+                <p><span style="font-weight: 400;">To know {{aa}} is what percent of {{bb}}, multiply {{aa}} by 100 and divide the product by {{bb}}.</span></p>
+                <p><span style="font-weight: 400;">The simple formula is percent = <span class="frac"><span>100 * X</span><span class="symbol">/</span><span class="bottom">y</span></span></span></p>
+                <p><span style="font-weight: 400;">Here X = {{aa}}, and Y = {{bb}}</span></p>
+                <p><span style="font-weight: 400;">After substituting the values in the formula, we get</span></p>
+                <p><span style="font-weight: 400;">percent = <span class="frac"><span>100 x {{aa}}</span><span class="symbol">/</span><span class="bottom">{{bb}}</span></span></span></span></p>
+                <p><span style="font-weight: 400;">= {{ans}}%</span></p>
+                <p><span style="font-weight: 400;">Therefore, {{aa}} is {{ans}}% of {{bb}}.</span></p>
+                <hr>
+                <h3><span style="font-weight: 400;">FAQs on {{aa}} is what % of {{bb}}</span></h3>
+              
+                <p><strong>1. {{aa}} is what percent of {{bb}}?</strong></p>
+                
+                <p><span style="font-weight: 400;">{{aa}} is {{ans}} percent of {{bb}}.</span></p>
+                
+                <p><strong>2. Where can I get the solution for {{aa}} is what percent of {{bb}}?</strong></p>
+                
+                <p><span style="font-weight: 400;">You can get the detailed solution for {{aa}} is what percentage of {{bb}} at our page.</span></p>
+                
+                <p><strong>3. How to calculate {{aa}} is what percent of {{bb}}?</strong></p>
+                
+                <p><span style="font-weight: 400;">Firstly, we have to divide {{aa}} by {{bb}} and multiply the result with 100 to get the resultant percentage.</span></p>
+                   <hr>
+                   <h3>Tables of X is what percent of Y </h3><br>
+                <div class="row">
+                    <div class="column col-sm-4">
+                        <table style="border: 2px solid;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 2px solid; padding: 0px 20px;">X is what %  </th>
+                                    <th style="border: 2px solid; padding: 0px 20px;">Of Value (Y)</th>
+                                </tr>
+                            </thead>
+                            {% for a,b in dict1 %}
+                            <tr>
+                                <td style="border-right: 1px solid;">{{a}} is {{b}} % </td>
+                                <td>of {{bb}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="column col-sm-4">
+                        <table style="border: 2px solid;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 2px solid; padding: 0px 20px;">X is what %  </th>
+                                    <th style="border: 2px solid; padding: 0px 20px;">Of Value (Y)</th>
+                                </tr>
+                            </thead>
+                            {% for a,b in dict2 %}
+                            <tr>
+                                <td style="border-right: 1px solid;">{{a}} is {{b}} % </td>
+                                <td>of {{bb}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table> <br>
+            
+            
+            </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    {% endif %}
+
+
+
+
+    <script>
+
+        {% if id == 1 %}
+
+        var scrollDiv = document.getElementById("clear").offsetTop;
+        console.log(scrollDiv)
+        window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+
+        {% endif %}
+
+    </script>
+
+    <script>
+        function myFunction() {
+            document.getElementById("clear").innerHTML = "";
+            document.getElementsName("aa")[0].value = "";
+            document.getElementsName("cc")[0].value = "";
+        }
+    </script>
+    <br>
+
+</div>
+</div>
+{% endblock %}

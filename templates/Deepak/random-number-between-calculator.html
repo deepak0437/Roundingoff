@@ -1,0 +1,180 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS -->
+<title>Random Number Between Calculator | Get a Random Number - RoundingCalculator.Guru</title>
+<meta name=description
+    content="Handy Random Number Between Calculator helps to get any random number easily. Check the steps to find a random number.">
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS -->
+
+<!-- FACEBOOK -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="Random Number Between Calculator | Get a Random Number - RoundingCalculator.Guru" />
+<meta property="og:description"
+    content="Handy Random Number Between Calculator helps to get any random number easily. Check the steps to find a random number. " />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="Random Number Between Calculator | Get a Random Number - RoundingCalculator.Guru" />
+<meta name="twitter:description"
+    content="Handy Random Number Between Calculator helps to get any random number easily. Check the steps to find a random number. " />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin -->
+<meta property='og:title' content="Random Number Between Calculator | Get a Random Number - RoundingCalculator.Guru" />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description'
+    content="Handy Random Number Between Calculator helps to get any random number easily. Check the steps to find a random number." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+
+{% endblock %}
+
+{% block content %}
+
+
+{%if go_to %}
+<a href="{{go_to}}" id="ddd"></a>
+{%endif%}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('ddd').click();
+    });
+</script>
+<style>
+
+</style>
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Random Number Between Calculator Online</h1>
+        </div>
+        <div class="card-body">
+            <p><span style="font-weight: 400;">Using this free handy Random Number Between Calculator tool we can get
+                    any random number. The thing you need to do is just give the input values in the input fields and
+                    tap the calculate button, you will see the answer in a very short span of time.</span></p>
+            <div class="card-body">
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+
+
+                    <div>
+                        <p>Get Random Number From <input name="aa" type="number" class="form" id="aa"
+                                onkeypress="return isNumberKey(event)" required required step="1" min="1" class="aa"
+                                id="aa" {% if aa%} value="{{aa}}" {% else %} value="36" {% endif %} placeholder=""
+                                name='aa'
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                maxlength="4"> <span style="padding: 0px 20px;"><strong>and</strong> </span>
+
+                            <input name="bb" type="number" class="form" id="bb" onkeypress="return isNumberKey(event)"
+                                required required step="1" min="1" class="bb" id="bb" {% if bb%} value="{{bb}}" {% else %} value="160" {% endif %} placeholder="" name='bb'
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                maxlength="4">
+                        </p>
+                    </div>
+
+
+                    <div class=" center col mt-2 ">
+                      <center>  <button type="submit" class="btn btn-primary" name="f1">Calculate</button></center>
+
+                    </div>
+                </form> <br>
+
+
+
+            </div>
+            <p><strong>Random Number Between Calculator: </strong><span style="font-weight: 400;">Getting the random
+                    number between the given list is very easy. But sometimes we will get bored of calculating them. For
+                    that, we have brought you an awesome tool to get the random number easily and you will get the
+                    answer effortlessly in no time. And also we have given detailed steps to calculate and definition in
+                    further sections.</span></p>
+            
+            <h2><span style="font-weight: 400;">What is the Random Number?</span></h2>
+            <p><span style="font-weight: 400;">A random number is a number chosen from a list of limited or unlimited
+                    numbers that have no discernible pattern for prediction. The list of numbers is almost always
+                    independent from each other.</span></p>
+            <h2><span style="font-weight: 400;">Example Question on Random Number</span></h2>
+            <p><span style="font-weight: 400;">What is the random number between 25 and 100?</span></p>
+            <p><strong>Solution:</strong></p>
+            <p><span style="font-weight: 400;">Given that,</span></p>
+            <p><span style="font-weight: 400;">Random number between 25 and 100</span></p>
+            <p><span style="font-weight: 400;">The random number between 25 and 100 is 39.</span></p>
+            <h3><span style="font-weight: 400;">How to Use a Random Number Between Calculator?</span></h3>
+            <p><span style="font-weight: 400;">Avail the simple steps to compute the random number.</span></p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Give the number limit in
+                        the input box.</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Click on the calculate
+                        button.</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">The generator will display
+                        output.</span></li>
+            </ul>
+            <hr>
+            <h3><span style="font-weight: 400;">FAQs on Random Number Between</span></h3>
+           
+                <p><strong>1. What is the minimum number you can use in a random number generator?</strong></p>            
+            <p><span style="font-weight: 400;">There is no such limit, you can use any negative or positive number in
+                    the tool.</span></p>
+            
+                <p><strong>2. What is the most random number between 1 and 100?</strong></p>            
+            <p><span style="font-weight: 400;">The most common 2 digit number is 37.</span></p>
+            
+                <p><strong>3. Where can I get the best tool to find random numbers?</strong></p>            
+            <p><span style="font-weight: 400;">You can get the best tool to find random numbers at </span><a
+                    href="https://roundingcalculator.guru/"><span
+                        style="font-weight: 400;">RoundingCalculator.guru</span></a><span
+                    style="font-weight: 400;">.</span></p>
+            
+                <p><strong> What is the range of random numbers?</strong></p>            
+            <p><span style="font-weight: 400;">The range of the random function is [0,1).</span></p>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+{% endblock %}

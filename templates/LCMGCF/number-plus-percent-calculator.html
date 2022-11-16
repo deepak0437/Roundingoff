@@ -1,0 +1,173 @@
+{% extends 'LCMGCF/new_base.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://onlinecalculator.guru/static/images/logo/LCMGCF-Com-Fevicon.png" type="icon">
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://onlinecalculator.guru/static/style.css">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- Meta Title, Description and Canonical URL Starts --->
+<title> Number Plus Calculator | Steps to Add Number & Percentage - LCMFCF.com</title>
+<meta name="description" content=" Learn the detailed step by step procedure to add a number and percentage together. Use Number Plus Percent Calculator for instant results. " />
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS --->
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="Number Plus Calculator | Steps to Add Number & Percentage - LCMFCF.com" />
+<meta property="og:description" content=" Learn the detailed step by step procedure to add a number and percentage together. Use Number Plus Percent Calculator for instant results. " />
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="Number Plus Calculator | Steps to Add Number & Percentage - LCMFCF.com" />
+<meta name="twitter:description" content=" Learn the detailed step by step procedure to add a number and percentage together. Use Number Plus Percent Calculator for instant results. " />
+<meta name="twitter:image:src" content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<meta property='og:title' content="Number Plus Calculator | Steps to Add Number & Percentage - LCMFCF.com" />
+<meta property='og:description'content=" Learn the detailed step by step procedure to add a number and percentage together. Use Number Plus Percent Calculator for instant results. " />
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator.jpeg" />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+<style>
+    input {
+        text-align: right;
+    }
+</style>
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Number Plus Percent Calculator Online</h1>
+        </div>
+        <div class="card-body">
+            <p>Find Number Plus Percent easily by taking the help of the online Number
+                    Plus Percent Calculator provided on this page. This handy calculator will provide the solution for
+                    tricky calculations based on Number Plus Percent by taking input values. Simply Number and Percent
+                    as inputs and click on the calculate button to check the accurate output as early as
+                    possible.</span></p>
+            <div class="card-body">
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+                    <div>
+                        <center>
+                            <p> <span>What is </span> <input name="aa" type="number" class="form" id="aa"
+                                    onkeypress="return isNumberKey(event)" required required step="any" min="1"
+                                    class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="5211" {% endif %}
+                                    placeholder="" name='aa'
+                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                    maxlength="8"> <span style="padding: 0px 20px;"><strong>Plus</strong> </span>
+                                <input name="bb" type="number" class="form" id="bb"
+                                    onkeypress="return isNumberKey(event)" required required step="any" min="1"
+                                    class="bb" id="bb" {% if bb%} value="{{bb}}" {% else %} value="18" {% endif %}
+                                    placeholder="" name='bb'
+                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                    maxlength="6"> <span>percent?</span>
+                            </p>
+                        </center>
+                    </div>
+                    <div class=" center col mt-2 ">
+                        <center> <button type="submit" class="btn btn-primary" name="f1">Calculate</button></center>
+                    </div>
+                </form> <br>
+            </div>
+
+            <p><strong>Number Plus Percent Calculator:</strong> When you are performing
+                    some long calculations and suddenly wish to add the percentage, then use this instant and handy
+                    tool. In this article, you can check useful information like how to add the percent manually. We
+                    have listed the formula, step-by-step process and solved examples for your better
+                    understanding.</p>
+            <h3>Steps to Add Percentage and Number</h3>
+            <p>Here are the steps to add a Number to a Percentage from the given number
+                    itself:</p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1">Note down the given number
+                        &amp; the percentage which we want to add.</li>
+                <li style="font-weight: 400;" aria-level="1">Now, we will convert the
+                        percent into a fraction or a decimal number.</li>
+                <li style="font-weight: 400;" aria-level="1">We can do that by dividing
+                        the given percentage by 100.</li>
+                <li style="font-weight: 400;" aria-level="1">Now, multiply the fraction
+                        calculated from a given percent with the number given in an example.</li>
+                <li style="font-weight: 400;" aria-level="1">Now, let us take the number
+                        calculated in the above step &amp; add this number to the given number.</li>
+                <li style="font-weight: 400;" aria-level="1">Now, check the calculated
+                        answer from the above steps.</li>
+            </ul>
+            <h3>Solved Example Increase by Percentage</h3>
+            <p><strong>Example:</strong></p>
+            <p>Calculate 400 plus 11 percent.</p>
+            <p><strong>Solution:</strong></p>
+            <p>Here, check the given number as 400 &amp; the percentage as 11 %.
+            </p>
+            <p>Now, we will convert the given percent into a fraction by dividing it by
+                    100:</p>
+            <p>11 % = 11 / 100 = 3 / 20</p>
+            <p>Now, multiply the above fraction by the given number:</p>
+            <p>400 x (11 / 100 ) = 44</p>
+            <p>Now, add the above number to the main given number:</p>
+            <p>400 + 44 = 444.</p>
+            <p>So now we can say that the calculation of 400 plus 11 percent is
+                    444.</p>
+            <p>Clarify your queries right after class and seek help on tricky
+                    mathematical concepts for your assignments and projects all in one place on <a href="https://roundingcalculator.guru/">RoundingCalculator.guru</a>.</p>
+                    <hr>
+            <h3>FAQs on Number + Percent Calculator With Steps</h3>
+           
+                <p><strong>1. How to add 5% to a number?</strong></p>
+            <p>Divide the number by 100 and then multiply it by 5, and finally add the
+                    output value to the original number.</p>
+                <p><strong>2. How to calculate the percentage of a number?</strong></p>
+            <p>To calculate the percentage of a number let&rsquo;s say 0.48, multiply it
+                    by 100, and we get 0.48 x 100 = 48. Hence 48% is the answer.</p>
+                <p><strong>3. What is 500 plus 10 percent?</strong></p>
+            <p>500 plus 10 percent is 550.</p>
+                <p><strong>4. How to add numbers and percentages?</strong></p>
+            <p>To add a number to a percentage, convert the given percent into a number
+                    by dividing by 100. And then add it to the number.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    function myFunction() {
+
+        document.getElementsByName("aa")[0].value = "";
+        document.getElementsByName("bb")[0].value = "";
+        document.getElementById("clear").innerHTML = "";
+    }
+</script>
+<br>
+
+
+{% endblock %}

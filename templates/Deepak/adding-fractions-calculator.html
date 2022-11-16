@@ -1,0 +1,264 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS -->
+<title>Adding Fractions Calculator | Free Calculator to find Adding Fractions - RoundingCalculator.Guru
+</title>
+<meta name=description content="Adding Fractions  Calculator makes it easy for you to find Adding Fractions">
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS -->
+
+<!-- FACEBOOK -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="Adding Fractions  Calculator Online - RoundingCalculator.Guru" />
+<meta property="og:description"
+    content="Adding Fractions  Calculator makes it easy for you to find Adding Fractions " />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="Adding Fractions  Calculator Online - RoundingCalculator.Guru" />
+<meta name="twitter:description"
+    content="Adding Fractions  Calculator makes it easy for you to find Adding Fractions " />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin -->
+<meta property='og:title' content="Adding Fractions  Calculator Online - RoundingCalculator.Guru" />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description' content="Adding Fractions  Calculator makes it easy for you to find Adding Fractions" />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+
+{% endblock %}
+
+{% block content %}
+
+
+{%if go_to %}
+<a href="{{go_to}}" id="ddd"></a>
+{%endif%}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('ddd').click();
+    });
+</script>
+<style>
+
+</style>
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Adding Fractions Calculator Online</h1>
+        </div>
+        <div class="card-body">
+            <div class="card-body">
+
+
+
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+                    <p>The addition is the basic arithmetic operations that are used in our daily life. A fraction is a
+                        rational number that is written in the p/q form where p is the numerator and q is the
+                        denominator. Adding Fractions Calculator is an online tool that is used to add fraction numbers
+                        in a simple way.</p>
+
+                    <table width="300" height="100" align="center" border="0" cellspacing="0" cellpadding="4"
+                        style="background-color:#ffffff;border:1px #000000 solid; border-bottom: 2px solid">
+                        <tr>
+                            <td align="center" valign="middle">
+                                <table width="150" height="100" border="0" cellspacing="0" cellpadding="0"">
+                                    <tr>
+    
+                                        <td style=" border-bottom:2px #000000 solid;">
+                                    <input type="text" size="10" tabindex="1" onkeypress="return isNumberKey(event)"
+                                        required required step="1"
+                                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                        maxlength="5" min="1" step="" max="9999" oninput="validateNumber(this);" required=""
+                                        placeholder="" id="aa" name="aa" {% if aa %} value="{{aa}}" {% else %}
+                                        value="20" {% endif %}>
+                            </td>
+                            <td rowspan="2" align="center" valign="middle">
+                                <select name="Op" tabindex="3">
+                                    <option value="+">+</option>
+
+                                </select>
+                            </td>
+                            <td style="border-bottom:2px #000000 solid;">
+                                <input type="text" size="10" tabindex="4" onkeypress="return isNumberKey(event)"
+                                    required required step="1"
+                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                    maxlength="5" step="" max="9999" oninput="validateNumber(this);" required=""
+                                    placeholder="" id="bb" name="bb" {% if bb %} value="{{bb}}" {% else %} value="40" 
+                                    {% endif %}>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" size="10" tabindex="4" onkeypress="return isNumberKey(event)"
+                                    required required step="1"
+                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                    maxlength="5" step="" max="9999" oninput="validateNumber(this);" required=""
+                                    placeholder="" id="cc" name="cc" {% if cc %} value="{{cc}}" {% else %} value="80" {% endif%}>
+                            </td>
+                            <td><input type="text" size="10" tabindex="4" onkeypress="return isNumberKey(event)"
+                                    required required step="1"
+                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                    maxlength="5" step="" max="9999" oninput="validateNumber(this);" placeholder=""
+                                    id="dd" name="dd" {% if dd %} value="{{dd}}" {% else %} value="50" {% endif%}></td>
+
+                        </tr>
+                    </table>
+                    </td>
+                    </tr>
+                    </table>
+                    <br>
+
+
+
+                    <div class=" center col mt-2 ">
+                        <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+
+                        </center>
+                    </div>
+
+                </form> <br>
+
+            </div>
+
+            <p>Steps to follow to add fractions</p>
+            <ol>
+                <li>
+                    <p>Make the denominators common if the denominators are different</p>
+                </li>
+                <li>
+                    <p>Add the numbers without changing the denominators</p>
+                </li>
+                <li>
+                    <p>Simplify the fractions if necessary</p>
+                </li>
+            </ol>
+
+            <h2>How to Use Adding Fractions Calculator?
+            </h2>
+
+            <p>Use the fraction calculator to compute the fractions with like and unlike denominators. Follow the
+                instructions given below to know how to use the addition of fractions calculator.
+            </p>
+            <ol>
+                <li>
+                    <p>Enter the values of two fractions in the input field.</p>
+                </li>
+                <li>
+                    <p>Click on the calculate button.</p>
+                </li>
+                <li>
+                    <p>The fraction in the lowest term will be displayed on the screen.</p>
+                </li>
+            </ol>
+
+            <h3>Steps to Calculate Add Two Fractions</h3>
+            <p>Fraction is a part of the whole thing. Mathematically, it can be represented as a/b here a is the
+                numerator and b is the denominator. Adding two fractions means getting the sum of them. The
+                following mentioned are the steps to calculate the addition of fractions. Go through the guidelines
+                and find the answer.</p>
+
+            <ul><b>Addition of Like Fractions</b>
+                <li>
+                    <p>Note down any two fractions.</p>
+                </li>
+                <li>
+                    <p>As denominators of the fractions are same, add the numerators.</p>
+                </li>
+                <li>
+                    <p>The resultant fraction is the addition of like fractions.</p>
+                </li>
+            </ul>
+
+            <ul><b>Addition of Unlike Fractions</b>
+                <li>
+                    <p>Get two fractions with different denominators.</p>
+                </li>
+                <li>
+                    <p>Find the least common multiple of denominators.</p>
+                </li>
+                <li>
+                    <p>Multiply the numerators and denominators to get the LCM in all denominators.</p>
+                </li>
+                <li>
+                    <p>Add the numerators and write the total fraction.</p>
+                </li>
+            </ul>
+
+            <h4>How to Use Adding Fractions Calculator</h4>
+            <p>These are the simple guidelines to get the addition of two fractions. </p>
+            <ul <li>Enter twio fractions on the both sides of the + operand.</li>
+                <li>Hit the calculate button.</li>
+                <li>You will get the addition of two fractions and detailed explanation as result .</li>
+            </ul>
+
+            <h3>FAQs on Adding Fractions Calculator
+            </h3>
+
+            <p><b>1. How do you add fractions with 2 different denominators?</b></p>
+            <p> Find the least common denominators of two fractions</p>
+            <p> Divide the LCM by the denominator of each number. </p>
+            <p> Add the numerators.</p>
+            <p> Simplify the fractions if needed.</p>
+            <p><b>2. How to add fractions with common denominators?</b></p>
+            <p>If the denominators of both the fractions are the same then you can directly add the numerators and write
+                in the fraction form.</p>
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+    {% endblock %}

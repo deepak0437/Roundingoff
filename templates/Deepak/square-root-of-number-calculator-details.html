@@ -1,0 +1,243 @@
+{% extends 'base/numbers_base3.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- Meta Title, Description and Canonical URL Starts -->
+<title>What is the Square Root of {{aa}} Squared? </title>
+<meta name="description"
+    content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}. " />
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS -->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title"
+    content="Square Root of a Number Squared  Calculator | Free Calculator to find Square Root of a Number Squared " />
+<meta property="og:description"
+    content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}." />
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title"
+    content="Square Root of a Number Squared  Calculator | Free Calculator to find Square Root of a Number Squared " />
+<meta name="twitter:description"
+    content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}.  " />
+<meta name="twitter:image:src"
+    content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<tittle></tittle>
+<meta property='og:title' content="Square Root of a Number Squared  Calculator | Square Root of a Number Squared " />
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property='og:description'
+    content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}.  ." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+
+<style>
+  
+
+
+</style>
+
+
+<div class="container" style="height: auto !important;">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Square Root of {{aa}} Squared?</h1>
+
+        </div>
+
+        <div class="card-body">
+
+
+            <form action="" method="POST" id="my_form">
+                {% csrf_token %}
+                <p>Are you confused about how to solve the square root of {{aa}} squared? You have come to the right place. You can use the <a href="/square-root-of-a-number-squared-calculator/">Square Root of a Number Squared Calculator</a> to get your answer or you can follow the explanation below to solve it yourself.</a>.
+                </p><br>
+
+                <div>
+                    <span style="font-size: 29px;"><strong>√</strong></span> <input name="aa" type="number"
+                        class="form" id="aa" onkeypress="return isNumberKey(event)" required required step="1"
+                        min="1" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="36" {% endif %}
+                        placeholder="" name='aa'
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="8"><span style="font-size: 20px;"><strong><sup>2</sup></strong> </span>
+
+
+                </div>
+                <div class=" center col mt-2 ">
+                <button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                    
+                </div>
+            </form> <br>
+
+            <h3>Examples of Square Root of a Number Squared  </h3> <br>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList1 %}
+
+                            <li>
+                                <a href="/square-root-of-{{a}}-squared/">
+                                    Square root of {{a}} squared 
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList2 %}
+
+                            <li>
+                                <a href="/square-root-of-{{a}}-squared/">
+                                    Square root of {{a}} squared 
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    {% if id == 1 %}
+
+    <div id="clear">
+
+        <div class="card" id="magnetic-Change in temperature">
+            <div class="card-header">
+                <h2 class="h2">Square Root of {{aa}} Squared?</h2>
+            </div>
+
+
+            <div class="card-body">
+                <p>First, let us recall the formulas that we learned previously. √(x<sup>2</sup>) = x</p>
+                <p>Given, x = √({{aa}}<sup>2</sup>)</p>
+                <p>We are doing two math operations: The radical sign √ means that you are taking the square root of {{aa}} and the ² means to square {{aa}}. It does not matter which order you do the math operations in, because the following two math rules result in the same answer:</p>
+                <p>√x² = x</p>
+                <p>(√x)² = x</p>
+                <p>We start by first taking the square root of {{aa}} and then square that result to get our answer like this:</p>
+                <p>√{{aa}} = {{ans}}</p>
+                <p>{{ans}}² = {{aa}}</p>
+                <p>Now, we will do the operations in opposite order where we first square {{aa}} and then calculate the square root of the result:</p>
+                <p>{{aa}}² = {{ab}}</p>
+                <p>√{{ab}} = {{aa}}</p>
+                <p>You may also find this math rule interesting when dealing with a problem like the square root of {{aa}} squared:</p>
+                <p>√x² = √x * √x</p>
+                <p>It also proves that the square root of {{aa}} squared equals {{aa}}.</p>
+                <p>√{{aa}}² = √{{aa}} * √{{aa}}</p>
+                <p>√{{aa}} * √{{aa}} = {{ans}} * {{ans}}</p>
+                <p>{{ans}} * {{ans}} = {{aa}}</p>
+                <hr>
+
+               
+                <h3><span style="font-weight: 400;">FAQs on Square Root of {{aa}} Squared</span></h3>
+                <p><strong>1. What is the square root of {{aa}} squared?</strong></p>
+                <p><span style="font-weight: 400;">The square root of {{aa}} squared is equal to {{aa}}.&nbsp;</span></p>
+                
+                <p><strong>2. How to find the square root of {{aa}} squared?</strong></p>
+                <p><span style="font-weight: 400;">All you need to do is follow this equation:</span></p>
+                <p><span style="font-weight: 400;">&radic;(x<sup>2</sup>) = x</span></p>
+                <p><span style="font-weight: 400;">So, when we replace x with {{aa}}, we can understand that the square root of {{aa}} squared is equal to {{aa}}.&nbsp;</span></p>
+                <p><span style="font-weight: 400;">&radic;({{aa}}<sup>2</sup>) = {{aa}}</span></p>
+                
+                <p><strong>3. What is the equation for finding the square root of a number which is squared?</strong></p>
+                <p><span style="font-weight: 400;">The equation is &radic;(x<sup>2</sup>) = x, but in fact, you do not even need to remember this formula for this problem. All you have to remember is the fact that the square root of a number that is squared is equal to the number itself.&nbsp;</span></p>
+                
+                <p><strong>4. Why is the square root of a number squared equal to the number?</strong></p>
+                <p><span style="font-weight: 400;">The square root of a number squared is equal to the number because of this:</span></p>
+                <p><span style="font-weight: 400;">Square of x = x<sup>2</sup></span></p>
+                <p><span style="font-weight: 400;">Square root of squared number = (x<sup>2</sup>)^&frac12;&nbsp;</span></p>
+                <p><span style="font-weight: 400;">Square root of squared number = x^(2&times; &frac12;)</span></p>
+                <p><span style="font-weight: 400;">2 &times; &frac12; = 1</span></p>
+                <p><span style="font-weight: 400;">Square root of squared number = x<sup>2</sup></span></p>
+                <p><span style="font-weight: 400;">&radic;(x<sup>2</sup>) = x</span></p>
+            </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    {% endif %}
+
+
+
+
+    <script>
+
+        {% if id == 1 %}
+
+        var scrollDiv = document.getElementById("clear").offsetTop;
+        console.log(scrollDiv)
+        window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+
+        {% endif %}
+
+    </script>
+
+    <script>
+        function myFunction() {
+            document.getElementById("clear").innerHTML = "";
+            document.getElementsName("aa")[0].value = "";
+            document.getElementsName("cc")[0].value = "";
+        }
+    </script>
+    <br>
+
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,363 @@
+{% extends 'Deepak/new_base.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://onlinecalculator.guru/static/images/logo/LCMGCF-Com-Fevicon.png" type="icon">
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://onlinecalculator.guru/static/style.css">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<!-- Meta Title, Description and Canonical URL Starts --->
+
+<title> Sequential Percentage Calculator | Find the Sequential Percentage of the given numbers</title>
+<meta name="description"
+    content="The Sequential Percentage Calculator provides unique ways to do successive calculations. Do check definitions, formulas, and solved examples with explanations." />
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS --->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title"
+    content="Sequential Percentage Calculator | Find the Sequential Percentage of the given numbers" />
+<meta property="og:description"
+    content="The Sequential Percentage Calculator provides unique ways to do successive calculations. Do check definitions, formulas, and solved examples with explanations." />
+
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title"
+    content="Sequential Percentage Calculator | Find the Sequential Percentage of the given numbers" />
+<meta name="twitter:description"
+    content="The Sequential Percentage Calculator provides unique ways to do successive calculations. Do check definitions, formulas, and solved examples with explanations." />
+
+<meta name="twitter:image:src" content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<meta property='og:title'
+    content="Sequential Percentage Calculator | Find the Sequential Percentage of the given numbers" />
+<meta property='og:description'
+    content="The Sequential Percentage Calculator provides unique ways to do successive calculations. Do check definitions, formulas, and solved examples with explanations." />
+
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+<style>
+    input {
+        text-align: left;
+    }
+</style>
+
+
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Sequential Percentage Calculator Online</h1>
+        </div>
+        <div class="card-body">
+            <div class="card-body">
+
+                <ul class="messages">
+
+                </ul>
+                <p>Sequential Percentage Calculator is a handful of tools available for free. You can easily perform the
+                    change in percentage tasks with the help of a calculator. The sudden increase and decrease in the
+                    percentages of the given term and it's vice-versa can be easily found using the simple steps in the
+                    sequential percentage calculator. You are just required to put the inputs to the given boxes and the
+                    result is on your screen.
+
+                </p> <br>
+
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" style="padding: 6px 40px;"><strong>Enter number to find
+                                    sequential percentage</strong></div>
+                        </div>
+                        <input name="nm" type="number" class="form-control" min="0.00001" id="inlineFormInputGroup"
+                            onkeypress="return isNumberKey(event)" required required step="any" class="nm" id="nm" {% if nm %} value="{{nm}}" {% else %} value="136.98" {% endif %} placeholder=":" name='nm'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="7">
+
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <select class="select form-control" id="inlineFormInputGroup" name="aa_op" id="aa_op">
+                            {% if aa_op == 'increased' %}
+                        <option value="increased" selected="selected"> increased by </option>
+                        {% else %}
+                        <option value="increased"> increased by </option>
+                        {% endif %}
+
+                        {% if aa_op == 'decreased' %}
+                        <option value="decreased" selected="selected"> decreased by </option>
+                        {% else %}
+                        <option value="decreased">decreased by </option>
+                        {% endif %}
+                        </select>
+                        <input name="aa" type="number" class="form-control" min="1" id="inlineFormInputGroup"
+                            onkeypress="return isNumberKey(event)" required required step="1" class="aa" id="aa" {% if aa %} value="{{aa}}" {% else %} value="31" {% endif %} placeholder=":" name='aa'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" style="padding: 6px 40px;"><strong>% </strong></div>
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <select class="select form-control" id="inlineFormInputGroup" name="bb_op" id="bb_op">
+                        {% if bb_op == 'increased' %}
+                        <option value="increased" selected="selected"> then increased by </option>
+                        {% else %}
+                        <option value="increased"> then increased by </option>
+                        {% endif %}
+
+                        {% if bb_op == 'decreased' %}
+                        <option value="decreased" selected="selected"> then decreased by </option>
+                        {% else %}
+                        <option value="decreased">then decreased by </option>
+                        {% endif %}
+                        </select>
+                        <input name="bb" type="number" class="form-control" min="1" id="inlineFormInputGroup"
+                            onkeypress="return isNumberKey(event)" required required step="1" class="bb" id="bb" {% if bb %} value="{{bb}}" {% else %} value="22" {% endif %} placeholder=":" name='bb'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" style="padding: 6px 40px;"><strong>% </strong></div>
+                        </div>
+                    </div>
+
+
+
+                    <div class=" center col mt-2 ">
+                        <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                        </center>
+                    </div>
+                </form> <br>
+
+            </div>
+
+            <p><strong>Sequential Percentage Calculator: </strong><span style="font-weight: 400;">If you are given big
+                    numbers in the percentage form and you have to check whether the increase took place or decrease
+                    between the given numbers then you can use the Sequential Percentage Calculator, and the result will
+                    be on your screen in a few seconds. Find more information on the Sequential Percentage Calculator,
+                    its formula, what is sequential percentage, detailed solutions, and a lot more below. </span><span
+                    style="font-weight: 400;"><br /></span></p>
+            <h2><span style="font-weight: 400;">What is Sequential Percentage?&nbsp;</span></h2>
+            <p><span style="font-weight: 400;">The Sequential percentage tells you how to increase or decrease a number
+                    by a percent, and then consider the result of that and increase or decrease by another percent.
+                    Here, you will observe that two or more percentage changes are applied to a quantity
+                    consecutively.&nbsp;</span></p>
+            <h3><span style="font-weight: 400;">Sequential Percentage Formula&nbsp;</span></h3>
+            <p><span style="font-weight: 400;">The sequential percentage Formula is entirely based on which type of
+                    change is taking place in the given numbers. Mainly we focus on</span></p>
+            
+            <p><strong>Percentage change = [(change in value)/original value] &times; 100%</strong></p>
+            <p><strong>Where Change in value = Final value &ndash; original value</strong></p>
+            <p><strong>OR&nbsp;</strong></p>
+            <p><span style="font-weight: 400;">When there is a percentage increase in the value then we
+                    use,&nbsp;</span></p>
+            
+            <p><strong>Percentage Increase = [(Final value &ndash; Original value)/Original value] &times; 100%</strong>
+            </p>
+            
+            <p><span style="font-weight: 400;">When there is a percentage decrease in the value then we
+                    use:&nbsp;</span></p>
+            
+            <p><strong>Percentage decrease = [(Original value &ndash; Final value)/Original value] &times; 100%</strong>
+            </p>
+            <h3><span style="font-weight: 400;">How to calculate the sequential percentage manually?</span></h3>
+            
+            <p><span style="font-weight: 400;">The sequential percentage can easily be calculated using a few different
+                    formulas as required by the need and demand of the question. Here are the steps that you can use to
+                    calculate the sequential percentage manually.&nbsp;</span></p>
+            
+            <p><span style="font-weight: 400;">The first step is to determine how percentages are increasing or
+                    decreasing in the given question. Using the formula we will put the values. The formula is (a+b+ ab/
+                    100)%</span></p>
+            
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">The first step is to Take
+                        the percentage given as x and y.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Now, consider the formula
+                        and check the increase and decrease in the percentage.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Putting the values of
+                        &lsquo;a and b&rsquo; in the above-provided formula. You will get your answer
+                        easily.&nbsp;</span></li>
+            </ul>
+            
+            <p><span style="font-weight: 400;">NOTE: The increased percentage is taken as +ve and decreased is taken as
+                    -ve.&nbsp;</span></p>
+            <h3><span style="font-weight: 400;">Illustrated examples For Sequential Percentage Calculator&nbsp;</span>
+            </h3>
+            <p><span style="font-weight: 400;">Now, if you are still confused about how to solve the questions then we
+                    are explaining the concept with the help of detailed examples.&nbsp;</span></p>
+            
+            <p><strong>Example:&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">The number increased by 20% and then decreased by 20%. What will be the
+                    net increase and increase?&nbsp;</span></p>
+            
+            <p><strong>Solution:&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">Using the formula,&nbsp;</span></p>
+            
+            <p><span style="font-weight: 400;">Net increase or decrease percent = {(Original number or Final number) -
+                    (Final number or</span></p>
+            <p><span style="font-weight: 400;">original number) &divide; Original number} &times; 100</span></p>
+            
+            <p><span style="font-weight: 400;">Let the original number be 100</span></p>
+            
+            <p><span style="font-weight: 400;">Given: number is increased by 20%</span></p>
+            <p><span style="font-weight: 400;">Thus, New Number = 100 + 20% of 100</span></p>
+            <p><span style="font-weight: 400;">&rArr; 100 + 20</span></p>
+            <p><span style="font-weight: 400;">&rArr; 120</span></p>
+            
+            <p><span style="font-weight: 400;">Given: number is decreased by 20%</span></p>
+            
+            <p><span style="font-weight: 400;">Final number = New number &ndash; 20% of new number</span></p>
+            <p><span style="font-weight: 400;">&rArr; 120 &ndash; 20% of 120</span></p>
+            <p><span style="font-weight: 400;">&rArr; 120 &ndash; 24</span></p>
+            <p><span style="font-weight: 400;">&rArr; 96</span></p>
+            
+            <p><span style="font-weight: 400;">&there4; Net Decrease in percentage = { (100 &ndash; 96) / 100} &times;
+                    100</span></p>
+            
+            <p><span style="font-weight: 400;">&rArr; {4/100} &times; 100</span></p>
+            <p><span style="font-weight: 400;">&rArr; 4%</span></p>
+            
+            <p><span style="font-weight: 400;">Hence, The net decrease percentage is 4% which can be termed as
+                    -4%.&nbsp;</span></p>
+            
+            <p><strong>Example:&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">Jenny&rsquo;s salary was increased by 10% and then decreased by 10%. What
+                    will be the net increase or decrease percent?&nbsp;</span></p>
+            
+            <p><strong>Solution:&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">Let Jenny&rsquo;s original salary be 100.&nbsp;</span></p>
+            
+            <p><span style="font-weight: 400;">Given: Decreases by 10% and Increased by 10%.&nbsp;</span></p>
+            <p><span style="font-weight: 400;">Let the number be 100</span></p>
+            <p><span style="font-weight: 400;">Increase in the number =10%</span></p>
+            <p><span style="font-weight: 400;">=&gt; 10% of 100=10</span></p>
+            <p><span style="font-weight: 400;">Thus, Increased number = 100 + 10 = 110</span></p>
+            <p><span style="font-weight: 400;">This number is then decreased by 10%</span></p>
+            <p><span style="font-weight: 400;">Thus, Decrease in the number</span></p>
+            <p><span style="font-weight: 400;">=&gt; 10% = 10% of 110 = (10/100&times;100) = 11</span></p>
+            <p><span style="font-weight: 400;">&there4; New number = 110 - 11 = 99</span></p>
+            <p><span style="font-weight: 400;">Thus, the net decrease = 100 - 99 = 1</span></p>
+            <p><span style="font-weight: 400;">Hence, the net percentage decrease</span></p>
+            <p><span style="font-weight: 400;">=&gt; ( 1/ 100 x 100 )% = 1% or -1% ( -ve used for decrease)&nbsp;</span>
+            </p>
+            <hr>
+            <h3><span style="font-weight: 400;">FAQs on Sequential Percentage Calculator&nbsp;</span></h3>
+            
+            
+                <p><strong>1. How sequence percentage can be calculated?&nbsp;</strong></p>
+            
+            
+            <p><span style="font-weight: 400;">To calculate the sequence percentage for the required terms you can apply
+                    the following formula: x (1 + a/100) (1 + b/100) (1 + c/100)</span></p>
+            
+            
+            
+                <p><strong>2. What is meant by sequential percentage?&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">The sequential percentage can be termed as when the consecutive quantity
+                    has been affected by two or more percentage changes. Thus, you may see that the change is not just
+                    an addition of two percentage changes. This is because the base changes after the first phenomenon
+                    are applied over the quantity.&nbsp;</span></p>
+            
+            
+            
+                <p><strong>3. What are the types of sequential percentage changes?&nbsp;</strong></p>
+            
+            
+            <p><span style="font-weight: 400;">Mainly there are three types of percentage changes that occur. These can
+                    be termed as:&nbsp;</span></p>
+            
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">When both percentage
+                        changes in the quantity are positive.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">When both percentages
+                        change the quantity is negative.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">When one percentage changes
+                        in the quantity are positive and the other one is negative.&nbsp;</span></li>
+            
+            
+            
+                <p><strong>4. What if the A number is first increased by 10% and then it is further
+                        increased by 20%?&nbsp;</strong></p>
+            
+            
+            <p><span style="font-weight: 400;">Here, the percentage change in the given quantity is positive in both
+                    cases.&nbsp;</span></p>
+            <p><span style="font-weight: 400;">Thus, we will use: {x + y + (xy/100)}%</span></p>
+            <p><span style="font-weight: 400;">Here, x = 10 and y = 20&nbsp;</span></p>
+            <p><span style="font-weight: 400;">Hence net percentage change =&gt; {10 + 20 + (10 x 20)/100} = 32%</span>
+            </p>
+            
+            
+            
+                <p><strong>5. What is the formula used when in sequential percentage, both percentage
+                        changes in the quantity are negative?&nbsp;</strong></p>
+            
+            
+            <p><span style="font-weight: 400;">In this case, you can use the formula (-x-y+xy/100)%.&nbsp;</span></p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    <script>
+        function myFunction() {
+
+            document.getElementsByName("OR")[0].value = "";
+        document.getElementsByName("D")[0].value = "";
+        document.getElementById("clear").innerHTML = "";
+            }
+</script>
+<br>
+
+
+{% endblock %}

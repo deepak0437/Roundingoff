@@ -1,0 +1,153 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS -->
+<title>Find the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0) | lcmgcf.com
+</title>
+<meta name=description content="Find the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0) & avail the results as (1, 1, -√2) and (1, 1, √2) in no time with our easy calculator tool. ">
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS -->
+
+<!-- FACEBOOK -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="Find the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0) | lcmgcf.com" />
+<meta property="og:description" content="Find the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0) & avail the results as (1, 1, -√2) and (1, 1, √2) in no time with our easy calculator tool. " />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="Find the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0) | lcmgcf.com" />
+<meta name="twitter:description" content="Find the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0) & avail the results as (1, 1, -√2) and (1, 1, √2) in no time with our easy calculator tool. " />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin -->
+<meta property='og:title' content="Find the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0) | lcmgcf.com" />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description' content="Find the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0) & avail the results as (1, 1, -√2) and (1, 1, √2) in no time with our easy calculator tool. " />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+
+{% endblock %}
+
+{% block content %}
+
+
+{%if go_to %}
+<a href="{{go_to}}" id="ddd"></a>
+{%endif%}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('ddd').click();
+    });
+</script>
+<style>
+ 
+</style>
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Find the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2,2,0)</h1>
+        </div>
+        <div class="card-body">
+            <p><span style="font-weight: 400;">Get to know how to find the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0), by reading this article. 
+                We will show you the detailed procedure on how to calculate the values, so stick around to get all your doubts cleared. 
+            </span>
+            </p>
+            <div class="card-body">
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+                    <div>
+                        <label>Cone:</label>
+                        <span><strong>z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup></strong></span>
+                    </div>
+                    
+                    <div style="text-align:center">
+                    <div class="form-group">
+                        <span><strong>x = </strong></span>
+                        <input name="xval" type="number" class="form" id="value" onkeypress="return isNumberKey(event)"
+                        required required step="1" min="1" {% if xval %} value="{{xval}}" {% else %} value="2" {% endif %} placeholder="" 
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="4" style="width: 15%;">
+                    </div>
+                    <div class="form-group">
+                        <span><strong>y = </strong></span><input name="yval" type="number" class="form" id="value" onkeypress="return isNumberKey(event)"
+                        required required step="1" min="1" {% if yval %} value="{{yval}}" {% else %} value="2" {% endif %} placeholder="" 
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="4" style="width: 15%;">
+                    </div>
+                    <div class="form-group">
+                        <span><strong>z = </strong></span><input name="zval" type="number" style="width: 15%;" value="0" readonly> 
+                    </div>
+                    
+
+
+                    <div class=" center col mt-2 ">
+                        <button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                        
+                    </div>
+                </form> <br>
+            </div>
+            
+            </div>
+            
+            <h3><strong>FAQs on How to Calculate the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0)?</strong></h3>
+            
+            <p><strong>Q1. </strong><strong>What are the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0)?</strong></p>
+            <p><strong>Ans:</strong><span style="font-weight: 400;">The coordinates for the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> are (1, 1, -√2) and (1, 1, √2). </span>
+            
+            <p><strong>Q2. </strong><strong>How to find the points on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> that are closest to the point (2, 2, 0)?</strong></p>
+            <p><strong>Ans: </strong><span style="font-weight: 400;">First, find the distance between the point and (2, 2, 0). Then, differentiate that equation with respect to x, to find the value of x. Then, differentiate it with respect to y, to find the value of y. Then, use the equation of the cone to find z. Now, put them together to get the coordinates of the points.</span></p>
+            <p><strong>Q3. </strong><strong>What is the equation used to find distance between the point on the cone z<sup>2</sup> = x<sup>2</sup> + y<sup>2</sup> and (2, 2, 0)?</strong></p>
+            <p><strong>Ans:</strong><span>The distance is determined by the equation: d = √[(x - 2)<sup>2</sup> + (y - 2)<sup>2</sup> + x<sup>2</sup> + y<sup>2</sup>]. </span>
+            </p>
+            <p><strong>Q4. Is x<sup>2</sup> an increasing function?</strong></p>
+            <p><strong>Ans: </strong><span style="font-weight: 400;">Yes, x<sup>2</sup> is always an increasing function because the answer is always a positive number when you square any number.</span></p>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+{% endblock %}

@@ -1,0 +1,579 @@
+{% extends 'LCMGCF/new_base.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://onlinecalculator.guru/static/images/logo/LCMGCF-Com-Fevicon.png" type="icon">
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://onlinecalculator.guru/static/style.css">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<!-- Meta Title, Description and Canonical URL Starts --->
+
+<title> Third Power Calculator | How to Calculate a Cube of a Number?
+
+</title>
+<meta name="description"
+    content="  Free Third Power Calculator helps to find the 3rd power or cube of a number easily. Get the steps to solve the third power." />
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS --->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="Third Power Calculator | Find the Third Power of the given numbers" />
+<meta property="og:description"
+    content="  Free Third Power Calculator helps to find the 3rd power or cube of a number easily. Get the steps to solve the third power." />
+
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="Third Power Calculator | Find the Third Power of the given numbers" />
+<meta name="twitter:description"
+    content="  Free Third Power Calculator helps to find the 3rd power or cube of a number easily. Get the steps to solve the third power." />
+
+<meta name="twitter:image:src" content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<meta property='og:title' content="Third Power Calculator | Find the Third Power of the given numbers" />
+<meta property='og:description'
+    content="  Free Third Power Calculator helps to find the 3rd power or cube of a number easily. Get the steps to solve the third power." />
+
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+<style>
+    input {
+        text-align: left;
+    }
+</style>
+
+
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Third Power Calculator Online</h1>
+        </div>
+        <div class="card-body">
+            <p>Third Power Calculator is a free online tool that helps to calculate the cube value for the large
+                base integers and real numbers. The third power calculator will help you in getting answers for both
+                negative and positive values. You could get step-by-step detail for the solution.
+            </p> 
+            <div class="card-body">
+
+
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+
+                    <div class="form-floating mb-3">
+                        <input name="aa" type="number" class="form-control" min="0"
+                            onkeypress="return isNumberKey(event)" required required step="any" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="55" {% endif %} placeholder="" name='aa'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="6">
+
+                        <label for="floatingInput">Enter number to convert third Power </label>
+                    </div>
+
+
+
+                    <div class=" center col mt-2 ">
+                        <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                        </center>
+                    </div>
+                </form> <br>
+
+            </div>
+
+            <p><strong>Third Power Calculator: </strong><span style="font-weight: 400;">Using the 3rd power calculator
+                    you can easily calculate the cube values for the given numbers in no time. The calculator is
+                    effective and efficient which will help you in getting the solution easily. To get detailed
+                    solutions to the calculation of third power you can refer to the below article.&nbsp;</span></p>
+            <h2><span style="font-weight: 400;">What is Third Power? | Third Power Formula</span></h2>
+            <p><span style="font-weight: 400;">The third power is generally calculated when the number is multiplied
+                    thrice by itself. These are commonly known as cubes for the given numbers. Third Power can be
+                    expressed as a</span><span style="font-weight: 400;">3</span><span style="font-weight: 400;">. For
+                    example, the third power can be called &ldquo;4 cubed&rdquo; or &ldquo;4 to the power of 3&rdquo; or
+                    &ldquo;4</span><span style="font-weight: 400;">3</span><span style="font-weight: 400;">&rdquo; which
+                    is similar to the 4 x 4 x 4 = 64.</span></p>
+            
+            <p><span style="font-weight: 400;">The cube for the given number can be found when the number is multiplied
+                    three times by itself.</span></p>
+            <p><strong>number</strong><strong>3</strong><strong> = number x number x number</strong></p>
+            <h3><span style="font-weight: 400;">How to Calculate Third Power?</span></h3>
+            <p><span style="font-weight: 400;">We can calculate the third power for the given numbers in the simple
+                    steps:&nbsp;</span></p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Check the given numbers in
+                        negative and positive forms.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Now, multiply the number
+                        thrice such as a x a x a = a</span><span style="font-weight: 400;">3</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Thus, the third power of
+                        the given number is calculated.&nbsp;</span></li>
+            </ul>
+            
+            <p><span style="font-weight: 400;">NOTE: the negative numbers when calculated for the cubes give a negative
+                    product such as -a x -a x -a = -a</span><span style="font-weight: 400;">3</span></p>
+            <h3><span style="font-weight: 400;">Third Power Table</span></h3>
+            <p><span style="font-weight: 400;">If you get confused in finding the third power for the required numbers
+                    then you can refer to the below-provided table to get a detailed view of the cube value for 1 to 100
+                    numbers.&nbsp;</span></p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">1&sup3; = 1</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">2&sup3; = 8</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">3&sup3; = 27</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">4&sup3; = 64</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">5&sup3; = 125</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">6&sup3; = 216</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">7&sup3; = 343</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">8&sup3; = 512</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">9&sup3; = 729</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">10&sup3; = 1000</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">11&sup3; = 1331</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">12&sup3; = 1728</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">13&sup3; = 2197</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">14&sup3; = 2744</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">15&sup3; = 3375</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">16&sup3; = 4096</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">17&sup3; = 4913</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">18&sup3; = 5832</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">19&sup3; = 6859</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">20&sup3; = 8000</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">21&sup3; = 9261</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">22&sup3; = 10648</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">23&sup3; = 12167</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">24&sup3; = 13824</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">25&sup3; = 15625</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">26&sup3; = 17576</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">27&sup3; = 19683</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">28&sup3; = 21952</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">29&sup3; = 24389</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">30&sup3; = 27000</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">31&sup3; = 29791</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">32&sup3; = 32768</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">33&sup3; = 35937</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">34&sup3; = 39304</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">35&sup3; = 42875</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">36&sup3; = 46656</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">37&sup3; = 50653</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">38&sup3; = 54872</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">39&sup3; = 59319</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">40&sup3; = 64000</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">41&sup3; = 68921</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">42&sup3; = 74088</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">43&sup3; = 79507</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">44&sup3; = 85184</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">45&sup3; = 91125</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">46&sup3; = 97336</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">47&sup3; = 103823</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">48&sup3; = 110592</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">49&sup3; = 117649</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">50&sup3; = 125000</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">51&sup3; = 132651</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">52&sup3; = 140608</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">53&sup3; = 148877</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">54&sup3; = 157464</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">55&sup3; = 166375</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">56&sup3; = 175616</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">57&sup3; = 185193</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">58&sup3; = 195112</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">59&sup3; = 205379</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">60&sup3; = 216000</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">61&sup3; = 226981</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">62&sup3; = 238328</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">63&sup3; = 250047</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">64&sup3; = 262144</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">65&sup3; = 274625</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">66&sup3; = 287496</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">67&sup3; = 300763</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">68&sup3; = 314432</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">69&sup3; = 328509</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">70&sup3; = 343000</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">71&sup3; = 357911</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">72&sup3; = 373248</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">73&sup3; = 389017</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">74&sup3; = 405224</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">75&sup3; = 421875</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">76&sup3; = 438976</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">77&sup3; = 456533</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">78&sup3; = 474552</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">79&sup3; = 493039</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">80&sup3; = 512000</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">81&sup3; = 531441</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">82&sup3; = 551368</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">83&sup3; = 571787</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">84&sup3; = 592704</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">85&sup3; = 614125</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">86&sup3; = 636056</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">87&sup3; = 658503</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">88&sup3; = 681472</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">89&sup3; = 704969</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">90&sup3; = 729000</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">91&sup3; = 753571</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">92&sup3; = 778688</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">93&sup3; = 804357</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">94&sup3; = 830584</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">95&sup3; = 857375</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">96&sup3; = 884736</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">97&sup3; = 912673</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">98&sup3; = 941192</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">99&sup3; = 970299</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">100&sup3; = 1000000</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3><span style="font-weight: 400;">Illustrated Example for 3rd Power&nbsp;</span></h3>
+            <p><strong>Example:&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">What is 15 to the 3rd power?&nbsp;</span></p>
+            
+            <p><strong>Solution:&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">Given 15 to the 3rd power&nbsp;</span></p>
+            
+            <p><span style="font-weight: 400;">We will multiply 15 three times by itself to get the 15 to the 3rd
+                    power.&nbsp;</span></p>
+            
+            <p><span style="font-weight: 400;">=&gt; 15</span><span style="font-weight: 400;">3</span><span
+                    style="font-weight: 400;"> = 15x15x15</span></p>
+            <p><span style="font-weight: 400;">=&gt; 15</span><span style="font-weight: 400;">3 </span><span
+                    style="font-weight: 400;">&nbsp;= 3375&nbsp;</span></p>
+            
+            <p><span style="font-weight: 400;">Thus, 3375 is the 15 to the 3rd power, or cube of 15 is
+                    3375.&nbsp;</span></p>
+                    <hr>
+            <h3><span style="font-weight: 400;">FAQs on Third Power Calculator</span></h3>
+            
+            
+                <p><strong>1. Does the 3rd power of the negative numbers are positive?&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">No, the negative of the third power is always negative such as -a x -a x
+                    -a = -a</span><span style="font-weight: 400;">3.&nbsp;</span></p>
+            
+                <p><strong>2. What is the formula to calculate the 3rd power of the given numbers?&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">You can easily calculate the third power of any given number by using the
+                    formula number</span><span style="font-weight: 400;">3</span><span style="font-weight: 400;"> =
+                    number x number x number, which is multiplying the number thrice by itself.&nbsp;</span></p>
+            
+                <p><strong>3. What is the 5 to the 3rd power?&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">By multiplying the number thrice by itself we will get 5</span><span
+                    style="font-weight: 400;">3</span><span style="font-weight: 400;"> = 5x5x5 = 125.&nbsp;</span></p>
+            
+                <p><strong>4. Is the cube and third power are same?&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">Yes, when we calculate the cube of any given number we multiply the
+                    number thrice by itself, and when we find the third power of the given number then also we will
+                    multiply the number thrice by itself.&nbsp;</span></p>
+            
+                <p><strong>5. Is the third power calculator available for free?&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">Yes, by visiting </span><a href="https://roundingcalculator.guru/"><span
+                        style="font-weight: 400;">RoundingCalculator.guru</span></a><span style="font-weight: 400;"> you
+                    can easily use the 3rd power calculator for free and perform your calculations easily.&nbsp;</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    <script>
+        function myFunction() {
+
+            document.getElementsByName("OR")[0].value = "";
+        document.getElementsByName("D")[0].value = "";
+        document.getElementById("clear").innerHTML = "";
+            }
+</script>
+<br>
+
+
+{% endblock %}

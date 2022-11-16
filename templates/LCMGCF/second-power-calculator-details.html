@@ -1,0 +1,281 @@
+{% extends 'LCMGCF/new_base.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://onlinecalculator.guru/static/images/logo/LCMGCF-Com-Fevicon.png" type="icon">
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://onlinecalculator.guru/static/style.css">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<!-- Meta Title, Description and Canonical URL Starts --->
+
+<title> What is {{aa}} to the 2nd power? | Calculate the squares of numbers</title>
+<meta name="description"
+    content="Get the answer for What is {{aa}} to the 2nd power here. Check the steps to find {{aa}} to the second number i.e {{ans}}." />
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS --->
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content=" Second Power Calculator | Calculate the squares of numbers" />
+<meta property="og:description"
+    content="Get the answer for What is {{aa}} to the 2nd power here. Check the steps to find {{aa}} to the second number i.e {{ans}}." />
+
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content=" Second Power Calculator | Calculate the squares of numbers" />
+<meta name="twitter:description"
+    content="Get the answer for What is {{aa}} to the 2nd power here. Check the steps to find {{aa}} to the second number i.e {{ans}}." />
+
+<meta name="twitter:image:src" content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<meta property='og:title' content=" Second Power Calculator | Calculate the squares of numbers" />
+<meta property='og:description'
+    content="Get the answer for What is {{aa}} to the 2nd power here. Check the steps to find {{aa}} to the second number i.e {{ans}}." />
+
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+<style>
+    input {
+        text-align: left;
+    }
+</style>
+
+
+<div class="container" style="height: auto !important;">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">What is {{aa}} to the 2nd power?</h1>
+        </div>
+
+        <div class="card-body">
+            <p>{{aa}} to the 2nd power is {{ans}}. As the number is bigger it makes it difficult to find the product of
+                the given numbers. Thus, using a <a href="/second-power-calculator/">Second Power Calculator</a> you can
+                easily solve the question within a few seconds. For the detailed deception on how to find out the 2nd
+                power of {{aa}}, you can refer to the below-provided solution. </p><br>
+
+            <form action="" method="POST" id="my_form">
+                {% csrf_token %}
+                <div class="form-floating mb-3">
+                    <input name="aa" type="number" class="form-control" min="0" onkeypress="return isNumberKey(event)"
+                        required required step="any" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="55"
+                        {% endif %} placeholder="" name='aa'
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="6">
+
+                    <label for="floatingInput">Enter number to convert Second Power </label>
+                </div>
+
+                <div class=" center col mt-2 ">
+                    <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                    </center>
+                </div>
+            </form> <br>
+
+
+            <h3>Examples of second power calculator </h3> <br>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList2 %}
+
+                            <li>
+                                <a href="/what-is-{{a}}-to-the-2nd-power/">
+                                    what is {{a}} to the 2nd power
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList2 %}
+                            <li>
+                                <a href="/what-is-{{a}}-to-the-2nd-power/">
+                                    what is {{a}} to the 2nd power
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    {% if id == 1 %}
+
+    <div id="clear">
+
+        <div class="card" id="magnetic-Change in temperature">
+            <div class="card-header">
+                <h2 class="h2">Detailed Solution For What is {{aa}} to the 2nd power?</h2>
+            </div>
+
+            <div class="card-body">
+
+                <!-- ######## This is a comment  ######## -->
+                <p><span style="font-weight: 400;">Given: {{aa}} to the 2nd power&nbsp;</span></p>
+                <p><span style="font-weight: 400;">=&gt; {{aa}} to the 2nd power = {{aa}} x {{aa}}= </span><span
+                        style="font-weight: 400;">{{aa}}</span><span style="font-weight: 400;"><sup>2</sup></span></p>
+                <p><span style="font-weight: 400;">=&gt; {{aa}} to the power of 2 = {{aa}}</span><span
+                        style="font-weight: 400;"><sup>2</sup></span><span style="font-weight: 400;"> = {{ans}}</span></p>
+                <p><span style="font-weight: 400;">Thus, the {{aa}} to the 2nd power is {{ans}}.&nbsp;</span></p>
+                <hr>
+                <h3><span style="font-weight: 400;">FAQs on {{aa}} to the Second Power</span></h3>
+                
+                    <p><strong> What else terms we can say for the {{aa}} to the 2nd power?&nbsp;</strong></p>
+                <p><span style="font-weight: 400;">{{aa}} power 2, {{aa}} exponents 2, ({{words}}) to the second power,
+                        and&nbsp; 2 power of {{aa}} are the terms which can be alternatively used for the {{aa}} to the 2nd
+                        power and it all means the same.&nbsp;</span></p>
+                    <p><strong> What is the {{aa}} to the 2nd power?&nbsp;</strong></p>
+                <p><span style="font-weight: 400;">{{ans}} is the {{aa}} to the 2nd power.&nbsp;</span></p>
+                    <p><strong> How can we write {{aa}} to the 2nd power?</strong></p>
+                <p><span style="font-weight: 400;">{{aa}} to the 2nd power can be written as {{aa}}</span><span
+                        style="font-weight: 400;"><sup>2</sup></span><span style="font-weight: 400;">.&nbsp;</span></p>
+                    <p><strong> What is {{aa}} to the negative 2nd power?&nbsp;</strong></p>
+                <p><span style="font-weight: 400;">{{aa}} to the negative 2nd power = {{aa}}</span><span
+                        style="font-weight: 400;"><sup>-1</sup></span><span style="font-weight: 400;"> = 1 / {{ans}} or {{ans1}}.</span>
+                </p>
+                <hr>
+                <h3> Square or second power of number table</h3><br>
+                <div class="row">
+                    <div class="column col-sm-3">
+                        <table style="border: 2px solid; text-align: center;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 2px solid; padding: 10px 30px;">Number </th>
+                                    <th style="border: 2px solid; padding: 10px 45px;">Square</th>
+                                </tr>
+                            </thead>
+                            {% for a,b in dict1 %}
+                            <tr>
+                                <td style="border-right: 2px solid;">{{a}}<sup>2</sup></td>
+                                <td>{{b}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="column col-sm-3">
+                        <table style="border: 2px solid; text-align: center;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 2px solid; padding: 10px 30px;">Number </th>
+                                    <th style="border: 2px solid; padding: 10px 45px;">Square</th>
+                                </tr>
+                            </thead>
+                            {% for a,b in dict2 %}
+                            <tr>
+                                <td style="border-right: 2px solid;">{{a}}<sup>2</sup></td>
+                                <td>{{b}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="column col-sm-3">
+                        <table style="border: 2px solid; text-align: center;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 2px solid; padding: 10px 30px;">Number </th>
+                                    <th style="border: 2px solid; padding: 10px 45px;">Square</th>
+                                </tr>
+                            </thead>
+                            {% for a,b in dict3 %}
+                            <tr>
+                                <td style="border-right: 2px solid;">{{a}}<sup>2</sup></td>
+                                <td>{{b}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+
+
+</div>
+{% endif %}
+
+
+
+
+<script>
+
+    {% if id == 1 %}
+
+    var scrollDiv = document.getElementById("clear").offsetTop;
+    console.log(scrollDiv)
+    window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+
+    {% endif %}
+
+</script>
+
+<script>
+    function myFunction() {
+        document.getElementById("clear").innerHTML = "";
+        document.getElementsName("aa")[0].value = "";
+        document.getElementsName("cc")[0].value = "";
+    }
+</script>
+<br>
+
+</div>
+</div>
+
+
+{% endblock %}

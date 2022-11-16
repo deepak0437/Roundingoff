@@ -1,0 +1,363 @@
+{% extends 'base/numbers_base3.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- Meta Title, Description and Canonical URL Starts -->
+<title>What is the Square Root of {{aa}} Squared? </title>
+<meta name="description"
+    content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}. " />
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS -->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title"
+    content="Square Root of a Number Squared  Calculator | Free Calculator to find Square Root of a Number Squared " />
+<meta property="og:description"
+    content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}." />
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title"
+    content="Square Root of a Number Squared  Calculator | Free Calculator to find Square Root of a Number Squared " />
+<meta name="twitter:description"
+    content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}.  " />
+<meta name="twitter:image:src"
+    content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<tittle></tittle>
+<meta property='og:title' content="Square Root of a Number Squared  Calculator | Square Root of a Number Squared " />
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property='og:description'
+    content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}.  ." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+
+<style>
+    
+    @media screen and (min-width: 768px) {
+
+
+.solveout2 {
+             margin-left: 80px;
+      }
+
+.box {
+             padding-left: 15px;
+             padding-right: 15px;
+             padding-bottom: 10px;
+             width: 30%;
+             font-size: 18px;
+             line-height: 1.8;
+             background-color: white;
+             border-radius: 9px;
+             margin-left: 0px;
+             margin-right: 10px;
+             margin-bottom: 20px;
+             border-style: groove;
+
+             margin-left: auto;
+             margin-right: auto;
+      }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+.solveout2 {
+             margin-left: 55px;
+      }
+
+  .box {
+             padding-left: 15px;
+             padding-right: 15px;
+             padding-bottom: 10px;
+             width: 90%;
+             font-size: 18px;
+             line-height: 1.8;
+             background-color: white;
+             border-radius: 9px;
+             margin-left: 0px;
+             margin-right: 10px;
+             margin-bottom: 20px;
+             border-style: groove;
+
+             margin-left: auto;
+             margin-right: auto;
+      }
+      .solveout {
+             margin-left: 30px;
+      }
+
+}
+
+.in1 {
+      padding-left: 5px;
+      width: 90px;
+      height: 35px;
+      text-align: left;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+}
+.in11 {
+      padding-left: 5px;
+      width: 90px;
+      height: 50px;
+      text-align: left;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+}
+.out {
+      padding-left: 5px;
+      width: 130px;
+      height: 35px;
+      text-align: left;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      margin-bottom: 5px;
+}
+
+.fraction {
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.lines1 {
+      height: 3px;
+      border: none;
+      color: #000;
+      background-color: #000;
+      font-size: 2px;
+}
+
+.solve {
+      background-color: #3574e9;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 0px 15px 0px 15px;
+      -moz-border-radius: 10px;
+      height: 35px;
+      vertical-align: bottom;
+      margin-bottom: 5px;
+}
+.frac {
+display: inline-block;
+position: relative;
+vertical-align: middle;
+letter-spacing: 0.001em;
+text-align: center;
+}
+.frac > span {
+display: block;
+padding: 0.1em;
+}
+.frac span.bottom {
+border-top: thin solid black;
+}
+.frac span.symbol {
+display: none;
+} 
+
+
+</style>
+
+
+<div class="container" style="height: auto !important;">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">General Solution of the differential equation  {{aa}}</h1>
+
+        </div>
+
+        <div class="card-body">
+        <p>General Solutions of a differential equation, that are used in our daily life. A differential equation in exponential form can be written as 
+            <span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span> = e<sup>(ax+by)</sup>
+            <a href="/differential-equation-of-exponential-calculator/">Differential Equation Calculator</a> is an online tool that is
+            used to find the general equation of a differential equation in a simple way.</p>
+
+            <form action="" method="POST" id="my_form">
+                {% csrf_token %}
+
+                <div>
+                    <b><span>Enter the differential Equation </span></b> 
+                    <center>
+                        <p> 
+                            <b><span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span>  =  e</b>
+                            <sup><input name="xcof" type="number"  id="xcof" {% if xcof %} value="{{ xcof|safe }}" {% else %} value = "5" {% endif %} placeholder="Enter x coefficient" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                maxlength="3" style="width: 58px;">
+                                <span style="padding: 0px 10px 0px 0px;"><b>X</b></span>
+                                <select  aria-label=".form-select example" name="operator">
+                                <option value="+"selected>+</option>
+                                <option value ="-">-</option>
+                                </select>
+                                <input name="ycof" type="number"  id="ycof" {% if ycof %} value="{{ ycof|safe }}" {% else %} value = "4" {% endif %} placeholder="Enter y coefficient" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                maxlength="3" style="width: 58px;">
+                                <span style="padding: 0px 10px 0px 0px;"><b>Y</b></span>
+                            </sup>
+                        </p>
+                    </center>
+                </div>
+                <div class=" center col mt-2 ">
+                    <center> <button type="submit" class="btn btn-primary" name="f1">Calculate</button></center>
+
+                </div>
+            </form> <br>
+
+            <h3>Examples of the differential equations </h3> <br>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList1 %}
+
+                            <li>
+                                <a href="/solve-the-given-differential-equation-by-separation-of-variables-dy-dx-e{{a}}">
+                                    General Solution of the differential equation <span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span> = e<sup>({{a}})</sup>
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList2 %}
+
+                            <li>
+                                <a href="/solve-the-given-differential-equation-by-separation-of-variables-dy-dx-e{{a}}">
+                                    General Solution of the differential equation <span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span> = e<sup>({{a}})</sup>
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- <span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span> -->
+
+
+    {% if id == 1 %}
+
+    <div id="clear">
+
+        <div class="card" id="magnetic-Change in temperature">
+            <div class="card-header">
+                <h2 class="h2">General Solution of the differential equation  <span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span> = e<sup>{{xcof}}x {{operator}} {{ycof}}y</sup>?</h2>
+            </div>
+
+
+            <div class="card-body">
+                <strong>Detailed solution for solving the differential equation <span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span> = e<sup>{{xcof}}x {{operator}} {{ycof}}y</sup>
+                </strong>   
+                <p>If the equation is already not in this form then needs to do some algebra to put the equation into the above form. Here, the equation we have is</p>
+                <p>=><span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span> = e<sup>{{xcof}}x {{operator}} {{ycof}}y</sup> </p>
+                <p>=> (<span class="frac"><span>1</span><span class="symbol">/</span><span class="bottom">f(y)</span></span> .<span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span>) = g(x)</p>
+                <p>Let's take all the y's over the left side
+                </p>
+                <p>=>  e<sup>({{valy}}y)</sup>(<span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span>) = e<sup>({{xcof}}x)</sup></p>
+                <p>Let's take all the x's toward the right-hand side by multiplying both sides by dx.</p>
+                <p>=>  e<sup>({{valy}}y)</sup>dy = e<sup>({{xcof}}x)</sup>dx</p>
+                <p>Let's integrate the above equation</p>
+                <p>=>  ∫e<sup>({{valy}}y)</sup>dy = ∫e<sup>({{xcof}}x)</sup>dx</p>
+                <p>=>We know that the formula of ∫e<sup>(ax)</sup>dx = (e<sup>(ax)</sup> /a) + c, where c is the integration constant.</p>
+                <p>So by using the above formula let's use this in the equation for the resolution-</p>
+                <p>
+                    =>The integration of ∫e<sup>({{valy}}y)</sup>dy = (e<sup>{{valy}}y</sup>/{{valy}}) + c 
+                    =>The integration of ∫e<sup>({{xcof}}x)</sup>dx = (e<sup>{{xcof}}x</sup>/ {{xcof}}) + c 
+                    </p>
+                <p>The Final solution of the differential equation by using separation of variables method for  <br><strong> <span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span> = e<sup>{{xcof}}x {{operator}} {{ycof}}y</sup>  =>  (<span {% if operator == "-"%} hidden {% endif %}>-</span>e<sup>{{valy}}x</sup>/{{ycof}}) = (e<sup>{{xcof}}x</sup>/{{xcof}}) + c.</strong></p>
+
+                
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    
+    {% endif %}
+    
+
+
+
+
+    <script>
+
+        {% if id == 1 %}
+
+        var scrollDiv = document.getElementById("clear").offsetTop;
+        console.log(scrollDiv)
+        window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+
+        {% endif %}
+
+    </script>
+
+    <script>
+        function myFunction() {
+            document.getElementById("clear").innerHTML = "";
+            document.getElementsName("aa")[0].value = "";
+            document.getElementsName("cc")[0].value = "";
+        }
+    </script>
+    <br>
+
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,352 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS --->
+<title>Area of the Parallelogram with Vertices ({{x1}}, {{y1}}), b({{x2}},{{y2}}), c({{x3}},{{y3}}), d({{x4}},{{y4}}) ?
+</title>
+<meta name=description
+    content="Area of the Parallelogram with Vertices a({{x1}}, {{y1}}), b({{x2}},{{y2}}),
+    c({{x3}},{{y3}}), d({{x4}},{{y4}}) is {{ans}}.">
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS --->
+
+<!-- FACEBOOK --->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title"
+    content="Area of the Parallelogram with Vertices ({{x1}}, {{y1}}), b({{x2}},{{y2}}), c({{x3}},{{y3}}), d({{x4}},{{y4}}) ?" />
+<meta property="og:description"
+    content="Area of the Parallelogram with Vertices a({{x1}}, {{y1}}), b({{x2}},{{y2}}),
+    c({{x3}},{{y3}}), d({{x4}},{{y4}}) is {{ans}}." />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter --->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title"
+    content="Area of the Parallelogram with Vertices ({{x1}}, {{y1}}), b({{x2}},{{y2}}), c({{x3}},{{y3}}), d({{x4}},{{y4}}) ?" />
+<meta name="twitter:description"
+    content="Area of the Parallelogram with Vertices a({{x1}}, {{y1}}), b({{x2}},{{y2}}),
+    c({{x3}},{{y3}}), d({{x4}},{{y4}}) is {{ans}}." />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin --->
+<meta property='og:title'
+    content="Area of the Parallelogram with Vertices ({{x1}}, {{y1}}), b({{x2}},{{y2}}), c({{x3}},{{y3}}), d({{x4}},{{y4}}) ?" />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description'
+    content="Area of the Parallelogram with Vertices a({{x1}}, {{y1}}), b({{x2}},{{y2}}),
+    c({{x3}},{{y3}}), d({{x4}},{{y4}}) is {{ans}}." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+{% endblock %}
+
+<style>
+    input {
+        text-align: right;
+    }
+
+
+    @media screen and (min-width: 768px) {
+
+
+        .solveout2 {
+            margin-left: 80px;
+        }
+
+        .box {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            width: 30%;
+            font-size: 18px;
+            line-height: 1.8;
+            background-color: white;
+            border-radius: 9px;
+            margin-left: 0px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            border-style: groove;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+    }
+
+
+    @media screen and (max-width: 768px) {
+
+        .solveout2 {
+            margin-left: 55px;
+        }
+
+        .box {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            width: 90%;
+            font-size: 18px;
+            line-height: 1.8;
+            background-color: white;
+            border-radius: 9px;
+            margin-left: 0px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            border-style: groove;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .solveout {
+            margin-left: 30px;
+        }
+
+    }
+
+    .in1 {
+        padding-left: 5px;
+        width: 90px;
+        height: 35px;
+        text-align: left;
+        font-size: 16px;
+        outline: none;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .in11 {
+        padding-left: 5px;
+        width: 90px;
+        height: 50px;
+        text-align: left;
+        font-size: 16px;
+        outline: none;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .out {
+        padding-left: 5px;
+        width: 130px;
+        height: 35px;
+        text-align: left;
+        font-size: 16px;
+        outline: none;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        margin-bottom: 5px;
+    }
+
+    .fraction {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .lines1 {
+        height: 3px;
+        border: none;
+        color: #000;
+        background-color: #000;
+        font-size: 2px;
+    }
+
+    .solve {
+        background-color: #3574e9;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0px 15px 0px 15px;
+        -moz-border-radius: 10px;
+        height: 35px;
+        vertical-align: bottom;
+        margin-bottom: 5px;
+    }
+
+    .frac {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        letter-spacing: 0.001em;
+        text-align: center;
+    }
+
+    .frac>span {
+        display: block;
+        padding: 0.1em;
+    }
+
+    .frac span.bottom {
+        border-top: thin solid black;
+    }
+
+    .frac span.symbol {
+        display: none;
+    }
+</style>
+{% block content %}
+<div class="container" style="height: auto !important;">
+    <div class="card c1">
+        <div class="card-header card-body">
+            <h1 class="h1">Area of the parallelogram with vertices a({{x1}}, {{y1}}), b({{x2}},{{y2}}),
+                c({{x3}},{{y3}}), d({{x4}},{{y4}}) ?</h1>
+        </div>
+
+        <div class="card-body" style="color:black ;">
+            <p>Use the <a href="/find-the-area-of-the-parallelogram-with-vertices-calculator/">Area of the parallelogram with
+                    vertices </a> to find the area of the parallelogram. Here you can check the detailed solution for
+                area of the parallelogram which is {{ans}} sq units.</p>
+            <p>{{APoints}}{{BPoints}}{{CPoints}}{{DPoints}}</p>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-floating input-group mb-3">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Point A:</span>
+                        </div>
+                        <input type="text" maxlength="4" class="form-control" required=""
+                            oninput="this.value = this.value.replace(/[^\-0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(\--*?)\--*/g, '$1');"
+                            name="x1" placeholder="Enter x1 point" {% if x1 %} value="{{x1}}" {% else %} value="-4" {% endif %}>
+                        <input type="text" maxlength="4" class="form-control" required=""
+                            oninput="this.value = this.value.replace(/[^\-0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(\--*?)\--*/g, '$1');"
+                            name="y1" placeholder="Enter y1 point" {% if y1 %} value="{{y1}}" {% else %} value="-2" {% endif %}>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Point B:</span>
+                        </div>
+                        <input type="text" maxlength="4" class="form-control" required=""
+                            oninput="this.value = this.value.replace(/[^\-0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(\--*?)\--*/g, '$1');"
+                            name="x2" placeholder="Enter x2 point" {% if x2 %} value="{{x2}}" {% else %} value="-2" {% endif %}>
+                        <input type="text" maxlength="4" class="form-control" required=""
+                            oninput="this.value = this.value.replace(/[^\-0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(\--*?)\--*/g, '$1');"
+                            name="y2" placeholder="Enter y2 point" {% if y2 %} value="{{y2}}" {% else %} value="6" {% endif %}>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Point C:</span>
+                        </div>
+                        <input type="text" maxlength="4" class="form-control" required=""
+                            oninput="this.value = this.value.replace(/[^\-0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(\--*?)\--*/g, '$1');"
+                            name="x3" placeholder="Enter x3 point" {% if x3 %} value="{{x3}}" {% else %} value="10" {% endif %}>
+                        <input type="text" maxlength="4" class="form-control" required=""
+                            oninput="this.value = this.value.replace(/[^\-0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(\--*?)\--*/g, '$1');"
+                            name="y3" placeholder="Enter y3 point" {% if y3 %} value="{{y3}}" {% else %} value="6" {% endif %}>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Point D:</span>
+                        </div>
+                        <input type="text" maxlength="4" class="form-control" required=""
+                            oninput="this.value = this.value.replace(/[^\-0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(\--*?)\--*/g, '$1');"
+                            name="x4" placeholder="Enter x4 point" {% if x4 %} value="{{x4}}" {% else %} value="8" {% endif %}>
+                        <input type="text" maxlength="4" class="form-control" required=""
+                            oninput="this.value = this.value.replace(/[^\-0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/(\--*?)\--*/g, '$1');"
+                            name="y4" placeholder="Enter y4 point" {% if y4 %} value="{{y4}}" {% else %} value="-2" {% endif %}>
+                    </div>
+                </div>
+                <center>
+                    <button type="submit" class="btn btn-primary" name="submitBtn" value="submitBtn">Calculate</button>
+                </center>
+            </form><br>
+
+            <!-- sample examples -->
+           
+                    <p>Example of area of parallelogram calculator</p>
+              <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <ul>
+                            {% for point1,point2,point3,point4,point5,point6,point7,point8 in relatedP2 %}
+                            <li>
+                                <a
+                                    href="/area-of-the-parallelogram-with-vertices-a-{{point1}}-{{point2}}-b-{{point3}}-{{point4}}-c-{{point5}}-{{point6}}-and-d-{{point7}}-{{point8}}/">
+                                    Area of the Parallelogram with vertices a({{point1}},{{point2}}),
+                                    b({{point3}},{{point4}}), c({{point5}},{{point6}}) and d({{point7}},{{point8}})
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+        {% if id == 1 %}
+        <div id="clear">
+            <div class="card" id="magnetic-Change in temperature">
+            <div class="card-header">
+                <h2 class="h2">Area of the Parallelogram with Vertices a({{x1}}, {{y1}}), b({{x2}},{{y2}}),
+                    c({{x3}},{{y3}}), d({{x4}},{{y4}}) is {{ans}}.</h2>
+            </div>
+            <div class="card-body">
+                <p> The vertices of a parallelogram are a({{x1}}, {{y1}}), b({{x2}},{{y2}}), c({{x3}},{{y3}}),
+                    d({{x4}},{{y4}})</p>
+                   <p> Area of triangle S=<span class="frac"><span>[x1(y2−y3)+x2(y3−y1)+x3(y1−y2)]</span><span class="symbol">/</span><span class="bottom">2</span></span> </p>                   
+                   <p> where,</p>
+                   <p> (x1,y1),(x2,y2),(x3,y3) are the coordinates of the three vertices of the triangle.</p>
+                   <p> Area of triangle S1=<span class="frac"><span>{{step1}}</span><span class="symbol">/</span><span class="bottom">2</span></span> </p>
+                   <p> Area of triangle S1=<span class="frac"><span>{{step2}}</span><span class="symbol">/</span><span class="bottom">2</span></span> </p>
+                   <p> Area of triangle S1=<span class="frac"><span>{{step3}}</span><span class="symbol">/</span><span class="bottom">2</span></span> </p>
+                   <p> Area of triangle S1={{step4}} sq units.</p>
+                   <p> Area of triangle S2=<span class="frac"><span>{{step5}}</span><span class="symbol">/</span><span class="bottom">2</span></span> </p>
+                   <p> Area of triangle S2=<span class="frac"><span>{{step6}}</span><span class="symbol">/</span><span class="bottom">2</span></span> </p>
+                   <p> Area of triangle S2=<span class="frac"><span>{{step7}}</span><span class="symbol">/</span><span class="bottom">2</span></span> </p>
+                   <p> Area of triangle S2={{step8}} sq units.</p>
+                   <p>Area of parallelogram = Area of triangle S1 + Area of triangle S2</p>
+                   <p> So, Area of parallelogram = {{ans}} sq units.</p>
+
+            </div>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endif %}
+
+
+<script>
+
+    {% if id == 1 %}
+    var scrollDiv = document.getElementById("clear").offsetTop;
+    window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+    {% endif %}
+
+</script>
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+<br>
+
+{% endblock %}

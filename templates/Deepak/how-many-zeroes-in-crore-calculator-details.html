@@ -1,0 +1,428 @@
+{% extends 'base/numbers_base3.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- Meta Title, Description and Canonical URL Starts -->
+<title>How do you Write {{aa}} Crores in Numbers? | Free Calculator to find How many Zeros in {{aa}}
+    Crore? </title>
+<meta name="description"
+    content="Know {{aa}} Crore How many Zeros and tricks to remember number of digits after 1 in it easily from this page. " />
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS -->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title"
+    content="How Many Zeros in a crore  Calculator | Free Calculator to find How Many Zeros in a crore " />
+<meta property="og:description"
+    content="Know {{aa}} Crore How many Zeros and tricks to remember number of digits after 1 in it easily from this page." />
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title"
+    content="How Many Zeros in a crore  Calculator | Free Calculator to find How Many Zeros in a crore " />
+<meta name="twitter:description"
+    content="Know {{aa}} Crore How many Zeros and tricks to remember number of digits after 1 in it easily from this page.  Calculator" />
+<meta name="twitter:image:src"
+    content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<tittle></tittle>
+<meta property='og:title' content="How Many Zeros in a crore  Calculator | How Many Zeros in a crore " />
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property='og:description'
+    content="Know {{aa}} Crore How many Zeros and tricks to remember number of digits after 1 in it easily from this page.  Calculator." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+
+<style>
+    @media screen and (min-width: 768px) {
+
+
+        .solveout2 {
+            margin-left: 80px;
+        }
+
+        .box {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            width: 30%;
+            font-size: 18px;
+            line-height: 1.8;
+            background-color: white;
+            border-radius: 9px;
+            margin-left: 0px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            border-style: groove;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+    }
+
+
+    @media screen and (max-width: 768px) {
+
+        .solveout2 {
+            margin-left: 55px;
+        }
+
+        .box {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            width: 90%;
+            font-size: 18px;
+            line-height: 1.8;
+            background-color: white;
+            border-radius: 9px;
+            margin-left: 0px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            border-style: groove;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .solveout {
+            margin-left: 30px;
+        }
+
+    }
+
+    .in1 {
+        padding-left: 5px;
+        width: 90px;
+        height: 35px;
+        text-align: left;
+        font-size: 16px;
+        outline: none;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .in11 {
+        padding-left: 5px;
+        width: 90px;
+        height: 50px;
+        text-align: left;
+        font-size: 16px;
+        outline: none;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .out {
+        padding-left: 5px;
+        width: 130px;
+        height: 35px;
+        text-align: left;
+        font-size: 16px;
+        outline: none;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        margin-bottom: 5px;
+    }
+
+    .fraction {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .lines1 {
+        height: 3px;
+        border: none;
+        color: #000;
+        background-color: #000;
+        font-size: 2px;
+    }
+
+    .solve {
+        background-color: #3574e9;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0px 15px 0px 15px;
+        -moz-border-radius: 10px;
+        height: 35px;
+        vertical-align: bottom;
+        margin-bottom: 5px;
+    }
+
+    .frac {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        letter-spacing: 0.001em;
+        text-align: center;
+    }
+
+    .frac>span {
+        display: block;
+        padding: 0.1em;
+    }
+
+    .frac span.bottom {
+        border-top: thin solid black;
+    }
+
+    .frac span.symbol {
+        display: none;
+    }
+</style>
+
+
+<div class="container" style="height: auto !important;">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">How many Zeros in {{aa}} crore?</h1>
+
+        </div>
+
+        <div class="card-body">
+
+            <ul class="messages">
+                {% if messages %}
+                <p id="message_container" class="alert alert-danger text-center" style="color:red">{{ messages }}</p>
+                {% endif %}
+            </ul>
+
+            <form action="" method="POST" id="my_form">
+                {% csrf_token %}
+                <p>Estimate How many Zeros does {{aa}} Crore have easily using the <a
+                        href="/how-many-zeros-in-a-crore-calculator/">How many Zeros in a Crore Calculator</a> and get
+                    the step by step solution too from here.</p>
+                <div class="form-floating mb-3">
+                    <input name="aa" type="number" class="form-control" id="aa"
+                            onkeypress="return isNumberKey(event)" required required step="0.001" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="36.1" {% endif %} placeholder="Product:" name='aa'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="6">
+                    <label for="floatingInput">Enter number to find zeros in crore</label>
+                </div>
+
+                <div class=" center col mt-2 ">
+                    <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                    </center>
+                </div>
+            </form> <br>
+
+            <h3>Examples of How many Zeros in crore </h3> <br>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList1 %}
+
+                            <li>
+                                <a href="/how-many-zeros-in-a-{{a}}-crore/">
+                                    How many zeros in a {{a}} crore
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList2 %}
+
+                            <li>
+                                <a href="/how-many-zeros-in-a-{{a}}-crore/">
+                                    How many zeros in a {{a}} crore
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    {% if id == 1 %}
+
+    <div id="clear">
+
+        <div class="card" id="magnetic-Change in temperature">
+            <div class="card-header">
+                <h2 class="h2">How many Zeros in {{aa}} crore?</h2>
+            </div>
+
+
+            <div class="card-body">
+                <p><span style="font-weight: 400;">We know 1 crore = 10000000</span></p>
+                <p><span style="font-weight: 400;">Now {{aa}} crores becomes = {{aa}} x 1 Crore figure</span></p>
+                <p><span style="font-weight: 400;">= {{aa}} x 10000000</span></p>
+                <p><span style="font-weight: 400;">= {{r}}</span></p>
+                <p>How many zeros does {{aa}} crore have? When we count zeros in {{aa}} crore above, we see that there are {{ans}} zeros.</p>
+                <p><span style="font-weight: 400;">Therefore, {{aa}} crore have {{ans}} zeros.</span></p>
+                <h3><span style="font-weight: 400;">FAQs on {{aa}} Crore in Numbers</span></h3>
+                
+                    <p><strong> What is {{aa}} Crore in Numbers?</strong></p>
+                
+                  <p><span style="font-weight: 400;">{{aa}} Crore in Numbers is {{r}}.</span></p>
+                    <p><strong> What is the number of zeros in {{aa}} Crore?</strong></p>
+                
+                  <p><span style="font-weight: 400;">Number of Zeros  {{aa}} crore is {{ans}}.</span></p>
+                    <p><strong> How many thousands make {{aa}} Crore?</strong></p>
+                
+                  <p><span style="font-weight: 400;">{{th}} thousands make {{aa}} Crore.</span></p>
+
+                <hr>
+                
+                <h3>{{aa}} crore in numbers</h3>
+                <p>How to write {{aa}} crore in numbers? The number form of {{aa}} crore is written as {{r}}. It can also be abbreviated as {{aa}}Cr.</p>
+                <table class="table table-hover">
+                    <tbody>
+                      <tr class="table-danger"> 
+                        <td style="text-align: left;"><p>{{aa}} crore in numbers</p></td>
+                       <td><p>{{r}}</p></td>
+                      </tr>
+                      <tr class="table-info">
+                        <td style="text-align: left;"><p>{{words}} in numbers</p></td>
+                        <td><p>{{r}}</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <hr>
+                <h3>{{aa}} crore has how many Zeros?</h3>
+                <p>You already know the answer to the question {{aa}} crore has how many zeros?, but we are left with
+                    telling you how many 10, 100, 1000 et cetera there are in {{aa}} crore:</p>
+                <ul>
+                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">How many tens in {{aa}}
+                            crore? Answer : {{ten}} tens.</span></li>
+                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">How many hundreds in
+                            {{aa}} crore? Answer : {{hun}} hundreds.</span></li>
+                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">How many thousands in
+                            {{aa}} crore? Answer : {{th}} thousands</span></li>
+                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">How many ten thousands
+                            in {{aa}} crore? Answer : {{tt}} ten thousands.</span></li>
+                    <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">How many Lakhs in {{aa}} crore? Answer : {{ht}} Lakhs.</span></li>
+                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">How many millions in {{aa}} crore? Answer : {{ml}} millions.</span></li>
+                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">How many Billion in {{aa}} crore? Answer : {{bl}} Billion.</span></li>
+                        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">How many Trillion in {{aa}} crore? Answer : {{tr}} Trillion.</span></li>
+
+                </ul>
+                <hr>
+                <h3>Tables of How many Zeros in crore </h3>
+                <div class="row">
+                    <div class="column col-sm-6">
+                        <table style="border: 2px solid;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 2px solid; padding: 0px 20px;">{{aa}} crore </th>
+                                    <th style="border: 2px solid; padding: 0px 20px;">How Many Zeros</th>
+                                </tr>
+                            </thead>
+                            {% for key,value in dict1.items %}
+                            <tr>
+                                <td style="border-right: 1px solid;">{{ key }} </td>
+                                <td>{{value}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="column col-sm-6">
+                        <table style="border: 2px solid;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 2px solid; padding: 0px 20px;">{{aa}} crore </th>
+                                    <th style="border: 2px solid; padding: 0px 20px;">How Many Zeros</th>
+                                </tr>
+                            </thead>
+                            {% for key,value in dict2.items %}
+                            <tr>
+                                <td style="border-right: 2px solid;">{{ key }} </td>
+                                <td>{{value}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table> <br>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    {% endif %}
+
+
+
+
+    <script>
+
+        {% if id == 1 %}
+
+        var scrollDiv = document.getElementById("clear").offsetTop;
+        console.log(scrollDiv)
+        window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+
+        {% endif %}
+
+    </script>
+
+    <script>
+        function myFunction() {
+            document.getElementById("clear").innerHTML = "";
+            document.getElementsName("aa")[0].value = "";
+            document.getElementsName("cc")[0].value = "";
+        }
+    </script>
+    <br>
+
+</div>
+</div>
+{% endblock %}

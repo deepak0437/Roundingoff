@@ -1,0 +1,470 @@
+{% extends 'LCMGCF/new_base.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://onlinecalculator.guru/static/images/logo/LCMGCF-Com-Fevicon.png" type="icon">
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://onlinecalculator.guru/static/style.css">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<!-- Meta Title, Description and Canonical URL Starts --->
+
+<title> Squared Calculator | Find the squared value of a number n.</title>
+<meta name="description"
+    content=" Use Squared Calculator for free to find the square values of the given numbers by providing the input in the given calculator boxes. " />
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS --->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="Squared Calculator | Find the Squared of the given numbers" />
+<meta property="og:description"
+    content=" Use Squared Calculator for free to find the square values of the given numbers by providing the input in the given calculator boxes. " />
+
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="Squared Calculator | Find the Squared of the given numbers" />
+<meta name="twitter:description"
+    content=" Use Squared Calculator for free to find the square values of the given numbers by providing the input in the given calculator boxes. " />
+
+<meta name="twitter:image:src" content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<meta property='og:title' content="Squared Calculator | Find the Squared of the given numbers" />
+<meta property='og:description'
+    content=" Use Squared Calculator for free to find the square values of the given numbers by providing the input in the given calculator boxes. " />
+
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+<style>
+    input {
+        text-align: left;
+    }
+</style>
+
+
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Squared Calculator Online</h1>
+        </div>
+        <div class="card-body">
+            <p>With the help of the Squared Calculator, you can estimate the square of the given number quickly and
+                automatically. You are just required to enter the input in the input field and tap on the enter button
+                to see the result. The tool is handiest in nature and you will not face any difficulty to solve the
+                questions.
+            </p>
+            <div class="card-body">
+
+
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+
+                    <div class="form-floating mb-3">
+                        <input name="aa" type="number" class="form-control" min="0"
+                            onkeypress="return isNumberKey(event)" required required step="any" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="55" {% endif %} placeholder="" name='aa'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="6">
+
+                        <label for="floatingInput">Enter number to find Squared </label>
+                    </div>
+
+
+
+                    <div class=" center col mt-2 ">
+                        <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                        </center>
+                    </div>
+                </form> <br>
+
+            </div>
+
+            <p><strong>Squared Calculator: </strong><span style="font-weight: 400;">Are you facing any difficulty to
+                    calculate the square numbers of the given terms? Then you can easily use the calculator to find the
+                    squares in just one go. Refer the following sections to know the detailed steps to calculate the
+                    square of a number and other information.</span></p>
+            <h2><span style="font-weight: 400;">What Is a Square of a Number?&nbsp;</span></h2>
+            <p><span style="font-weight: 400;">Square is the value of the number that when multiplied by itself gives
+                    the product. When the numbers are squared they are denoted with the power 2 such as X</span><span
+                    style="font-weight: 400;">2</span><span style="font-weight: 400;">. The square number is derived by
+                    the multiplication of two similar integers. For example 4</span><span style="font-weight: 400;">2
+                </span><span style="font-weight: 400;">= 4 &times; 4 = 16.</span></p>
+            
+            <p><span style="font-weight: 400;">We can also find the square for the negative numbers and the result will
+                    be in the positive form as the two numbers are multiplied twice having the -ve sign. When the -ve
+                    sign is multiplied twice we will get a positive sign in the product. For example (&minus;5) &times;
+                    (&minus;5) = 25.&nbsp;</span></p>
+            <h3><span style="font-weight: 400;">How to Find Out Square Numbers Manually?&nbsp;</span></h3>
+            <p><span style="font-weight: 400;">Finding square numbers is an easy task. You are just required to multiply
+                    the number twice and boom the result is in front of you.&nbsp;</span></p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">First, you need to multiply
+                        the given number twice.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Now, X</span><span
+                        style="font-weight: 400;">2 </span><span style="font-weight: 400;">= given number x given
+                        number&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Thus, the square for the
+                        given number is found.&nbsp;</span></li>
+            </ul>
+            <h3><span style="font-weight: 400;">How to Use Squared Calculator?</span></h3>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">First, insert the given
+                        numbers into the required box.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Now, click on the calculate
+                        option.&nbsp;</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Thus, you can see the
+                        solution for the required squared numbers.&nbsp;</span></li>
+            </ul>
+            
+            <p><span style="font-weight: 400;">Yes, using </span><a href="https://roundingcalculator.guru/"><span
+                        style="font-weight: 400;">RoundingCalculator.guru</span></a><span style="font-weight: 400;">
+                    squared calculator, you can easily find out the squares of the given numbers in no
+                    time.&nbsp;</span></p>
+            <h3><span style="font-weight: 400;">Square Table For the 1-30 Numbers&nbsp;</span></h3>
+            <p><span style="font-weight: 400;">The squaring of 0-10 numbers is listed below.&nbsp;</span></p>
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><strong>Square Numbers&nbsp;</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>Square Value</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">1&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">1</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">2&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">4</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">3&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">9</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">4&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">16</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">5&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">25</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">6&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">36</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">7&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">49</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">8&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">64</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">9&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">81</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">10&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">100</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">11&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">121</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">12&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">144</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">13&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">169</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">14&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">196</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">15&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">225</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">16&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">256</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">17&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">289</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">18&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">324</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">19&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">361</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">20&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">400</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">21&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">441</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">22&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">484</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">23&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">529</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">24&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">576</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">25&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">625</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">26&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">676</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">27&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">729</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">28&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">784</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">29&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">841</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">30&sup2;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">900</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3><span style="font-weight: 400;">Examples for Squared Calculator&nbsp;</span></h3>
+            <p><strong>Example:&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">What is 20 squared?&nbsp;</span></p>
+            
+            <p><strong>Solution:&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">Given: 20 squared&nbsp;</span></p>
+            
+            <p><span style="font-weight: 400;">To find the square of 20 we will multiply the number twice by
+                    itself.&nbsp;</span></p>
+            <p><span style="font-weight: 400;">=&gt; (20)</span><span style="font-weight: 400;">2</span><span
+                    style="font-weight: 400;"> = 400</span></p>
+            <p><span style="font-weight: 400;">=&gt; 20 &times; 20 = 400</span></p>
+            
+            <p><span style="font-weight: 400;">Thus, 20 squares is 400.&nbsp;</span></p>
+            <hr>
+            <h3><span style="font-weight: 400;">FAQs on Squared Calculator&nbsp;</span></h3>
+          
+                <p><strong>1. How can we denote a square?&nbsp;</strong></p>
+            <p><span style="font-weight: 400;">The square for any given number is always denoted by X</span><span
+                    style="font-weight: 400;">2</span><span style="font-weight: 400;">. The symbol of the square is
+                </span><span style="font-weight: 400;">2</span><span style="font-weight: 400;">.&nbsp;</span></p>
+            
+                <p><strong>2. How to calculate the square of given numbers?&nbsp;</strong></p>
+            <p><span style="font-weight: 400;">To calculate the square of given numbers you are just required to
+                    multiply the number twice and the product is your answer.&nbsp;</span></p>
+            
+                <p><strong>3. Do the negative and positive numbers have different signs when squared?&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">When any two negative integers are squared they will give the positive
+                    product only, and when two positive integers are squared they will also give a positive result only.
+                    So the product always turned out to be positive.&nbsp;</span></p>
+                <p><strong>4. What is the square of 209?</strong></p>
+            <p><span style="font-weight: 400;">The square of 209 is 43,681.</span></p>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+
+    function myFunction() {
+
+        document.getElementsByName("OR")[0].value = "";
+        document.getElementsByName("D")[0].value = "";
+        document.getElementById("clear").innerHTML = "";
+    }
+</script>
+<br>
+
+
+{% endblock %}

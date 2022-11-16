@@ -1,0 +1,246 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS -->
+<title>X times X Calculator - RoundingCalculator.Guru
+</title>
+<meta name=description content="X times X is the result of multiplying the value X by itself X times.">
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS -->
+
+<!-- FACEBOOK -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="X times X  Calculator Online - RoundingCalculator.Guru" />
+<meta property="og:description" content="X times X is the result of multiplying the value X by itself X times. " />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="X times X  Calculator Online - RoundingCalculator.Guru" />
+<meta name="twitter:description" content="X times X is the result of multiplying the value X by itself X times. " />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin -->
+<meta property='og:title' content="X times X  Calculator Online - RoundingCalculator.Guru" />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description' content="X times X is the result of multiplying the value X by itself X times." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+
+{% endblock %}
+
+{% block content %}
+
+
+{%if go_to %}
+<a href="{{go_to}}" id="ddd"></a>
+{%endif%}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('ddd').click();
+    });
+</script>
+<style>
+ 
+</style>
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">X times X Calculator Online</h1>
+        </div>
+        <div class="card-body">
+            <p><span style="font-weight: 400;">X times X is the result of multiplying the value X by itself X times.
+                    Many find it difficult to solve the X times X problems. To help you with solutions to X times X
+                    questions, here is our X times X calculator. In the X times X calculator provided here, all you have
+                    to do is enter the two values in the respective boxes and you will get the results.</span></p>
+            <div class="card-body">
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+
+
+                    <div>
+                        <input name="aa" type="number" class="form" id="aa" onkeypress="return isNumberKey(event)"
+                            required required step="1" min="1" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %}
+                            value="36" {% endif %} placeholder="" name='aa'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="4"> <span>X</span> <span style="padding: 0px 20px;"><strong>Times</strong> </span>
+
+                        <input name="bb" type="number" class="form" id="bb"
+                            onkeypress="return isNumberKey(event)" required required step="1" min="1" class="bb" id="bb"
+                            {% if bb%} value="{{bb}}" {% else %} value="54" {% endif %} placeholder="" name='bb'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="4"> <span>X</span>
+                    </div>
+
+
+                    <div class=" center col mt-2 ">
+                        <button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                        
+                    </div>
+                </form> <br>
+
+
+
+            </div>
+            <p><span style="font-weight: 400;">In this article, X times X Calculator, we will show you how to find the
+                    solutions to your X times X problems. The concept of finding the answers to the X time X questions
+                    is to multiply the coefficients together and the variables (X) together to find the solution. The
+                    detailed steps on how to find solutions to X times X problems with solved examples have been
+                    provided on this page. Scroll down to find out more.</span></p>
+            
+            <p><strong>How To Use X Times X Calculator?</strong></p>
+            <p><span style="font-weight: 400;">The detailed steps on how to make use of X * X calculator are given
+                    below:</span></p>
+            
+            <p><strong>Step 1: </strong><span style="font-weight: 400;">Enter the two numbers in the respective
+                    fields.</span></p>
+            <p><strong>Step 2: </strong><span style="font-weight: 400;">Click on the &ldquo;Calculate&rdquo;
+                    button.</span></p>
+            <p><strong>Step 3: </strong><span style="font-weight: 400;">The solution to your X times X will be displayed
+                    on the screen.</span></p>
+            
+            <p><strong>What is X Multiply X</strong><span style="font-weight: 400;">?</span></p>
+            <p><span style="font-weight: 400;">X times X is a concept which is introduced in Algebra.&nbsp;</span></p>
+            <p><span style="font-weight: 400;">In Algebra, X times X can be written as X * X = (X) x (X) = </span><span
+                    style="font-weight: 400;">X</span><span style="font-weight: 400;">2</span><span
+                    style="font-weight: 400;">.&nbsp;</span></p>
+            <p><span style="font-weight: 400;">Since X is squared with X, we can write X * X as&nbsp; </span><span
+                    style="font-weight: 400;">X</span><span style="font-weight: 400;">2</span><span
+                    style="font-weight: 400;">.</span></p>
+            <p><span style="font-weight: 400;">From the exponents, we can tell how many times the X is multiplied by
+                    itself. Here&nbsp; </span><span style="font-weight: 400;">X</span><span
+                    style="font-weight: 400;">2</span><span style="font-weight: 400;"> means,&nbsp; </span><span
+                    style="font-weight: 400;">X</span><span style="font-weight: 400;"> is multiplied by itself 2 times
+                    resulting X . X.&nbsp;&nbsp;&nbsp;</span></p>
+            <p><strong>Note:</strong><span style="font-weight: 400;"> The X times X is only true, when X = 2.</span></p>
+            
+            <p><strong>How Do You Solve X Times X? - Problems Based on X Times X</strong></p>
+            <p><span style="font-weight: 400;">A few solved examples to understand the concepts of X times X in Algebra
+                    is are given below:</span></p>
+            
+            <p><strong>Question 1: What is 2X times 2X?</strong><strong><br /></strong><strong>Solution:</strong><span
+                    style="font-weight: 400;"> 2X times 2X is equal to 4 </span><span
+                    style="font-weight: 400;">X</span><span style="font-weight: 400;">2</span></p>
+            <p><strong>Step 1</strong><span style="font-weight: 400;">: From the equation 2X x 2X,</span></p>
+            <p><span style="font-weight: 400;">2 and 2 are coefficients and X and X are variables.</span></p>
+            <p><strong>Step 2: </strong><span style="font-weight: 400;">When a coefficient is written with a variable,
+                    there is an invisible multiplication between coefficient and variable.</span></p>
+            <p><strong>Step 3: </strong><span style="font-weight: 400;">Hence the above equation can be written as 2 x X
+                    x 2 x X</span></p>
+            <p><strong>Step 4:</strong><span style="font-weight: 400;"> Multiplying and coffeicents together give
+                    us</span></p>
+            <p><span style="font-weight: 400;">2 x 2 =4.</span></p>
+            <p><strong>Step 5: </strong><span style="font-weight: 400;">Multiplying variables together gives us X x X =
+                </span><span style="font-weight: 400;">X</span><span style="font-weight: 400;">2</span></p>
+            <p><strong>Step 6: </strong><span style="font-weight: 400;">Combine the coefficient and variable answer
+                    together gives as 4</span><span style="font-weight: 400;">X</span><span
+                    style="font-weight: 400;">2</span><span style="font-weight: 400;">,</span><span
+                    style="font-weight: 400;">&nbsp;</span></p>
+            <p><span style="font-weight: 400;">Hence the answer of 2X x 2X = 4X</span><span
+                    style="font-weight: 400;">2</span></p>
+            
+            <p><strong>Question 2: What is x times x^2?</strong></p>
+            <p><strong>Solution: </strong><span style="font-weight: 400;">X times X^2 = X^3</span></p>
+            <p><strong>Step 1: </strong><span style="font-weight: 400;">The equation X times X^2 can be written as X x
+                </span><span style="font-weight: 400;">X</span><span style="font-weight: 400;">2</span><span
+                    style="font-weight: 400;">a</span></p>
+            <p><strong>Step 2: </strong><span style="font-weight: 400;">Using the power rule a</span><span
+                    style="font-weight: 400;">m&nbsp; </span><span style="font-weight: 400;">x a</span><span
+                    style="font-weight: 400;">n </span><span style="font-weight: 400;">=a </span><span
+                    style="font-weight: 400;">m+ n</span><span style="font-weight: 400;"> , we can write the equation X
+                    x </span><span style="font-weight: 400;">X</span><span style="font-weight: 400;">2 </span><span
+                    style="font-weight: 400;">=X</span><span style="font-weight: 400;">1+2</span></p>
+            <p><strong>Step 3:</strong><span style="font-weight: 400;"> X x </span><span
+                    style="font-weight: 400;">X</span><span style="font-weight: 400;">2 </span><span
+                    style="font-weight: 400;">=X</span><span style="font-weight: 400;">3</span></p>
+            <p><span style="font-weight: 400;">Hence the X times&nbsp; </span><span
+                    style="font-weight: 400;">X</span><span style="font-weight: 400;">2 </span><span
+                    style="font-weight: 400;">=X</span><span style="font-weight: 400;">3</span></p>
+            
+            <p><strong>Question 3. What is 5X times 3X?</strong></p>
+            <p><strong>&nbsp;</strong><strong>Solution:&nbsp;</strong></p>
+            <p><span style="font-weight: 400;">The equation 5X times 3X can be written as 5X x 3X.</span></p>
+            <p><strong>Step 1: </strong><span style="font-weight: 400;">From the equation 5X x 3X, we can separate the
+                    coefficients and variables. This is because, when coefficients and variables are written together,
+                    there is an invisible multiplication between 5X and 3X.</span></p>
+            <p><strong>Step 2: </strong><span style="font-weight: 400;">Hence the equation can be written as 5 x X x 3 x
+                    X.</span></p>
+            <p><strong>Step 3: </strong><span style="font-weight: 400;">Multiplying coefficients together gives us 5 X 3
+                    = 15.</span></p>
+            <p><strong>Step 4:</strong><span style="font-weight: 400;"> Multiplying variables together gives us X x X
+                    =&nbsp; </span><span style="font-weight: 400;">X</span><span style="font-weight: 400;">2</span><span
+                    style="font-weight: 400;">&nbsp;</span></p>
+            <p><strong>Step 5: </strong><span style="font-weight: 400;">Combining the answer of Step 3 and Step 4 gives
+                    us 5X x 3X =&nbsp; 15</span><span style="font-weight: 400;">X</span><span
+                    style="font-weight: 400;">2</span><span style="font-weight: 400;">&nbsp;</span></p>
+            <p><span style="font-weight: 400;">Hence from 5x times 3x = 15</span><span
+                    style="font-weight: 400;">X</span><span style="font-weight: 400;">2</span><span
+                    style="font-weight: 400;">.</span></p>
+            
+            <h3><strong>FAQs on X Times X Calculator</strong></h3>
+            
+            <p><strong>Q1. </strong><strong>Is X times X the same as 2x?</strong></p>
+            <p><strong>Ans:</strong><span style="font-weight: 400;"> No, the X times X is not same as the 2X. X times X
+                    is </span><span style="font-weight: 400;">X</span><span style="font-weight: 400;">2</span><span
+                    style="font-weight: 400;">. Whereas 2X means X + X.&nbsp;</span></p>
+            <p><span style="font-weight: 400;">For examples, let us assume X as 4.</span></p>
+            <p><span style="font-weight: 400;">Now 4 times 4 = 4^2 = 16.</span></p>
+            <p><span style="font-weight: 400;">Whereas 2(4) = 2 x 4 = 8.</span></p>
+            
+            <p><strong>Q2. </strong><strong>What is x to the power of 3 called?</strong></p>
+            <p><strong>Ans: </strong><span style="font-weight: 400;">X to the power of 3 is called as </span><span
+                    style="font-weight: 400;">X</span><span style="font-weight: 400;">3</span><span
+                    style="font-weight: 400;">( x cube).</span></p>
+            <p><br /><strong>Q3. What is X cubed times X cubed?</strong><strong><br /></strong><strong>Ans:
+                </strong><span style="font-weight: 400;">The X cubed times X cubed is </span><span
+                    style="font-weight: 400;">X</span><span style="font-weight: 400;">6</span><span
+                    style="font-weight: 400;">.</span></p>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+{% endblock %}

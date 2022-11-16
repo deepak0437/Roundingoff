@@ -1,0 +1,324 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS -->
+<title> cm³ to m³ Converter | How to Convert cm³ to m³ and Conversion Formula- RoundingCalculator.Guru
+</title>
+<meta name=description
+    content=" Handy cm³ to m³ Converter converts the given cubic centimeter measures into cubic meters easily. Obtain the cm³ to m³ conversion factor, formula, and detailed steps.">
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS -->
+
+<!-- FACEBOOK -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="cm³ to m³ Converter Online - RoundingCalculator.Guru" />
+<meta property="og:description"
+    content=" Handy cm³ to m³ Converter converts the given cubic centimeter measures into cubic meters easily. Obtain the cm³ to m³ conversion factor, formula, and detailed steps. " />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="cm³ to m³ Converter Online - RoundingCalculator.Guru" />
+<meta name="twitter:description"
+    content=" Handy cm³ to m³ Converter converts the given cubic centimeter measures into cubic meters easily. Obtain the cm³ to m³ conversion factor, formula, and detailed steps. " />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin -->
+<meta property='og:title' content="cm³ to m³ Converter Online - RoundingCalculator.Guru" />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description'
+    content=" Handy cm³ to m³ Converter converts the given cubic centimeter measures into cubic meters easily. Obtain the cm³ to m³ conversion factor, formula, and detailed steps." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+
+{% endblock %}
+
+{% block content %}
+
+
+{%if go_to %}
+<a href="{{go_to}}" id="ddd"></a>
+{%endif%}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('ddd').click();
+    });
+</script>
+<style>
+
+</style>
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">cm³ to m³ Converter Online</h1>
+        </div>
+        <div class="card-body">
+            <div class="card-body">
+
+                <p>Take the help of the free cm³ to m³ Converter tool for converting the given cubic centimeter values
+                    into cubic meter values. The simple technique of using this tool is giving the input and pressing
+                    the calculate button.
+                </p>
+
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+
+
+                    <div class="form-floating mb-3">
+                        <input name="aa" type="number" class="form-control" id="aa"
+                            onkeypress="return isNumberKey(event)" required required step="any" min="0" class="aa"
+                            id="aa" {% if aa%} value="{{aa}}" {% else %} value="13.68" {% endif %}
+                            placeholder="Product:" name='aa'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="6">
+
+                        <label for="floatingInput">Enter number to convert cm³ to m³</label>
+                    </div>
+
+                    <div class=" center col mt-2 ">
+                        <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                        </center>
+                    </div>
+                </form> <br>
+
+            </div>
+            <p><strong>cm&sup3; to m&sup3; Conversion Calculator: </strong><span style="font-weight: 400;">Turning the
+                    provided cm&sup3; values into m&sup3; values is easier with the cubic centimeter to cubic meter
+                    converter. Have a look at the cubic centimeters into cubic meters conversion formula, and conversion
+                    factor. Also, know the elaborate solution for a question with detailed steps.</span></p>
+            <h3><span style="font-weight: 400;">Cm&sup3; to m&sup3; Conversion Formula</span></h3>
+            <p><span style="font-weight: 400;">The conversion factor for cm&sup3; into m&sup3; is here:</span></p>
+            <p><strong>cubic meters = cubic centimeters &divide; 1,000,000</strong></p>
+            <p><span style="font-weight: 400;">As we know that 1 cm = 100 m</span></p>
+            <p><span style="font-weight: 400;">So, 1 m = 1/100 cm</span></p>
+            <p><span style="font-weight: 400;">Hence, m&sup3; = (1/100)&sup3; cm&sup3;</span></p>
+            <p><span style="font-weight: 400;">= cm&sup3;/1,000,000</span></p>
+            <h3><span style="font-weight: 400;">Steps to Convert Cubic Centimeters into Cubic Meters</span></h3>
+            <p><span style="font-weight: 400;">The following are the simple steps that are helpful for converting
+                    cm&sup3; into m&sup3;.</span></p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Consider any value of
+                        cm&sup3;.</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Divide the given cubic
+                        centimeters by 1,000,000.</span></li>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">The result is in cubic
+                        meters.</span></li>
+            </ul>
+            <p><strong>Example:</strong></p>
+            <p><span style="font-weight: 400;">Convert 25 cm&sup3; to m&sup3;?</span></p>
+            <p><strong>Solution:</strong></p>
+            <p><span style="font-weight: 400;">Given input value = 25 cm&sup3;</span></p>
+            <p><span style="font-weight: 400;">Cm&sup3; to m&sup3; conversion formula is cubic meters = cubic
+                    centimeters &divide; 1,000,000</span></p>
+            <p><span style="font-weight: 400;">= 25 &divide; 1,000,000</span></p>
+            <p><span style="font-weight: 400;">= 0.000025</span></p>
+            <p><span style="font-weight: 400;">Therefore, 25 cm&sup3; is 0.000025.</span></p>
+            <h3><span style="font-weight: 400;">Cubic Centimeters to Cubic Meters Conversion Table</span></h3>
+            <p><span style="font-weight: 400;">Cubic centimeters to cubic meters conversion chart is given below:</span>
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><strong>Cubic Centimeters</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>Cubic Meters</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">1 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.000001 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">2 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.000002 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">3 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.000003 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">4 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.000004 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">5 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.000005 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">6 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.000006 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">7 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.000007 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">8 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.000008 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">9 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.000009 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">10 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.00001 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">100 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.0001 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">1,000 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.001 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">10,000 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.01 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">100,000 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.1 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">1,000,000 cm&sup3;</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">1 m&sup3;</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3><span style="font-weight: 400;">FAQs on cm&sup3; to m&sup3; Conversion</span></h3>
+            
+                <p><strong>1. What is the difference between m&sup3; and cm&sup3;?</strong></p>
+            
+            <p><span style="font-weight: 400;">we know that 1 m&sup3; is 1000000 cm&sup3;. So, 1 m is always greater
+                    than 1 cm. Both cm and m are the measuring units.</span></p>
+            
+                <p><strong>2. Which is greater cm&sup3; or m&sup3;?</strong></p>
+            
+            <p><span style="font-weight: 400;">m&sup3; is always greater than cm&sup3; as 1 m = 100 cm.</span></p>
+            
+                <p><strong>3. What is the cubic centimeter to cubic meter conversion factor?</strong></p>
+            
+            <p><span style="font-weight: 400;">cubic centimeter to cubic meter conversion factor is m&sup3; = cm&sup3;
+                    &divide; 1,000,000.</span></p>
+            
+                <p><strong>4. How to use a Cubic Centimeter to Cubic Meter Converter?</strong></p>
+            
+            <p><span style="font-weight: 400;">Give the cubic centimeter value as input and click the calculate button
+                    to find the cubic meters as output.</span></p>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+{% endblock %}

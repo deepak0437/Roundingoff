@@ -1,0 +1,286 @@
+{% extends 'LCMGCF/new_base.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://onlinecalculator.guru/static/images/logo/LCMGCF-Com-Fevicon.png" type="icon">
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://onlinecalculator.guru/static/style.css">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<!-- Meta Title, Description and Canonical URL Starts --->
+
+<title> What is {{aa}} Squared? | Find the Square of {{aa}}</title>
+<meta name="description"
+    content=" Get the detailed solution for What is {{aa}} squared using the squared calculator in just a few simple steps. " />
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS --->
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content=" Squared Calculator | Calculate the Squared of numbers" />
+<meta property="og:description"
+    content=" Get the detailed solution for What is {{aa}} squared using the squared calculator in just a few simple steps. " />
+
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content=" Squared Calculator | Calculate the Squared of numbers" />
+<meta name="twitter:description"
+    content=" Get the detailed solution for What is {{aa}} squared using the squared calculator in just a few simple steps. " />
+
+<meta name="twitter:image:src" content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<meta property='og:title' content=" Squared Calculator | Calculate the Squared of numbers" />
+<meta property='og:description'
+    content=" Get the detailed solution for What is {{aa}} squared using the squared calculator in just a few simple steps. " />
+
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/Half-Life-Calculator
+.jpeg" />
+
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+<style>
+    input {
+        text-align: left;
+    }
+</style>
+
+
+<div class="container" style="height: auto !important;">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">What is {{aa}} Squared? </h1>
+        </div>
+
+        <div class="card-body">
+            <p>When we perform the mathematical calculation for the {{aa}} squares we will get the result of {{ans}}.
+                Thus, we can either use the <a href="/squared-calculator/">Squared Calculator</a> or follow the manual
+                steps to calculate the {{aa}} squared. To know more about the detailed solution for {{aa}} squared refer
+                to the below-provided solution.
+            </p><br>
+
+            <form action="" method="POST" id="my_form">
+                {% csrf_token %}
+                <div class="form-floating mb-3">
+                    <input name="aa" type="number" class="form-control" min="0" onkeypress="return isNumberKey(event)"
+                        required required step="any" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="55"
+                        {% endif %} placeholder="" name='aa'
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="6">
+
+                    <label for="floatingInput">Enter number to find Squared </label>
+                </div>
+
+                <div class=" center col mt-2 ">
+                    <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                    </center>
+                </div>
+            </form> <br>
+
+
+            <h3>Examples of Squared calculator </h3> <br>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList2 %}
+
+                            <li>
+                                <a href="/what-is-{{a}}-squared/">
+                                    what is {{a}} squared
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList2 %}
+                            <li>
+                                <a href="/what-is-{{a}}-squared/">
+                                    what is {{a}} squared
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    {% if id == 1 %}
+
+    <div id="clear">
+
+        <div class="card" id="magnetic-Change in temperature">
+            <div class="card-header">
+                <h2 class="h2">How to Calculate What is {{aa}} squared? </h2>
+            </div>
+
+            <div class="card-body">
+
+                <p><span style="font-weight: 400;">Given: {{aa}} squared&nbsp;</span></p>
+                <p><span style="font-weight: 400;">To calculate the {{aa}}</span><span
+                        style="font-weight: 400;">2</span><span style="font-weight: 400;"> we are just required to
+                        multiply {{aa}} two times.&nbsp;</span></p>
+                <p><span style="font-weight: 400;">= {{aa}} squared</span></p>
+                <p><span style="font-weight: 400;">= {{aa}}</span><span style="font-weight: 400;"><sup>2</sup></span></p>
+                <p><span style="font-weight: 400;">= {{aa}} x {{aa}}</span></p>
+                <p><span style="font-weight: 400;">= {{ans}}</span></p>
+                <p><span style="font-weight: 400;">Thus, the result for {{aa}} squares is {{ans}}.&nbsp;</span></p>
+                <hr>
+                <h3><span style="font-weight: 400;">FAQs on What is {{aa}} squared?</span></h3>
+                    <p><strong>1. What is {{aa}} squared when calculated manually?&nbsp;</strong></p>
+                <p><span style="font-weight: 400;">When {{aa}} is squared manually, the answer is {{ans}}.</span></p>
+                
+                    <p><strong>2. Is {{aa}} square and {{aa}} square root 2 the same?&nbsp;</strong></p>
+                <p><span style="font-weight: 400;">No, {{aa}} squared is {{ans}}, and {{aa}} square root 2 is {{ans1}}. Thus, the
+                        square root can be found out by multiplying {{aa}} two times and the square root is found out by
+                        various other methods such as long division, etc.&nbsp;</span></p>
+                
+                    <p><strong>3. How can we write {{aa}} squares?&nbsp;</strong></p>
+                <p><span style="font-weight: 400;">There are various forms to write {{aa}} squares such as ({{aa}})</span><span
+                        style="font-weight: 400;"><sup>2</sup></span><span style="font-weight: 400;">, {{aa}} &times; {{aa}}, {{aa}} to the 2nd
+                        power, and more.&nbsp;</span></p>
+                
+                    <p><strong4.> What is negative {{aa}} squared?&nbsp;</strong></p>
+                <p><span style="font-weight: 400;">The negative of the {{aa}} squares is also {{ans}}. When two negative numbers
+                        are multiplied the product is always positive. </span></p>
+                <hr>
+                <h3> Squared of number table</h3><br>
+                <div class="row">
+                    <div class="column col-sm-3">
+                        <table style="border: 2px solid; text-align: center;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 2px solid; padding: 10px 30px;">Number </th>
+                                    <th style="border: 2px solid; padding: 10px 45px;">Square</th>
+                                </tr>
+                            </thead>
+                            {% for a,b in dict1 %}
+                            <tr>
+                                <td style="border-right: 2px solid;">{{a}}<sup>2</sup></td>
+                                <td>{{b}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="column col-sm-3">
+                        <table style="border: 2px solid; text-align: center;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 2px solid; padding: 10px 30px;">Number </th>
+                                    <th style="border: 2px solid; padding: 10px 45px;">Square</th>
+                                </tr>
+                            </thead>
+                            {% for a,b in dict2 %}
+                            <tr>
+                                <td style="border-right: 2px solid;">{{a}}<sup>2</sup></td>
+                                <td>{{b}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="column col-sm-3">
+                        <table style="border: 2px solid; text-align: center;">
+                            <thead>
+                                <tr>
+                                    <th style="border: 2px solid; padding: 10px 30px;">Number </th>
+                                    <th style="border: 2px solid; padding: 10px 45px;">Square</th>
+                                </tr>
+                            </thead>
+                            {% for a,b in dict3 %}
+                            <tr>
+                                <td style="border-right: 2px solid;">{{a}}<sup>2</sup></td>
+                                <td>{{b}}</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+
+
+</div>
+{% endif %}
+
+
+
+
+<script>
+
+    {% if id == 1 %}
+
+    var scrollDiv = document.getElementById("clear").offsetTop;
+    console.log(scrollDiv)
+    window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+
+    {% endif %}
+
+</script>
+
+<script>
+    function myFunction() {
+        document.getElementById("clear").innerHTML = "";
+        document.getElementsName("aa")[0].value = "";
+        document.getElementsName("cc")[0].value = "";
+    }
+</script>
+<br>
+
+</div>
+</div>
+
+
+{% endblock %}

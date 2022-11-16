@@ -1,0 +1,308 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS -->
+<title>Square Inches to Square Feet Converter | How to convert In^2 to Ft^2 - RoundingCalculator.Guru
+</title>
+<meta name=description
+    content="Square Inches to Square Feet Converter Calculator is useful to convert the given sq in to sq ft. Get the questions, formula.">
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS -->
+
+<!-- FACEBOOK -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title"
+    content="Square Inches to Square Feet Converter  Calculator Online - RoundingCalculator.Guru" />
+<meta property="og:description"
+    content="Square Inches to Square Feet Converter Calculator is useful to convert the given sq in to sq ft. Get the questions, formula. " />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title"
+    content="Square Inches to Square Feet Converter  Calculator Online - RoundingCalculator.Guru" />
+<meta name="twitter:description"
+    content="Square Inches to Square Feet Converter Calculator is useful to convert the given sq in to sq ft. Get the questions, formula. " />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin -->
+<meta property='og:title'
+    content="Square Inches to Square Feet Converter  Calculator Online - RoundingCalculator.Guru" />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description'
+    content="Square Inches to Square Feet Converter Calculator is useful to convert the given sq in to sq ft. Get the questions, formula." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+
+{% endblock %}
+
+{% block content %}
+
+
+{%if go_to %}
+<a href="{{go_to}}" id="ddd"></a>
+{%endif%}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('ddd').click();
+    });
+</script>
+<style>
+
+</style>
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">Square Inches to Square Feet Converter Calculator Online</h1>
+        </div>
+        <div class="card-body">
+            <p><span style="font-weight: 400;">Welcome to the Square Inches to Square Feet Converter, an online tool
+                    available for free. You can easily use the tool for performing all sorts of calculations. This
+                    handful tool will help you in calculating the small as well as bigger digits from sq inch to sq ft.
+                </span></p>
+            <div class="card-body">
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+
+
+                    <div class="form-floating mb-3">
+                        <input name="aa" type="number" class="form-control" min="0.000001"
+                            onkeypress="return isNumberKey(event)" required required step="any" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="152" {% endif %} placeholder="" name='aa'
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="6">
+
+                        <label for="floatingInput">Enter square inches to convert square feet </label>
+                    </div>
+
+
+                    <div class=" center col mt-2 ">
+                        <button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+
+                    </div>
+                </form> <br>
+
+
+
+            </div>
+            <p><strong>Square Inches to Square Feet Converter: </strong><span style="font-weight: 400;">There are large
+                    digits involved in the conversion of sq inch to sq ft which takes too much time. You can reduce this
+                    issue by using the online square inch to square feet calculator and get the desired result in no
+                    time. For the manual calculations, formulas involved, and conversion table, you can spare a few
+                    minutes to read the below article.</span></p>
+            <h2><span style="font-weight: 400;">Square Inch to Square Feet Converter Formula&nbsp;</span></h2>
+            <p><span style="font-weight: 400;">To convert a square inch to a square foot we will divide the given sq
+                    inch area by the conversion ratio which is defined below.&nbsp;</span></p>
+            <p><strong>=&gt; Square Feet = Square Inches &divide; 144</strong></p>
+            <h3><span style="font-weight: 400;">How to Convert Square Inch to Square Ft Manually?&nbsp;</span></h3>
+            <p><span style="font-weight: 400;">You can follow these 3 simple steps to convert sq inch to sq
+                    ft.&nbsp;</span></p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Use the given
+                        formula</span></li>
+            </ul>
+            <p><span style="font-weight: 400;">=&gt; Square Feet = Square Inches &divide; 144</span></p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Now put the values in the
+                        given formula</span></li>
+            </ul>
+            <p><span style="font-weight: 400;">=&gt; Sq ft = X &divide; 144</span></p>
+            <ul>
+                <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Complete the calculations
+                        and you will get your result.&nbsp;</span></li>
+            </ul>
+            <h3><span style="font-weight: 400;">Illustrated Example For Square Inch to Square Feet Converter</span></h3>
+            <p><strong>Example:</strong></p>
+            
+            <p><span style="font-weight: 400;">Convert 750 square inches to square feet.&nbsp;</span></p>
+            
+            <p><strong>Solution:&nbsp;</strong></p>
+            <p><span style="font-weight: 400;">Given: Square Inch = 750&nbsp;</span></p>
+            
+            <p><span style="font-weight: 400;">To convert sq inch to sq ft we will use the formula:&nbsp;</span></p>
+            <p><span style="font-weight: 400;">=&gt; Square Feet = Square Inches &divide; 144</span></p>
+            <p><span style="font-weight: 400;">=&gt; Square Feet = 750 &divide; 144</span></p>
+            <p><span style="font-weight: 400;">=&gt; Square Feet = 5.20833333 ft</span><span
+                    style="font-weight: 400;">2</span></p>
+            
+            <p><span style="font-weight: 400;">Thus, we can say that 750 in</span><span
+                    style="font-weight: 400;">2</span><span style="font-weight: 400;"> is equal to 5.20833333 sq
+                    ft.&nbsp;</span></p>
+            <h3><span style="font-weight: 400;">Square Inch to Square Foot Conversion Table</span></h3>
+            <p><span style="font-weight: 400;">Refers to the below-provided chart the for the square inches to square
+                    feet conversions.&nbsp;</span></p>
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><strong>Square Inches</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>Square Feet</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">1 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.006944 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">10 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.069444 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">100 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">0.694444 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">200 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">1.3889 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">300 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">2.0833 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">400 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">2.7778 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">500 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">3.4722 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">600 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">4.1667 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">700 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">4.8611 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">800 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">5.5556 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">900 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">6.25 sq ft</span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p><span style="font-weight: 400;">1,000 sq in</span></p>
+                        </td>
+                        <td>
+                            <p><span style="font-weight: 400;">6.9444 sq ft</span></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3><span style="font-weight: 400;">FAQs on Square Inches to Square Feet Converter&nbsp;</span></h3>
+            
+                <p><strong>1. How many square feet is 12x12 inches?&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">12x12 inches is 1 square feet.&nbsp;</span></p>
+            
+                <p><strong>2. How many Square Feet are there in Square Inch?</strong></p>
+            
+            <p><span style="font-weight: 400;">You can check that, 1 Square Inch = 0.006944447 Sq ft.</span></p>
+            
+                <p><strong>3. Which formula is used to convert sq inch to sq ft?&nbsp;</strong></p>
+            
+            <p><span style="font-weight: 400;">You can use the formula Square Feet = Square Inches &divide;
+                    144.&nbsp;</span></p>
+            
+                <p><strong>4. How many Square inches are there in Square Feet?</strong></p>
+            
+            <p><span style="font-weight: 400;">According to the calculations, we can obtain 1 Square Foot = 143.99994803
+                    sq inch.</span></p>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+{% endblock %}

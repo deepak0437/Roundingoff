@@ -1,0 +1,257 @@
+{% extends 'base/numbers_base3.html' %}
+
+{%load static%}
+{%block meta%}
+<!-- HTML Defaults Broweser -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Stylesheet and Jquery, Google APIS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- Online Calculator Guru Site Fevicon -->
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<!-- Online Calculator Guru Project Style Sheet -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- Meta Title, Description and Canonical URL Starts -->
+<title> What is {{aa}} decimal to Binary ? </title>
+<meta name="description"
+    content="Decimal to Binary Converter tool is useful to convert decimal numbers into binary. Check the detailed steps of decimal to binary conversion with examples." />
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- Meta Title, Description and Canonical URL ENDS -->
+
+<!-- OPEN GRAPH CONFIGURATIONS STARTS -->
+<!--  FACEBOOK CONFIGURATION STARTS  -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title"
+    content="Decimal to Binary Converter  Calculator | Free Calculator to find Decimal to Binary Converter " />
+<meta property="og:description"
+    content="Get the answer for Decimal to Binary Converter. {{aa}} crores can be expressed in numbers as {{r}}. Also, check what is {{aa}} crore in words." />
+<meta content="" property="og:site_name" />
+<meta content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!--  FACEBOOK CONFIGURATION ENDS  -->
+<!-- TWITTER CARD CONFIGURATION STARTS  -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title"
+    content="Decimal to Binary Converter  Calculator | Free Calculator to find Decimal to Binary Converter " />
+<meta name="twitter:description"
+    content="Decimal to Binary Converter tool is useful to convert decimal numbers into binary. Check the detailed steps of decimal to binary conversion with examples. " />
+<meta name="twitter:image:src"
+    content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- TWITTER CARD CONFIGURATION ENDS  -->
+<!--  LINKEDIN CONFIGURATION STARTS-->
+<tittle></tittle>
+<meta property='og:title' content="Decimal to Binary Converter  Calculator | Decimal to Binary Converter " />
+<meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
+<meta property='og:description'
+    content="Decimal to Binary Converter tool is useful to convert decimal numbers into binary. Check the detailed steps of decimal to binary conversion with examples. " />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+<!-- end of linkedin CONFIGURATIONS ENDS -->
+<!-- OPEN GRAPH CONFIGURATION ENDS -->
+<!-- FAQ SCHEMA STARTS -->
+
+{%endblock%}
+
+{%block content%}
+
+
+<style>
+
+</style>
+
+
+<div class="container" style="height: auto !important;">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">What is {{aa}} to Binary ?</h1>
+
+        </div>
+
+        <div class="card-body">
+
+            <ul class="messages">
+                {% if messages %}
+                <p id="message_container" class="alert alert-danger text-center" style="color:red">{{ messages }}</p>
+                {% endif %}
+            </ul>
+
+            <form action="" method="POST" id="my_form">
+                {% csrf_token %}
+                <p><a href="/decimal-to-binary-calculator/">Decimal to Binary Converter Calculator</a> provides the
+                    answers to
+                    questions like What is {{aa}} in binary. {{aa}} base 10 after convert it into Binary form is {{ans}}
+                </p>
+
+
+
+                <div class="form-floating mb-3">
+                    <input name="aa" type="number" class="form-control" id="aa" onkeypress="return isNumberKey(event)" min="1"
+                        required required step="1" class="aa" id="aa" {% if aa%} value="{{aa}}" {% else %} value="78" {% endif %} placeholder="Product:" name='aa'
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="4">
+                    <label for="floatingInput">Enter number to find Crore in Numbers</label>
+                </div>
+
+                <div class=" center col mt-2 ">
+                    <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                    </center>
+                </div>
+            </form> <br>
+
+            <h3>Examples of What is {{aa}} to Binary </h3> <br>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList1 %}
+
+                            <li>
+                                <a href="/how-to-convert-{{a}}-to-binary/">
+                                    What is {{a}} to Binary
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <ul>
+                            {% for a in randList2 %}
+
+                            <li>
+                                <a href="/how-to-convert-{{a}}-to-binary/">
+                                    What is {{a}} to Binary
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    {% if id == 1 %}
+
+    <div id="clear">
+
+        <div class="card" id="magnetic-Change in temperature">
+            <div class="card-header">
+                <h2 class="h2">What is {{aa}} to Binary?</h2>
+            </div>
+
+
+            <div class="card-body">
+                <p>Here we will show you step-by-step how to convert the decimal number {{aa}} to binary.</p>
+                <p>First, note that decimal numbers use 10 digits (0, 1, 2, 3, 4, 5, 6, 7, 8, and 9) and binary numbers
+                    use only 2 digits (0 and 1).</p>
+                <p>As we explain the steps to converting {{aa}} to binary, it is important to know the name of the parts
+                    of a division problem. In a problem like A divided by B equals C, A is the Dividend, B is the
+                    Divisor and C is the Quotient.</p>
+                <p>The Quotient has two parts. The Whole part and the Fractional part. The Fractional part is also known
+                    as the Remainder.</p><br>
+                <p>Step 1) Divide {{aa}} by 2 to get the Quotient. Keep the Whole part for the next step and set the
+                    Remainder aside.</p>
+                <p>Step 2) Divide the Whole part of the Quotient from Step 1 by 2. Again, keep the Whole part and set
+                    the Remainder aside.</p>
+                <p>Step 3) Repeat Step 2 above until the Whole part is 0.</p>
+                <p>Step 4) Write down the Remainders in reverse order to get the answer to {{aa}} as a binary.</p><br>
+                <p>Here we will show our work so you can follow along:</p>
+
+
+                {% for x,y,z in mapped %}
+                <p>{{x}} / 2 = {{y}} with {{z}} remainder</p>
+                {% endfor %}
+
+
+
+                <p>Then, when we put the remainders together in reverse order, we get the answer. The decimal number
+                    {{aa}} converted to binary is therefore:</p>
+                <p><strong>{{ans}}</strong></p>
+
+
+                <p>So what we did on the page was to Convert A<sub>10</sub> to B<sub>2</sub>, where A is the decimal
+                    number {{aa}} and B is the binary number {{ans}}. Which means that you can display decimal number
+                    {{aa}} to binary in mathematical terms as follows:</p>
+                <p>{{aa}}<sub>10</sub> = {{ans}}<sub>2</sub></p>
+                <hr>
+
+                <h3><span style="font-weight: 400;">FAQs on Converting Decimal Number {{aa}} in Binary</span></h3>
+                
+                    <p><strong>1. What is Decimal {{aa}} in Binary?</strong></p>
+                
+                <p><span style="font-weight: 400;">Decimal {{aa}} in Binary is ({{ans}})</span><span
+                        style="font-weight: 400;"><sub>2</sub></span></p>
+                
+                    <p><strong>2. How to Convert Decimal {{aa}} to Binary Number?</strong></p>
+                
+                <p><span style="font-weight: 400;">To convert {{aa}} to binary number divide {{aa}} by 2 successively until the
+                        quotient is 0.</span></p>
+                
+                    <p><strong>3. What is the easiest way to Convert {{aa}} to Binary?</strong></p>
+                
+                <p><span style="font-weight: 400;">The easiest way to Convert {{aa}} to Binary is to use a Decimal to Binary
+                        Converter.</span></p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+{% endif %}
+
+
+
+
+<script>
+
+    {% if id == 1 %}
+
+    var scrollDiv = document.getElementById("clear").offsetTop;
+    console.log(scrollDiv)
+    window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+
+    {% endif %}
+
+</script>
+
+<script>
+    function myFunction() {
+        document.getElementById("clear").innerHTML = "";
+        document.getElementsName("aa")[0].value = "";
+        document.getElementsName("cc")[0].value = "";
+    }
+</script>
+<br>
+
+</div>
+</div>
+{% endblock %}
