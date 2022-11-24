@@ -1,0 +1,183 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+  integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+  type="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS -->
+{% for i in result %}
+<title>Find the distance between the points {{i.point1}} and {{i.point2}} - RoundingCalculator.Guru</title>
+{% endfor %}
+<meta name=description 
+    content="Here are the simple steps to find the distance between the points {{i.point1}} and {{i.point2}}.">
+    
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS -->
+
+<!-- FACEBOOK -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="Find the distance between the points {{i.point1}} and {{i.point2}} - RoundingCalculator.Guru" />
+<meta property="og:description"
+  content="Here are the simple steps to find the distance between the points {{i.point1}} and {{i.point2}}.  " />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="Find the distance between the points {{i.point1}} and {{i.point2}} - RoundingCalculator.Guru" />
+<meta name="twitter:description"
+  content="Here are the simple steps to find the distance between the points {{i.point1}} and {{i.point2}}." />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin -->
+<meta property='og:title' content="Find the distance between the points {{i.point1}} and {{i.point2}} - RoundingCalculator.Guru" />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description'
+  content="Here are the simple steps to find the distance between the points {{i.point1}} and {{i.point2}}." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+{% endblock %}
+
+{% block content %} 
+{% for i in result %}
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h1 class="h1">Find the distance between points {{i.point1}} and point {{i.point2}}?</h1>
+    </div>
+    <div class="card-body">
+        <p>The step-by-step detailed explanation to find the distance between the points {{i.point1}} and {{i.point2}} is mentioned here. Follow the steps and Distance Between Two Points Formula to solve any other questions similar to this.</p>
+        
+        <form method='POST' action='/distance-between-points/'>
+          {% csrf_token %}
+        
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" value={{i.point1}} id="numa" placeholder="Product:" name='point1' required>
+            <label for="floatingInput">Point1 (x,y)</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control"  id="num" placeholder="Quotient" name='point2' required min=1 value={{i.point2}}>
+            <label for="floatingInput">Point2 (x,y)</label>
+          </div>
+
+        <button type="submit" class="btn mb-4 btn-primary">Calculate</button>
+        </form>
+        <h2>Method to Find Distance Between {{i.point1}} and {{i.point2}}?</h2>
+        <p>Given points are {{i.point1}} and {{i.point2}}</p>
+        <p>The given formula is</p>
+        <p>distance = √[(x<sub>2</sub> - x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub> - y<sub>1</sub>)<sup>2</sup>]</p>
+        {{i.steps|safe}}
+        <p>Therefore, the distance between the points {{i.point1}} and {{i.point2}} is √{{i.d}}.</p>
+        <div class="d-flex flex-wrap">
+          <div class='p-2'>
+            
+            <table class="table table-sm table-bordered table-responsive">
+              <thead>
+                <tr>
+                  
+                  <th scope="col">point 1</th>
+                  <th scope="col">point 2</th>
+                  <th scope="col">distance</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for j in mylist1 %}
+                <tr>
+                  <td>{{j.point1}}</td>
+                  <td>{{j.point2}}</td>
+                  <td>{{j.d}}</td>
+                </tr>
+                {% endfor %}
+                               
+              </tbody>
+            </table>
+          </div>
+          <div class='p-2'>
+
+            <table class="table table-sm table-bordered table-responsive">
+              <thead>
+                <tr>
+                  <th scope="col">point 1</th>
+                  <th scope="col">point 2</th>
+                  <th scope="col">distance</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  {% for j in mylist %}
+                <tr>
+                  <td>{{j.point1}}</td>
+                  <td>{{j.point2}}</td>
+                  <td>{{j.d}}</td>
+                </tr>
+                {% endfor %}
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <h3>FAQs on Finding the distance between the points {{i.point1}} and {{i.point2}}</h3>
+        <p><strong>1. What is the distance formula in math?</strong></p>
+        <p>The distance formula is</p>
+        <p>distance = √[(x<sub>2</sub> - x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub> - y<sub>1</sub>)<sup>2</sup>]</p>
+        <p>where d is the distance, (x1, y1) are the coordinates of the first point, and (x2, y2) are the coordinates of the second point.
+        </p>
+       
+        <p><strong>2. What is the distance formula for the 3D coordinate system?</strong></p>
+        <p>The distance formula for a 3-dimensional coordinate system is √[(x<sub>2</sub> - x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub> - y<sub>1</sub>)<sup>2</sup> + (z<sub>2</sub> - z<sub>1</sub>)<sup>2</sup>].</p>
+        <p><strong>3. How do you find the distance between 2 points on a graph? </strong></p>
+        <p>We can find the distance between 2 points on a graph by placing the coordinates of the points in the distance formula and solve.</p>
+        <p><strong>3. Find the distance between the points {{i.point1}} and {{i.point2}}. </strong></p>
+        <p>The distance between the points {{i.point1}} and {{i.point2}} is √{{i.d}}.</p>
+        
+        <h3>Related Calculations</h3>
+        <ul>
+        {% for n in link5a %}
+        <li><a href="/find-the-distance-between-points-{{n}}-and-{{point2}}">find the distance between points {{n}} and {{point2}}</a></li>
+        {% endfor %}
+        {% for n in link5b %}
+        <li><a href="/find-the-distance-between-points-{{point1}}-and-{{n}}">find the distance between points {{point1}} and {{n}}</a></li>
+        {% endfor %}
+
+        {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+  crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  -->
+{% endblock %}

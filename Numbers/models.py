@@ -275,3 +275,64 @@ class HorizontalTangent(RoundingoffStructure):
         date_modified = models.DateTimeField(default=now) 
         class Meta:
                 verbose_name_plural = "HorizontalTangent"
+
+
+class equationofarithmeticsequenceCalculator(RoundingoffStructure):
+        eq1 = models.CharField(max_length=300)
+        date_modified = models.DateTimeField(default=now) 
+        class Meta:
+                verbose_name_plural = "equationofarithmeticsequenceCalculator"
+
+
+class equationofnthtermCalculator(RoundingoffStructure):
+     class Meta:
+        verbose_name_plural = "equationofnthtermCalculator"
+
+class findremainderofpowerCalculator(RoundingoffStructure):
+     class Meta:
+        verbose_name_plural = "findremainderofpowerCalculator"
+
+
+class independenteventsCalculator(RoundingoffStructure):
+     class Meta:
+        verbose_name_plural = "independenteventsCalculator"
+
+class distanceBetweenPoints(models.Model):
+    point1=models.CharField(max_length=50)
+    point2=models.CharField(max_length=50)
+    steps=models.TextField()
+    d=models.CharField(max_length=50)
+
+class interceptForm(models.Model):
+    eqn=models.CharField(max_length=50)
+    cox=models.CharField(max_length=5)
+    coy=models.CharField(max_length=5)
+    cons=models.CharField(max_length=5)
+    slope=models.CharField(max_length=10)
+    result=models.CharField(max_length=50)
+
+class aot(models.Model):
+    a=models.CharField(max_length=50)
+    b=models.CharField(max_length=5)
+    c=models.CharField(max_length=5)
+    steps=models.TextField()
+    result=models.CharField(max_length=10)
+
+
+class maxAreaRectangle(models.Model):
+    perim=models.CharField(max_length=10)
+    area=models.CharField(max_length=10)
+    halfperim=models.CharField(max_length=10)
+    quatperim=models.CharField(max_length=10)
+
+
+class poly_root_db(TableStructure):
+    class Meta:
+        verbose_name_plural = "poly_root_db"
+
+class TangentPlane(RoundingoffStructure):
+        input2 = models.CharField(max_length=250)
+        latex = models.CharField(max_length=250)
+        date_modified = models.DateTimeField(default=now) 
+        class Meta:
+                verbose_name_plural = "TangentPlane"

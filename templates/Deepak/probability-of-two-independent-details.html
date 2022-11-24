@@ -1,0 +1,389 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+  integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+  type="icon">
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS -->
+<title>Find If A and B are independent events with P(A) = {{A}} and P(B) = {{B}}, then
+P(A|B) will be?</title>
+<meta name=description 
+    content="f A and B are independent events with P(A) = {{A}} and P(B) = {{B}}, then P(A|B)
+will be {{Ans}}. Know detailed steps of determining P(A|B) from our page.">
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS -->
+
+<!-- FACEBOOK -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="Find If A and B are independent events with P(A) = {{A}} and P(B) = {{B}}, then
+P(A|B) will be?" />
+<meta property="og:description"
+  content="f A and B are independent events with P(A) = {{A}} and P(B) = {{B}}, then P(A|B)
+will be {{Ans}}. Know detailed steps of determining P(A|B) from our page. " />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="Find If A and B are independent events with P(A) = {{A}} and P(B) = {{B}}, then
+P(A|B) will be?" />
+<meta name="twitter:description"
+  content="f A and B are independent events with P(A) = {{A}} and P(B) = {{B}}, then P(A|B)
+will be {{Ans}}. Know detailed steps of determining P(A|B) from our page. " />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin -->
+<meta property='og:title' content="Find If A and B are independent events with P(A) = {{A}} and P(B) = {{B}}, then
+P(A|B) will be?" />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description'
+  content="f A and B are independent events with P(A) = {{A}} and P(B) = {{B}}, then P(A|B)
+will be {{Ans}}. Know detailed steps of determining P(A|B) from our page." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+
+{% endblock %}
+
+{%block content%}
+
+
+<style>
+    input {
+        text-align: right;
+    }
+
+
+    @media screen and (min-width: 768px) {
+
+
+        .solveout2 {
+            margin-left: 80px;
+        }
+
+        .box {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            width: 30%;
+            font-size: 18px;
+            line-height: 1.8;
+            background-color: white;
+            border-radius: 9px;
+            margin-left: 0px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            border-style: groove;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+    }
+
+
+    @media screen and (max-width: 768px) {
+
+        .solveout2 {
+            margin-left: 55px;
+        }
+
+        .box {
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 10px;
+            width: 90%;
+            font-size: 18px;
+            line-height: 1.8;
+            background-color: white;
+            border-radius: 9px;
+            margin-left: 0px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            border-style: groove;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .solveout {
+            margin-left: 30px;
+        }
+
+    }
+
+    .in1 {
+        padding-left: 5px;
+        width: 90px;
+        height: 35px;
+        text-align: left;
+        font-size: 16px;
+        outline: none;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .in11 {
+        padding-left: 5px;
+        width: 90px;
+        height: 50px;
+        text-align: left;
+        font-size: 16px;
+        outline: none;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    .out {
+        padding-left: 5px;
+        width: 130px;
+        height: 35px;
+        text-align: left;
+        font-size: 16px;
+        outline: none;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        margin-bottom: 5px;
+    }
+
+    .fraction {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .lines1 {
+        height: 3px;
+        border: none;
+        color: #000;
+        background-color: #000;
+        font-size: 2px;
+    }
+
+    .solve {
+        background-color: #3574e9;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0px 15px 0px 15px;
+        -moz-border-radius: 10px;
+        height: 35px;
+        vertical-align: bottom;
+        margin-bottom: 5px;
+    }
+
+    .frac {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        letter-spacing: 0.001em;
+        text-align: center;
+    }
+
+    .frac>span {
+        display: block;
+        padding: 0.1em;
+    }
+
+    .frac span.bottom {
+        border-top: thin solid black;
+    }
+
+    .frac span.symbol {
+        display: none;
+    }
+</style>
+
+
+<div class="container" style="height: auto !important;">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">If A and B are independent events with
+P(A) = {{A}} and P(B) = {{B}}, then
+P(A|B) will be</h1>
+
+        </div>
+
+        <div class="card-body">
+
+            <ul class="messages">
+                {% if messages %}
+                <p id="message_container" class="alert alert-danger text-center" style="color:red">{{ messages }}</p>
+                {% endif %}
+            </ul>
+
+            <p>When it comes to solving the questions related to probability then students get confused. But
+there is always a trick to solve probability, which you can get here below. We are here to help
+you to <a href="/probability-of-two-independent-events/">find the value of P(A/B)</a> ie., {{Ans}} when A and B are independent events with P(A) = {{A}}
+and P(B) = {{B}}. Spare a few minutes of yours to get the detailed solution of If A and B are
+independent events with P(A) = {{A}} and P(B) = {{B}}, then P(A|B) will be from below.
+                </p>
+            <form action=""  align="center" method="POST" id="my_form">
+                {% csrf_token %}
+                <label>probability of A : </label>
+
+                    <input type="number" min="0" max="1" step="any" oninput="validateNumber(this);" required="" placeholder="probability of A " id="A" name="A" {% if A %} value="{{A}}" {% else %} value="0.05" {% endif %}>
+
+                <br><label>probability of B : </label>
+
+                    <input type="number" min="0" max="1"  step="any" oninput="validateNumber(this);" required="" placeholder="probability of B" id="B" name="B" {% if B %} value="{{B}}" {% else %} value="0.65" {% endif %}>
+
+                <br>
+
+                <div class=" center col mt-2 ">
+                    <center><button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+
+
+                    </center>
+                </div>
+
+            </form> <br>
+            <p>Examples of Independent events with P(A) and P(B)</p>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <ul>
+                            {% for a,b in dict1 %}
+                            <li>
+                                <a
+                                    href="/if-a-and-b-are-independent-events-with-p-a-{{a}}-and-p-b-{{b}}-then-p-a-b-will-be/">
+                                    P(A) and P(B) : {{a}} , {{b}}
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul>
+                            {% for a,b in dict2 %}
+                            <li>
+                                <a
+                                    href="/if-a-and-b-are-independent-events-with-p-a-{{a}}-and-p-b-{{b}}-then-p-a-b-will-be/">
+                                    P(A) and P(B) : {{a}} , {{b}}
+                                </a>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="clear">
+
+        <div class="card" id="magnetic-Change in temperature">
+            <div class="card-header">
+                <h2 class="h2">Detailed Solution to Find P(A|B), where A and B are independent
+events with P(A) = {{A}} and P(B) = {{B}}</h2>
+            </div>
+
+
+            <div class="card-body">
+                <p>Given: P(A) = {{A}} and P(B) = {{B}}</p>
+                <p>We have been aware of the conditional probability of A given B = P(A/B) if A and B are
+                independent events is:</p>
+                <p>=> P(A/B) = P( A ∩ B)/ P (B)</p>
+                <p>=> P( A ∩ B) = P(A) × P(B)</p>
+                <p>Thus P(A/B) can be written as</p>
+                <p>=> P (A/B) = [P (A) × P (B)]/ P (B)</p>
+                <p>We get,</p>
+                <p>=> P (A/B) = P (A) = {{Ans}}</p>
+                <p>=> P (A/B) = {{Ans}}.</p></p>
+                <p>Hence, If A and B are independent events with P(A) = {{A}} and P(B) = {{B}}, then the value of
+                P(A|B) will be {{Ans}}.</p>
+            <hr>
+
+                    <h3>FAQs on Probability of P(A|B) when P(A) = {{A}} and P(B) = {{B}}</h3>
+               
+                    <p><strong>1. What is the value of P(A|B) when, P(A) = {{A}} and P(B) = {{B}}?</strong></p>
+                        <p>If A and B are independent events with P(A) = {{A}} and P(B) = {{B}}, then the value of P(A|B)
+will be {{Ans}}.
+                        </p>
+                         
+
+                    <p><strong>2. How do you calculate the independent probability for P(A) = {{A}} and P(B) = {{B}}?</strong></p>
+                        <p>The independent probability P(A) = {{A}} and P(B) = {{B}} can be calculated by using our online
+tool or else manually by following this point ie., multiply the probabilities of the P(A) = {{A}} and
+P(B) = {{B}} together to notice if they equal the probability of them both happening together.</p>
+                         
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script>
+
+        {% if id == 1 %}
+
+        var scrollDiv = document.getElementById("clear").offsetTop;
+        console.log(scrollDiv)
+        window.scrollTo({ top: scrollDiv, behavior: 'smooth' });
+
+        {% endif %}
+
+    </script>
+<script>
+
+        var fist_input = document.getElementById("inlineFormInputGroup").value;
+
+        function validateNumber(elem) {
+            var validNumber = new RegExp(/^\-?\d*\.?\d*$/);
+            console.log(elem)
+            if (validNumber.test(elem.value)) {
+                fist_input = elem.value;
+            } else {
+                elem.value = fist_input;
+            }
+            if ( fist_input.length > 8){
+            elem.value = fist_input.slice(0, 8);}
+        }
+
+
+
+        const result = document.getElementById("span1").innerHTML
+        function modifyres1(){
+
+            var sus  = document.getElementById("myunt1")
+            document.getElementById("span1").innerHTML = +(Number(result) * sus.value)
+        }
+
+    </script>
+
+
+
+    <br>
+
+</div>
+</div>
+    {% endblock %}

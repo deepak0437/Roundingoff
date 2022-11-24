@@ -53,6 +53,11 @@ sitemaps = {
     'coordinates-shape-calculator':coordinatesh_SiteMap,
     'find-remainder-of-equation-calculator':remainderofequationCalculator_SiteMap,
     'horizontal-tangent-points-on-curve-calculator':HorizontalTangent_SiteMap,
+    'equation-of-arithmetic-sequence-calculator':equationofarithmeticsequenceCalculator_SiteMap,
+    'equation-of-nth-term-of-arithmetic-sequence-calculator':equationofnthtermCalculator_SiteMap,
+    'find-remainder-of-power-calculator':findremainderofpowerCalculator_SiteMap,
+    'independent-events-calculator':independenteventsCalculator_SiteMap,
+    'equation-of-the-tangent-plane-to-the-given-surface-at-the-specified-point-calculator':TangentPlane_SiteMap,
 
 }
 

@@ -15,6 +15,7 @@ from sympy import *
 from sympy import N
 from .models import *
 from .utilities import *
+from django.db.models import Q
 
 #Function for getting the random numbers with n digits
 def random_with_N_digits(range_start,range_end):
@@ -49,6 +50,7 @@ def random_with_single_digits(range_start,range_end):
             present[temp]=1
             
     return l1  
+    
 
 def random_with_single_digits1(range_start,range_end,n):
     l1=[]
@@ -79,7 +81,7 @@ def percenttodecimalcalculator(request):
         return redirect(f'/{aa}-percentage-as-a-decimal/')
 
     else:
-         return render(request,'Mathcue/percent-to-decimal-calculator.html')
+         return render(request,'Deepak/percent-to-decimal-calculator.html')
 
 def percentagetodecimal_details(request,aa):
   if request.method == 'POST':
@@ -153,7 +155,7 @@ def percentagetodecimal_details(request,aa):
         'id':1,
         'randList1':randList1
     }
-    return render(request,'Mathcue/percent-to-decimal-calculator-details.html',context)
+    return render(request,'Deepak/percent-to-decimal-calculator-details.html',context)
 
 
 
@@ -170,7 +172,7 @@ def decimaltopercentagecalculator(request):
         return redirect(f'/{aa}-decimal-as-a-percentage/')
 
     else:
-        return render(request,"Mathcue/decimal_percentage.html")
+        return render(request,"Deepak/decimal_percentage.html")
 
 
 def decimaltopercentage(request,aa):
@@ -245,7 +247,7 @@ def decimaltopercentage(request,aa):
             'id':1,
             'randList':randList1
                 }
-        return render(request,"Mathcue/decimaltopercentage_details.html", context) 
+        return render(request,"Deepak/decimaltopercentage_details.html", context) 
 
 
 
@@ -271,7 +273,7 @@ def dividedbywhatcalculator(request):
         return redirect(f'/{aa}-divided-by-what-equals-to-{cc}/')    
 
     else:
-        return render(request,"Mathcue/dividedbywhat.html")
+        return render(request,"Deepak/dividedbywhat.html")
 
 def dividedbywhatcalculatordetails(request,aa,cc):
     if request.method == 'POST':
@@ -319,7 +321,7 @@ def dividedbywhatcalculatordetails(request,aa,cc):
             'randList1':randList1,
             'randList2':randList2
         }
-        return render(request,"Mathcue/dividedbywhat-details.html", context)
+        return render(request,"Deepak/dividedbywhat-details.html", context)
 
 
 
@@ -349,7 +351,7 @@ def negativedividedcalculator(request):
         return redirect(f'/what-is-negative-{aa}-divided-by-negative-{cc}/')    
  
     else:
-        return render(request,"Mathcue/negative-divided-by-negative.html")
+        return render(request,"Deepak/negative-divided-by-negative.html")
 
 
 def negativeDividedCalculatorDetails(request,aa,cc):
@@ -402,7 +404,7 @@ def negativeDividedCalculatorDetails(request,aa,cc):
             'randList1':randList1,
             'randList2':randList2,
         }
-        return render(request,"Mathcue/negative-divided-by-negative-details.html", context)
+        return render(request,"Deepak/negative-divided-by-negative-details.html", context)
         
 
 
@@ -430,7 +432,7 @@ def modulocalculator(request):
 
         return redirect(f'/what-is-{aa}-mod-{cc}/')
     else:
-         return render(request,'Mathcue/modulo-calculator.html')
+         return render(request,'Deepak/modulo-calculator.html')
 
 
 def modulocalculatordetails(request,aa,cc):
@@ -481,7 +483,7 @@ def modulocalculatordetails(request,aa,cc):
             'randList1':randList1,
             'randList2':randList2
         }
-        return render(request,'Mathcue/modulo-calculator-details.html',context)
+        return render(request,'Deepak/modulo-calculator-details.html',context)
 
 
 
@@ -5349,49 +5351,49 @@ def numberpluspercent(request,aa,bb):
 
 ##########----------------------LCMGCF TEMPLATE ENDS--------------------###########
 #############------------START NEW WORK##########################################
-def atsequencedomain(request):
-    if request.method=='POST':
-        func=str(request.POST['func'])
-        if '/' in func:
-            func=func.replace('/','÷')
-        return redirect("/given-the-arithmetic-sequence-an-'{}'-what-is-the-domain-for-n".format(func))    
-    else:
-        content={
-            'question':'1+2*(n-1)',
-            'display':'none'
-        }
-        return render(request,'Deepak/atsequence-calculator.html',content)
-def atsequencedomaintail(request,func):
+# def atsequencedomain(request):
+#     if request.method=='POST':
+#         func=str(request.POST['func'])
+#         if '/' in func:
+#             func=func.replace('/','÷')
+#         return redirect("/given-the-arithmetic-sequence-an-'{}'-what-is-the-domain-for-n".format(func))    
+#     else:
+#         content={
+#             'question':'1+2*(n-1)',
+#             'display':'none'
+#         }
+#         return render(request,'Deepak/atsequence-calculator.html',content)
+# def atsequencedomaintail(request,func):
 
-    val=atsequenceutility(func)
-    if val[0].solution=='Syntax Error':
-        content={
-            'question':func,
-            'display':'block'
-        }
-        return render(request,'Deepak/atsequence-calculator.html',content)
-    else:
-        linka=[]
-        for i in range(5):
-            a=random.randint(1,9)
-            b=random.randint(1,9)
-            c=random.randint(1,9)
-            s=str(a)+'+'+str(b)+'*'+'(n-'+str(c)+')'
-            linka.append(s)
-        linkb=[]
-        for i in range(5):
-            a=random.randint(1,9)
-            b=random.randint(1,9)
-            c=random.randint(1,9)
-            s=str(a)+'+'+str(b)+'*'+'(n-'+str(c)+')'
-            linkb.append(s)
-        content={
-        'res':val,
-        'question':val[0].func,
-        'linksa':linka,
-        'linksb':linkb
-        }
-        return render(request,'Deepak/atsequence-calculator-details.html',content)
+#     val=atsequenceutility(func)
+#     if val[0].solution=='Syntax Error':
+#         content={
+#             'question':func,
+#             'display':'block'
+#         }
+#         return render(request,'Deepak/atsequence-calculator.html',content)
+#     else:
+#         linka=[]
+#         for i in range(5):
+#             a=random.randint(1,9)
+#             b=random.randint(1,9)
+#             c=random.randint(1,9)
+#             s=str(a)+'+'+str(b)+'*'+'(n-'+str(c)+')'
+#             linka.append(s)
+#         linkb=[]
+#         for i in range(5):
+#             a=random.randint(1,9)
+#             b=random.randint(1,9)
+#             c=random.randint(1,9)
+#             s=str(a)+'+'+str(b)+'*'+'(n-'+str(c)+')'
+#             linkb.append(s)
+#         content={
+#         'res':val,
+#         'question':val[0].func,
+#         'linksa':linka,
+#         'linksb':linkb
+#         }
+#         return render(request,'Deepak/atsequence-calculator-details.html',content)
         #########__________________________________________FUNCTION
 
 ##DEEPAK
@@ -5562,8 +5564,8 @@ def sumofgeometricsequence(request,aa,bb):
         ab1 = 1+int(xy)
         ac = int(x1) * (1-ab)
         ac1 = int(ac/ab1)
-        randList1=random_with_N_digits(1,40)
-        randList2=random_with_N_digits(1,50)
+        randList1=random_with_single_digits(1,40)
+        randList2=random_with_single_digits(1,50)
         
 
         #x1,y1 = (-3, 18, -108) , 9
@@ -5714,8 +5716,8 @@ def sumofarithmeticsequence(request,aa,bb):
         ab = bb*(x1+xx)
         ab1 = round(ab/2,2)
 
-        randList1=random_with_N_digits(1,40)
-        randList2=random_with_N_digits(1,50)
+        randList1=random_with_single_digits(1,40)
+        randList2=random_with_single_digits(1,50)
         
 
         #x1,y1 = (-3, 18, -108) , 9
@@ -5757,41 +5759,16 @@ def arithmeticsequencetermcalculator(request):
     if request.method == 'POST':
         
         #VALUE FOR THE no--------------------------------------------------
-        if request.POST.get('bb')!=None and request.POST.get('bb')!='' :
-            inp=str(request.POST.get('bb'))
-            if inp.isdigit(): 
-                bb=int(request.POST.get('bb'))
-            else:
-                bb=float(request.POST.get('bb'))
-        else:
-            bb=None
+        aa=request.POST.get('aa')
+        bb=request.POST.get('bb')
+        cc=request.POST.get('cc')
+        yy=request.POST.get('yy')
+
+        # # aa = str(aa).replace('-','_')
+        bb = str(bb).replace('-','_')
+        cc = str(cc).replace('-','_')
+        # # yy = str(yy).replace('-','_')
         
-        if request.POST.get('aa')!=None and request.POST.get('aa')!='' :
-            inp=str(request.POST.get('aa'))
-            if inp.isdigit(): 
-                aa=int(request.POST.get('aa'))
-            else:
-                aa=float(request.POST.get('aa'))
-        else:
-            aa=None
-
-        if request.POST.get('cc')!=None and request.POST.get('cc')!='' :
-            inp=str(request.POST.get('cc'))
-            if inp.isdigit(): 
-                cc=int(request.POST.get('cc'))
-            else:
-                cc=float(request.POST.get('cc'))
-        else:
-            cc=None
-
-        if request.POST.get('yy')!=None and request.POST.get('yy')!='' :
-            inp=str(request.POST.get('yy'))
-            if inp.isdigit(): 
-                yy=int(request.POST.get('yy'))
-            else:
-                yy=float(request.POST.get('yy'))
-        else:
-            yy=None
             
         return redirect(f'/what-is-the-{aa}-term-of-the-arithmetic-sequence-where-a1-{bb}-and-a{yy}-{cc}/')
         
@@ -5800,51 +5777,13 @@ def arithmeticsequencetermcalculator(request):
 
 
 def arithmeticsequenceterm(request,aa,bb,cc,yy):
-
-    if request.method == 'POST':
-
-        if request.POST.get('bb')!=None and request.POST.get('bb')!='' :
-            inp=str(request.POST.get('bb'))
-            if inp.isdigit(): 
-                bb=int(request.POST.get('bb'))
-            else:
-                bb=float(request.POST.get('bb'))
-        else:
-            bb=None
-        
-        if request.POST.get('aa')!=None and request.POST.get('aa')!='' :
-            inp=str(request.POST.get('aa'))
-            if inp.isdigit(): 
-                aa=int(request.POST.get('aa'))
-            else:
-                aa=float(request.POST.get('aa'))
-        else:
-            aa=None
-
-        if request.POST.get('cc')!=None and request.POST.get('cc')!='' :
-            inp=str(request.POST.get('cc'))
-            if inp.isdigit(): 
-                cc=int(request.POST.get('cc'))
-            else:
-                cc=float(request.POST.get('cc'))
-        else:
-            cc=None
-
-        if request.POST.get('yy')!=None and request.POST.get('yy')!='' :
-            inp=str(request.POST.get('yy'))
-            if inp.isdigit(): 
-                yy=int(request.POST.get('yy'))
-            else:
-                yy=float(request.POST.get('yy'))
-        else:
-            yy=None
-        
-        
-        
-        return redirect(f'/what-is-the-{aa}-term-of-the-arithmetic-sequence-where-a1-{bb}-and-a{yy}-{cc}/') 
-    else:
-        
-
+    # try:
+        # aa=request.POST.get('aa')
+        # bb=request.POST.get('bb')
+        # cc=request.POST.get('cc')
+        # yy=request.POST.get('yy')
+        bb = float(str(bb).replace('_','-'))
+        cc = float(str(cc).replace('_','-'))
         x1 = round(float(cc)-float(bb),2)
         x2 = yy-1
         x3 = round(x1/x2,2)
@@ -5853,11 +5792,17 @@ def arithmeticsequenceterm(request,aa,bb,cc,yy):
         ba = round(ab*x3,4)
         ans = round(float(bb)+ba,2)
         #print(ans)
-        randList1=random_with_N_digits(10,100)
-        randList2=random_with_N_digits(10,500)
-        randList3=random_with_N_digits(2,90)
-        randList4=random_with_N_digits(100,500)
+        randList1=random_with_single_digits(10,100)
+        randList2=random_with_single_digits(10,500)
+        randList3=random_with_single_digits(2,90)
+        randList4=random_with_single_digits(100,500)
         dict2 = list(zip(randList1,randList2,randList3,randList4))
+
+        randList5=random_with_single_digits(10,100)
+        randList6=random_with_single_digits(10,500)
+        randList7=random_with_single_digits(2,90)
+        randList8=random_with_single_digits(100,500)
+        dict1 = list(zip(randList5,randList6,randList7,randList8))
 
         #x1,y1 = (-3, 18, -108) , 9
         query=arithmeticsequencetermCalculator.objects.filter(inputEnter=str(aa))
@@ -5892,9 +5837,13 @@ def arithmeticsequenceterm(request,aa,bb,cc,yy):
             'check':True,
             #'n':n,
             'dict2':dict2,
+            'dict1':dict1,
             'id':1,
                 }
         return render(request,"Deepak/term-of-arithmetic-sequence-calculator-details.html", context)
+    # except:
+    #     messages.error('Syntax Error.')    
+    #     return redirect('/term-of-arithmetic-sequence-calculator/')
 
 
 
@@ -5902,41 +5851,15 @@ def geometricsequencetermcalculator(request):
     if request.method == 'POST':
         
         #VALUE FOR THE no--------------------------------------------------
-        if request.POST.get('bb')!=None and request.POST.get('bb')!='' :
-            inp=str(request.POST.get('bb'))
-            if inp.isdigit(): 
-                bb=int(request.POST.get('bb'))
-            else:
-                bb=float(request.POST.get('bb'))
-        else:
-            bb=None
-        
-        if request.POST.get('aa')!=None and request.POST.get('aa')!='' :
-            inp=str(request.POST.get('aa'))
-            if inp.isdigit(): 
-                aa=int(request.POST.get('aa'))
-            else:
-                aa=float(request.POST.get('aa'))
-        else:
-            aa=None
+        aa=request.POST.get('aa')
+        bb=request.POST.get('bb')
+        cc=request.POST.get('cc')
+        yy=request.POST.get('yy')
 
-        if request.POST.get('cc')!=None and request.POST.get('cc')!='' :
-            inp=str(request.POST.get('cc'))
-            if inp.isdigit(): 
-                cc=int(request.POST.get('cc'))
-            else:
-                cc=float(request.POST.get('cc'))
-        else:
-            cc=None
-
-        if request.POST.get('yy')!=None and request.POST.get('yy')!='' :
-            inp=str(request.POST.get('yy'))
-            if inp.isdigit(): 
-                yy=int(request.POST.get('yy'))
-            else:
-                yy=float(request.POST.get('yy'))
-        else:
-            yy=None
+        # # aa = str(aa).replace('-','_')
+        bb = str(bb).replace('-','_')
+        cc = str(cc).replace('-','_')
+        # # yy = str(yy).replace('-','_')
             
         return redirect(f'/what-is-the-{aa}-term-of-the-geometric-sequence-where-a1-{bb}-and-a{yy}-{cc}/')
         
@@ -5946,58 +5869,21 @@ def geometricsequencetermcalculator(request):
 
 def geometricsequenceterm(request,aa,bb,cc,yy):
 
-    if request.method == 'POST':
+        bb = float(str(bb).replace('_','-'))
+        cc = float(str(cc).replace('_','-'))
 
-        if request.POST.get('bb')!=None and request.POST.get('bb')!='' :
-            inp=str(request.POST.get('bb'))
-            if inp.isdigit(): 
-                bb=int(request.POST.get('bb'))
-            else:
-                bb=float(request.POST.get('bb'))
-        else:
-            bb=None
-        
-        if request.POST.get('aa')!=None and request.POST.get('aa')!='' :
-            inp=str(request.POST.get('aa'))
-            if inp.isdigit(): 
-                aa=int(request.POST.get('aa'))
-            else:
-                aa=float(request.POST.get('aa'))
-        else:
-            aa=None
-
-        if request.POST.get('cc')!=None and request.POST.get('cc')!='' :
-            inp=str(request.POST.get('cc'))
-            if inp.isdigit(): 
-                cc=int(request.POST.get('cc'))
-            else:
-                cc=float(request.POST.get('cc'))
-        else:
-            cc=None
-
-        if request.POST.get('yy')!=None and request.POST.get('yy')!='' :
-            inp=str(request.POST.get('yy'))
-            if inp.isdigit(): 
-                yy=int(request.POST.get('yy'))
-            else:
-                yy=float(request.POST.get('yy'))
-        else:
-            yy=None
-        
-        
-        
-        return redirect(f'/what-is-the-{aa}-term-of-the-geometric-sequence-where-a1-{bb}-and-a{yy}-{cc}/') 
-    else:
+        bb = float(bb)
+        cc = float(cc)
         n = yy-1
         n1 = aa-1
         print(n)
         from math import gcd
         from math import exp, log
-        d = gcd(bb, cc);
-        p = bb // d;
-        q = cc // d;
-        fin = int(exp(log(p)/n))
-        fin1 = int(exp(log(q)/n))
+        d = gcd(int(float(bb)), int(float(cc)));
+        p = int(float((bb))) // d;
+        q = int(float(cc)) // d;
+        fin = int(exp(log(abs(p))/n))
+        fin1 = int(exp(log(abs(q))/n))
 
 
         x1 = fin1**n1
@@ -6007,7 +5893,7 @@ def geometricsequenceterm(request,aa,bb,cc,yy):
         q1 = x2 // d1;
 
 
-        y1 = bb*p1
+        y1 = int(float(bb))*p1
         d2 = gcd(y1, q1);
         p2 = y1 // d2;
         q2 = q1 // d2;
@@ -6015,11 +5901,17 @@ def geometricsequenceterm(request,aa,bb,cc,yy):
         
         ans = round(p2/q2,8)
         #print(ans)
-        randList1=random_with_N_digits(10,100)
-        randList2=random_with_N_digits(10,500)
-        randList3=random_with_N_digits(2,90)
-        randList4=random_with_N_digits(100,500)
+        randList1=random_with_single_digits(10,100)
+        randList2=random_with_single_digits(10,500)
+        randList3=random_with_single_digits(2,90)
+        randList4=random_with_single_digits(100,500)
         dict2 = list(zip(randList1,randList2,randList3,randList4))
+
+        randList5=random_with_single_digits(10,100)
+        randList6=random_with_single_digits(10,500)
+        randList7=random_with_single_digits(2,90)
+        randList8=random_with_single_digits(100,500)
+        dict1 = list(zip(randList5,randList6,randList7,randList8))
 
         #x1,y1 = (-3, 18, -108) , 9
         query=geometricsequencetermCalculator.objects.filter(inputEnter=str(aa))
@@ -6049,6 +5941,7 @@ def geometricsequenceterm(request,aa,bb,cc,yy):
             'check':True,
             'n':n,
             'dict2':dict2,
+            'dict1':dict1,
             'id':1,
                 }
         return render(request,"Deepak/term-of-geometric-sequence-calculator-details.html", context)
@@ -6103,8 +5996,8 @@ def fractionofadayinhour(request,aa):
         p3 = p2 // d2;
         q3 = y // d2;
         
-        randList1=random_with_N_digits(10,100)
-        randList2=random_with_N_digits(10,100)
+        randList1=random_with_single_digits(10,100)
+        randList2=random_with_single_digits(10,100)
         
         ans = round(p1/q1,3)
         #x1,y1 = (-3, 18, -108) , 9
@@ -6152,7 +6045,6 @@ def fractionofadayinhour(request,aa):
 
 
 
-
 def remainderofequationcalculator(request):
      
     if request.method == 'POST':
@@ -6164,6 +6056,12 @@ def remainderofequationcalculator(request):
         dd = request.POST['dd']
         ee = request.POST['ee']
 
+        aa = str(aa).replace('-','_')
+        bb = str(bb).replace('-','_')
+        cc = str(cc).replace('-','_')
+        dd = str(dd).replace('-','_')
+        ee = str(ee).replace('-','_')
+
         #print("MAIN",aa)
         return redirect(f'/find-the-remainder-when-fx-{aa}-x3-{bb}-x2-{cc}-x-{dd}-is-divided-by-x-{ee}/') 
 
@@ -6174,6 +6072,11 @@ def remainderofequationcalculator(request):
 def remainderofequation(request,aa,bb,cc,dd,ee):
     
     #try:
+        aa = str(aa).replace('_','-')
+        bb = str(bb).replace('_','-')
+        cc = str(cc).replace('_','-')
+        dd = str(dd).replace('_','-')
+        ee = str(ee).replace('_','-')
         
         
         a,b,c,d,e = '','','','',''
@@ -6317,24 +6220,7 @@ def remainderofequation(request,aa,bb,cc,dd,ee):
             'x5':x5,
             'xe':xe,
             'ans':ans,
-            # 'add':add,
-            # 'ans':ans,
-            # 'ad':ad,
-            # 'aa':aa,
-            # 'bb':bb,
-            # 'nm':nm,
-            # 'a1':a1,
-            # 'b1':b1,
-            # 'p1':p1,
-            # 'p2':p2,
-            # 'ans':ans,
-            # '1':1,
-            # 'xy':xy,
-            # 'yx':yx,
-            # 'x1':x1,
-            # 'x2':x2,
-            # 'aa_op':aa_op,
-            # 'bb_op':bb_op,
+            
             'dict1':dict1,
             'dict2':dict2,
             # 'new1':new1,
@@ -6347,6 +6233,677 @@ def remainderofequation(request,aa,bb,cc,dd,ee):
     # except:
     #     messages.error(request,'Invalid Inputs.') 
     #     return redirect('/find-remainder-of-equation-calculator/')
+
+
+
+def equationofarithmeticsequencecalculator(request): 
+    if request.method == 'POST':
+        
+        #VALUE FOR THE no--------------------------------------------------
+       
+        
+        if request.POST.get('aa')!=None and request.POST.get('aa')!='' :
+            aa=request.POST.get('aa')
+        
+    
+        try:
+            lst = [int(i) for i in aa.split(",")]
+            
+            #print(len(lst))
+            
+        except:
+            messages.error(request, 'Syntax Error.')
+            context = {
+            'aa':aa,
+            }
+            return render(request,'Deepak/equation-of-arithmetic-sequence-calculator.html', context)
+
+        flag = 0
+
+        if (checkIsAP(lst, len(lst))):
+            flag = 1
+            if len(lst)>=4:
+                print()
+            elif len(lst)<4:
+                messages.error(request, 'Enter atleast upto 4 terms.')
+                context = {
+                    'aa':aa,
+                    }
+                return render(request,'Deepak/equation-of-arithmetic-sequence-calculator.html', context)
+
+        
+        elif (flag == 0):
+            messages.error(request, 'The given array is not in arithmetic sequence.')
+            context = {
+                'aa':aa,
+                }
+            return render(request,'Deepak/equation-of-arithmetic-sequence-calculator.html', context)
+
+        
+        return redirect(f'/find-an-equation-for-the-nth-term-of-the-arithmetic-sequence-{aa}/')
+    else:
+        return render(request,"Deepak/equation-of-arithmetic-sequence-calculator.html")
+
+
+def equationofarithmeticsequence(request,aa):
+    if request.method == 'POST':
+        
+        if request.POST.get('aa')!=None and request.POST.get('aa')!='' :
+            aa=request.POST.get('aa')
+        try:
+            lst = [int(i) for i in aa.split(",")]
+
+        except:
+            messages.error(request, 'Syntax Error.')
+            
+            return redirect(f'/equation-of-arithmetic-sequence-calculator/')
+
+        flag = 0
+
+        if (checkIsAP(lst, len(lst))):
+            flag = 1
+            if len(lst)>=4:
+                print()
+            elif len(lst)<4:
+                messages.error(request, 'Enter atleast upto 4 terms.')
+                return redirect(f'/equation-of-arithmetic-sequence-calculator/')
+        
+        elif (flag == 0):
+            messages.error(request, 'The given array is not in arithmetic sequence.')
+            
+            return redirect(f'/equation-of-arithmetic-sequence-calculator/')
+
+        return redirect(f'/find-an-equation-for-the-nth-term-of-the-arithmetic-sequence-{aa}/') 
+    else:
+        lst = [int(i) for i in aa.split(",")]
+        # x1 = 12,18,24,30,36
+        # aa = 9
+        # ans=randint(aa,bb+1)
+        x1 = lst[0]
+        x2 = lst[1]
+        x3 = lst[2]
+        x4 = lst[3]
+        xy = int(x2-x1)
+        
+        xb = x1 - xy
+        # xb1 = xb*xy
+        # xx = x1+xb1    
+
+        sum = round((15*(2*(x1) + (15-1)*xy)) / 2,2)
+        # ab = bb*(x1+xx)
+        # ab1 = round(ab/2,2)
+
+        randList1=random_with_single_digits(1,40)
+        randList2=random_with_single_digits(1,50)
+        
+
+        #x1,y1 = (-3, 18, -108) , 9
+        ans = f"{xy}n - ({xb})"
+        query=equationofarithmeticsequenceCalculator.objects.filter(inputEnter=str(aa))
+        if len(query)==0:
+            solutionTitle="What is the sum of the arithmetic sequence {aa}, ... if there are  terms?"
+            detailStep=f'''<p>The given arithmetic sequence are : {aa} and the sum of  term of the given arithmetic sequence is {ans}   </p> <p></p>'''
+            finalAnswer=(ans)
+            obj=equationofarithmeticsequenceCalculator(inputEnter=str(aa),solutionTitle=solutionTitle,detailStep=detailStep,finalAnswer=finalAnswer,slug=f'/find-an-equation-for-the-nth-term-of-the-arithmetic-sequence-{aa}/',date_modified=datetime.now())
+            obj.save()
+
+        context = {
+            'ans':ans,
+           
+            # 'ab1':ab1,
+            # 'ab':ab,
+            # 'xx':xx,
+            # 'xb1':xb1,
+            'xb':xb,
+            'xy':xy,
+            'x2':x2,
+            'x1':x1,
+            # 'bb':bb,
+            'aa':aa,
+            # 'x3':x3,
+            # 'x4':x4,
+            'sum':sum,
+            'check':True,
+            'randList1':randList1,
+            'randList2':randList2,
+            'id':1,
+                }
+        return render(request,"Deepak/equation-of-arithmetic-sequence-calculator-details.html", context)
+
+
+
+
+def equationofnthtermcalculator(request): 
+    if request.method == 'POST':
+        
+        #VALUE FOR THE no--------------------------------------------------
+        aa = request.POST['aa']
+        bb = request.POST['bb']
+        xx = request.POST['xx']
+        yy = request.POST['yy']
+
+        bb = str(bb).replace('-','_')
+        aa = str(aa).replace('-','_')
+        
+
+        if xx>yy:
+            xy = xx
+            xx = yy
+            yy = xy
+        else:
+            xx = xx
+            yy = yy
+
+        return redirect(f'/find-an-equation-for-nth-term-of-the-arithmetic-sequence-a{xx}-{aa}-a{yy}-{bb}/')
+        
+    else:
+        return render(request,"Deepak/equation-of-nth-term-calculator.html")
+
+
+def equationofnthterm(request,aa,bb,xx,yy):
+        bb = str(bb).replace('_','-')
+        aa = str(aa).replace('_','-')
+        if xx>yy:
+            xy = xx
+            xx = yy
+            yy = xy
+        else:
+            xx = xx
+            yy = yy
+
+        if aa == bb:
+            messages.error(request,f"Terms of a{xx} is not equal to a{yy} ")
+            return redirect(f'/equation-of-nth-term-of-arithmetic-sequence-calculator/')
+            
+        a,b = "",""
+        if '-' in str(aa):
+            aa = str(aa).strip('-')
+            a = 'minus'
+        else:
+            a = 'plus'
+
+        if '-' in str(bb):
+            bb = str(bb).strip('-')
+            b = 'minus'
+        else:
+            b = 'plus'
+
+        
+        if a == 'minus':
+            aa = int('-'+ str(aa))
+        else:
+            aa = int(aa)
+            
+        if b == 'minus':
+            bb = int('-'+ str(bb))
+        else:
+            bb = int(bb)
+
+        a1 = xx-1
+        a2 = yy-1
+        a3 = a2-a1
+        a4 = bb-aa
+        a5 = round(a4/a3,2)
+        a6 = round(a1*a5,2)
+        a7 = round(aa - a6,2)
+
+        z = 0
+        z1 = 0
+        f1 = 0
+        if a5 >= 0:
+            z = 5
+            f1 = a7 - a5
+        else:
+            z1 = abs(a5)
+            f1 = a7 + a5
+        
+        
+        ans = 0
+        randList1=random_with_single_digits(1,10)
+        randList2=random_with_single_digits(10,50)
+        randList3=random_with_single_digits(8,30)
+        randList4=random_with_single_digits(40,150)
+        dict2 = list(zip(randList1,randList2,randList3,randList4))
+
+
+        randList1=random_with_single_digits(1,10)
+        randList2=random_with_single_digits(10,50)
+        randList3=random_with_single_digits(8,30)
+        randList4=random_with_single_digits(40,150)
+        dict1 = list(zip(randList1,randList2,randList3,randList4))
+
+        query=equationofnthtermCalculator.objects.filter(inputEnter=str(aa))
+        if len(query)==0:
+            solutionTitle="What is the sum of the arithmetic sequence {aa}, ... if there are {bb} terms?"
+            detailStep=f'''<p>The given number is : {aa}   </p> <p></p>'''
+            finalAnswer=(ans)
+            obj=equationofnthtermCalculator(inputEnter=str(aa),solutionTitle=solutionTitle,detailStep=detailStep,finalAnswer=finalAnswer,slug=f'/find-an-equation-for-nth-term-of-the-arithmetic-sequence-a{xx}-{aa}-a{yy}-{bb}/',date_modified=datetime.now())
+            obj.save()
+
+        context = {
+            'ans':ans,
+            'f1':f1,
+            'z':z,
+            'z1':z1,
+            'a1':a1,
+            'a2':a2,
+            'a3':a3,
+            'a4':a4,
+            'a5':a5,
+            'a6':a6,
+            'a7':a7,
+            'xx':xx,
+            'bb':bb,
+            'aa':aa,
+            # 'x1':x1,
+            'yy':yy,
+            # 'x3':x3,
+            'check':True,
+            #'n':n,
+            'dict2':dict2,
+            'dict1':dict1,
+            'id':1,
+                }
+        return render(request,"Deepak/equation-of-nth-term-calculator-details.html", context)
+
+
+
+def findCenterVerticesFociOfEclipse(request):
+    if request.method == 'POST':
+        #VALUE FOR THE no--------------------------------------------------
+        # if request.POST.get('aa')!=None and request.POST.get('aa')!='' :
+        #     inp=str(request.POST.get('aa'))
+            
+        #     if inp[0] == '-':
+        #         aa = int(inp[1:])*-1
+        #     elif inp[0] == '+':
+        #         aa = int(inp[1:])
+        #     else:
+        #         aa=int(inp)
+        # else:
+        #     aa=None
+
+        # if request.POST.get('bb')!=None and request.POST.get('bb')!='' :
+        #     inp=str(request.POST.get('bb'))
+        #     if inp[0] == '-':
+        #         bb = int(inp[1:])*-1
+        #     elif inp[0] == '+':
+        #         bb = int(inp[1:])
+        #     else:
+        #         bb=int(inp)
+        # else:
+        #     bb=None
+        
+        # if request.POST.get('cc')!=None and request.POST.get('cc')!='' :
+        #     inp=str(request.POST.get('cc'))
+        #     if inp[0] == '-':
+        #         cc = int(inp[1:])*-1
+        #     elif inp[0] == '+':
+        #         cc = int(inp[1:])
+        #     else:
+        #         cc=int(inp)
+        # else:
+        #     cc=None
+        
+        # if aa > bb:
+        #     bb , aa = aa, bb
+        aa=request.POST.get('aa')
+        bb=request.POST.get('bb')
+        cc=request.POST.get('cc')
+
+        aa = str(aa).replace('-','_')
+        bb = str(bb).replace('-','_')
+        cc = str(cc).replace('-','_')
+        
+
+        return redirect(f'/find-the-center-vertices-and-foci-of-the-eclipse-{aa}x2-{bb}y2-{cc}/')
+    
+    return render(request, 'Deepak/find-the-center-vertices-and-foci-of-the-eclipse.html')
+
+
+def findCenterVerticesFociOfEclipseDetails(request, aa, bb, cc):
+    aa = str(aa).replace('_','-')
+    bb = str(bb).replace('_','-')
+    cc = str(cc).replace('_','-')
+
+    aa = float(aa)
+    bb = float(bb)
+    cc = float(cc)
+
+    # if aa[0] == '-':
+    #     aa = int(aa[1:])*-1
+    # elif aa[0] == '+':
+    #     aa = int(aa[1:])
+    # else:
+    #     aa=int(aa)
+    
+    # if bb[0] == '-':
+    #     bb = int(bb[1:])*-1
+    # elif bb[0] == '+':
+    #     bb = int(bb[1:])
+    # else:
+    #     bb=int(bb)
+    
+    # if cc[0] == '-':
+    #     cc = int(cc[1:])*-1
+    # elif cc[0] == '+':
+    #     cc = int(cc[1:])
+    # else:
+    #     cc=int(cc)
+    
+    # if aa > bb:
+    #     bb , aa = aa, bb    
+    a_2 = round(cc/aa, 4)
+    b_2 = round(cc/bb, 4)
+    c_2 = round(a_2 - b_2, 4)
+ 
+    
+    a = round(math.sqrt(abs(a_2)), 4)
+    b = round(math.sqrt(abs(b_2)), 4)
+    c = round(math.sqrt(abs(c_2)), 4)
+    
+    randList1=random_with_single_digits(1, 100)
+    randList2=random_with_single_digits(100, 250)
+    randList3=random_with_single_digits(10,250)
+    dict1 = list(zip(randList1,randList2,randList3))
+
+    randList4=random_with_single_digits(1, 100)
+    randList5=random_with_single_digits(100 ,250)
+    randList6=random_with_single_digits(10,250)
+    dict2 = list(zip(randList4, randList5, randList6))
+    
+    context = {
+            'ans1':0,
+            'cc': cc,
+            'bb' : bb,
+            'aa' : aa,
+            'a_2' : a_2,
+            'b_2' : b_2,
+            'c_2' : c_2,
+            'a' : a,
+            'b' : b,
+            'c' : c,
+            'ab':2,
+            'xy':2,
+            'check':True,
+            'dict1':dict1,
+            'dict2':dict2,
+            'dict3':dict(),
+            'dict4':dict(),
+            'id':1,
+        }
+    
+    return render(request, 'Deepak/find-the-center-vertices-and-foci-of-the-eclipse-details.html', context)
+
+def cartesianEquationForTheCurveAndIidentify(request):
+    if request.method == 'POST':
+        #VALUE FOR THE no--------------------------------------------------
+        aa=request.POST.get('aa')
+        aa = str(aa).replace('-','_')
+
+
+        return redirect(f'/find-a-cartesian-equation-for-the-curve-and-identify-it-r-{aa}-tan8-sec8/')
+    
+    return render(request, 'Deepak/find-a-cartesian-equation-for-the-curve-and-identify.html')
+
+
+def cartesianEquationForTheCurveAndIidentifyDetails(request, aa):
+        aa = str(aa).replace('_','-')
+        
+        # r = aa
+        randList1=random_with_single_digits(1, 99)
+        randList2=random_with_single_digits(1, 99)
+            
+        
+        
+        context = {
+            'aa':aa,
+            'ab':2,
+            'xy':2,
+            'check':True,
+            'dict1':randList1,
+            'randList2':randList2,
+            'dict2':dict(),
+            'dict3':dict(),
+            'dict4':dict(),
+            'id':1,
+            }
+        
+        return render(request, 'Deepak/find-a-cartesian-equation-for-the-curve-and-identify-details.html', context)
+
+
+
+def findremainderofpowercalculator(request): 
+    if request.method == 'POST':
+        
+        #VALUE FOR THE no--------------------------------------------------        
+        if request.POST.get('aa')!=None and request.POST.get('aa')!='' :
+            inp=str(request.POST.get('aa'))
+            if inp.isdigit(): 
+                aa=int(request.POST.get('aa'))
+            else:
+                aa=float(request.POST.get('aa'))
+        else:
+            aa=None
+
+        if request.POST.get('bb')!=None and request.POST.get('bb')!='' :
+            inp=str(request.POST.get('bb'))
+            if inp.isdigit(): 
+                bb=int(request.POST.get('bb'))
+            else:
+                bb=float(request.POST.get('bb'))
+        else:
+            bb=None
+            
+        return redirect(f'/find-the-remainder-when-{aa}-is-divided-by-{bb}/')
+        
+    else:
+        return render(request,"Deepak/find-remainder-of-power-calculator.html")
+
+
+def findremainderofpower(request,aa,bb):
+
+    if request.method == 'POST':
+        
+        if request.POST.get('aa')!=None and request.POST.get('aa')!='' :
+            inp=str(request.POST.get('aa'))
+            if inp.isdigit(): 
+                aa=int(request.POST.get('aa'))
+            else:
+                aa=float(request.POST.get('aa'))
+        else:
+            aa=None
+
+        if request.POST.get('bb')!=None and request.POST.get('bb')!='' :
+            inp=str(request.POST.get('bb'))
+            if inp.isdigit(): 
+                bb=int(request.POST.get('bb'))
+            else:
+                bb=float(request.POST.get('bb'))
+        else:
+            bb=None
+        
+        return redirect(f'/find-the-remainder-when-{aa}-is-divided-by-{bb}/') 
+    else:
+        from math import gcd
+        d = gcd(aa, 24);
+        p1 = aa // d;
+        q1 = 24 // d;
+
+        d1 = gcd(aa, 60);
+        p2 = aa // d1;
+        q2 = 60 // d1;
+
+        y = q2*24
+        d2 = gcd(p2, y);
+        p3 = p2 // d2;
+        q3 = y // d2;
+        
+        randList1=random_with_single_digits(5,50)
+        randList2=random_with_single_digits(10,90)
+        dict1 = list(zip(randList1,randList2))
+
+        randList3=random_with_single_digits(5,50)
+        randList3=random_with_single_digits(10,90)
+        dict2 = list(zip(randList3,randList3))
+        
+        ans = round(p1/q1,3)
+        #x1,y1 = (-3, 18, -108) , 9
+        query=findremainderofpowerCalculator.objects.filter(inputEnter=str(aa))
+        if len(query)==0:
+            solutionTitle="Find the remainder when {aa}^{aa}^{aa} is divided by {bb}."
+            detailStep=f'''<p>The given number is : {aa} and {bb}. </p> <p> </p>'''
+            finalAnswer=(ans)
+            obj=findremainderofpowerCalculator(inputEnter=str(aa),solutionTitle=solutionTitle,detailStep=detailStep,finalAnswer=finalAnswer,slug=f'/find-the-remainder-when-{aa}-is-divided-by-{bb}/',date_modified=datetime.now())
+            obj.save()
+
+        # from math import exp, log
+        # x = 8
+        # n = 3
+        # exp(log(x)/n)
+
+        context = {
+            'ans':ans,
+           
+            'p1':p1,
+            'q1':q1,
+            'p2':p2,
+            'q2':q2,
+            'p3':p3,
+            'q3':q3,
+            # 'ans':ans,
+            # # 'xb1':xb1,
+            # # 'xb':xb,
+            # # 'xy':xy,
+            # 'x2':x2,
+            # 'cc':cc,
+            'bb':bb,
+            'aa':aa,
+            # 'x1':x1,
+            # 'yy':yy,
+            # 'x3':x3,
+            'check':True,
+            #'n':n,
+            'dict1':dict1,
+            'dict2':dict2,
+            
+            'id':1,
+                }
+        return render(request,"Deepak/find-remainder-of-power-calculator-details.html", context)
+
+
+def independenteventscalculator(request): 
+    if request.method == 'POST':
+        
+        #VALUE FOR THE no--------------------------------------------------
+        aa=request.POST.get('aa')
+        bb=request.POST.get('bb')
+
+        return redirect(f'/if-a-and-b-are-independent-events-with-P(A)-{aa}-and-P(B)-{bb}-then-P(A∪B)-is/')    
+
+    else:
+        return render(request,"Deepak/independent-events-calculator.html")
+
+def independentevents(request,aa,bb):
+    if request.method == 'POST':
+        
+        aa=request.POST.get('aa')
+        bb=request.POST.get('bb')
+
+        return redirect(f'/if-a-and-b-are-independent-events-with-P(A)-{aa}-and-P(B)-{bb}-then-P(A∪B)-is/') 
+    else:
+        x1 = round(float(aa)*float(bb),4)
+        x2 = round(float(aa)+float(bb)-x1,4)
+        ans= round(x2,4)
+        
+        
+        # ans = f"{aa} : {bb}"
+        if "." in aa:
+            n = len(str(aa).split(".")[1])
+            randList1=random_with_single_digits1(0.01,0.5,n)
+            randList2=random_with_single_digits1(0.5,0.99,n)
+            dict1 = list(zip(randList1,randList2))
+
+        if "." in aa:
+            n = len(str(aa).split(".")[1])
+            randList3=random_with_single_digits1(0.01,0.5,n)
+            randList4=random_with_single_digits1(0.5,0.99,n)
+            dict2 = list(zip(randList3,randList4))
+            
+
+        query=independenteventsCalculator.objects.filter(inputEnter=str(aa))
+        if len(query)==0:
+            solutionTitle="If A and B are independent events with P(A) = {aa} and P(B) = {bb}, then P(A ∪ B) is."
+            detailStep=f'''<p>The given number is : {aa}  and {bb} </p> <p></p>'''
+            finalAnswer=(ans)
+            obj=independenteventsCalculator(inputEnter=str(aa),solutionTitle=solutionTitle,detailStep=detailStep,finalAnswer=finalAnswer,slug=f'/if-a-and-b-are-independent-events-with-P(A)-{aa}-and-P(B)-{bb}-then-P(A∪B)-is/',date_modified=datetime.now())
+            obj.save()
+
+        context = {
+            'ans':ans,
+            'aa':aa,
+            'bb':bb,
+            'x1':x1,
+            'x2':x2,
+            'check':True,
+            'dict1':dict1,
+            'dict2':dict2,
+            'id':1,
+                }
+        return render(request,"Deepak/independent-events-calculator-details.html", context)
+
+
+
+def probatwoindependent(request):
+    if request.method == 'POST':
+        A = request.POST.get('A')
+        B = request.POST.get('B')
+        return redirect(f'/if-a-and-b-are-independent-events-with-p-a-{A}-and-p-b-{B}-then-p-a-b-will-be/')
+    else:
+        return render(request, 'Deepak/probability-of-two-independent.html')
+
+
+def  probatwoindependentdetails(request, A, B):
+    if request.method == 'POST':
+        A = request.POST.get('A')
+        B = request.POST.get('B')
+        return redirect(f'/if-a-and-b-are-independent-events-with-p-a-{A}-and-p-b-{B}-then-p-a-b-will-be/')
+    else:
+        ans=A
+
+        if "." in A:
+            n = len(str(A).split(".")[1])
+            randList1=random_with_single_digits1(0.01,0.5,n)
+            randList2=random_with_single_digits1(0.5,0.99,n)
+            dict1 = list(zip(randList1,randList2))
+
+        if "." in A:
+            n = len(str(A).split(".")[1])
+            randList3=random_with_single_digits1(0.01,0.5,n)
+            randList4=random_with_single_digits1(0.5,0.99,n)
+            dict2 = list(zip(randList3,randList4))
+
+
+
+        """query = probatwoindependent_db.objects.filter(inputEnter=[A,B])
+        if len(query) == 0:
+            obj = probatwoindependent_db(inputEnter=[A,B], detailStep="", finalAnswer=ans,
+                                slug=f'/if-a-and-b-are-independent-events-with-p-a-{A}-and-p-b-{B}-then-p-a-b-will-bev/',
+                                solutionTitle=f"Find If A and B are independent events with P(A) = {{A}} and P(B) = {{B}}, then
+P(A|B) will be?",
+                                date_modified=datetime.datetime.now())
+            obj.save()"""
+
+
+
+        context = {
+            "A": A,
+            "B": B,
+            "dict1": dict1,
+            "dict2": dict2,
+            "Ans":ans,
+        }
+        return render(request, 'Deepak/probability-of-two-independent-details.html', context)
 
 
 
@@ -6384,10 +6941,10 @@ def largestdimension(request,aa):
         return redirect(f'/find-the-dimensions-of-a-rectangle-with-a-perimeter-{aa}m-whose-area-is-as-large-as-possible/')    
     else:
         randList1 = []
-        for x in range(int(float(aa))+1, int(float(aa))+6):
+        for x in range(int(float(aa))+1, int(float(aa))+2):
             randList1.append(x)
         randList2 = []
-        for x in range(int(float(aa))+7, int(float(aa))+12):
+        for x in range(int(float(aa))+7, int(float(aa))+8):
             randList2.append(x)
 
         ans = round(float(aa)/4,3)
@@ -6423,6 +6980,7 @@ def differentialequationcalculator(request):
         return render(request,"Deepak/differential_equation_calculator.html")
 
 def generalSolution(request,xcof,operator,ycof):
+        
         if request.method=='POST':
             m=xcof= int(request.POST["xcof"])
             n=ycof = int(request.POST["ycof"])
@@ -6435,13 +6993,13 @@ def generalSolution(request,xcof,operator,ycof):
             valy = -n
         ans = "(e<sup>{0}y</sup>/{0}) = (e<sup>{1}x</sup>/{1})+c".format(valy,m)
         randList1 = []
-        for x in range(1,6):
+        for x in range(1,2):
             pair = (m+x,n+x)
             val = str(pair[0])+"x{}".format(operator)+str(pair[1])+"y"
             randList1.append(val)
         #print(randList1)
         randList2 = []
-        for x in range(7,12):
+        for x in range(7,8):
             pair = (m+x,n+x)
             val = str(pair[0])+"x{}".format(operator)+str(pair[1])+"y"
             randList2.append(val)
@@ -6478,8 +7036,17 @@ def pointOnTheParabolaCalculator(request):
         return redirect("/find-the-point-on-the-parabola-y2-{0}x-that-is-closest-to-the-point-{1}-{2}/".format(xcof,x1,y1))   
     else:
         id = 0
-        return render(request,"Deepak/point-on-the-parabola-calculator.html",{"id":id})
+        context = {
+            "id":id,
+            "xcof":2,
+            "x1":1,
+            "y1":4,
+            "x":2,
+            "y":2
+        }
+        return render(request,"Deepak/point-on-the-parabola-calculator.html",context)
 
+    
 def closestPoint(request,xcof,x1,y1):
     if request.method=='POST':
         xcof= int(request.POST["xcof"])
@@ -6492,18 +7059,25 @@ def closestPoint(request,xcof,x1,y1):
     y = (xcof*y1)**(1/3)
     x = y**2/xcof
 
-    randList1 = []
-    for i in range(1,6):
-        xi = x1+i
-        yi = y1+i
-        pair = str(xi)+"-"+str(yi)
-        randList1.append(pair)
-    randList2 = []
-    for i in range(7,12):
-        xi = x1+i
-        yi = y1+i
-        pair = str(xi)+"-"+str(yi)
-        randList2.append(pair)
+    # randList1 = []
+    # for i in range(1,2):
+    #     xi = x1+i
+    #     yi = y1+i
+    #     pair = str(xi)+"-"+str(yi)
+    #     randList1.append(pair)
+    # randList2 = []
+    # for i in range(7,8):
+    #     xi = x1+i
+    #     yi = y1+i
+    #     pair = str(xi)+"-"+str(yi)
+    #     randList2.append(pair)
+    randList1=random_with_single_digits(5,70)
+    randList2=random_with_single_digits(1,50)
+    dict1 = list(zip(randList1,randList2))
+
+    randList3=random_with_single_digits(5,70)
+    randList3=random_with_single_digits(1,50)
+    dict2 = list(zip(randList3,randList3))
     context= {
         "y":round(y,2),
         "x":round(x,2),
@@ -6511,11 +7085,12 @@ def closestPoint(request,xcof,x1,y1):
         "y1":y1,
         "xcof":xcof,
         "id":1,
-        "randList1":randList1,
-        "randList2":randList2
+        "dict1":dict1,
+        "dict2":dict2
         
     }
     return render(request,"Deepak/point-on-the-parabola-calculator.html",context)
+
 
 
 def pointOnTheSurfaceCalculator(request):
@@ -6533,11 +7108,11 @@ def closestOrigin(request,val):
     value = int(val)
     y = math.sqrt(value)
     randList1 = []
-    for i in range(1,6):
+    for i in range(1,2):
         val = value+i
         randList1.append(val)
     randList2 = []
-    for i in range(7,12):
+    for i in range(7,8):
         val = value+i
         randList2.append(val)
     context= {
@@ -6582,11 +7157,11 @@ def closestPoints(request,xval,yval,zval):
         z = "±√"+str(x**2 + y**2)
 
     randList1 = []
-    for i in range(1,6):
+    for i in range(1,2):
         val = [xval+i,yval+i,zval]
         randList1.append(val)
     randList2 = []
-    for i in range(7,12):
+    for i in range(7,8):
         val = [xval+i,yval+i,zval]
         randList2.append(val)
     context= {
@@ -6606,11 +7181,317 @@ def closestPoints(request,xval,yval,zval):
     return render(request,"Deepak/find-the-point-on-the-cone-calculator-details.html",context)
 
 
+
+
+def standardEqautionOfHyperbola(request):
+    if request.method=='POST':
+        vx= int(request.POST["vx"])
+        vy= int(request.POST["vy"])
+        fx= int(request.POST["fx"])
+        fy= int(request.POST["fy"])
+        return redirect("/find-an-equation-in-standard-form-for-the-hyperbola-with-vertices-at-{0}-{1}-and-foci-at-{2}-{3}/".format(vx,vy,fx,fy))
+    else:
+        id = 0
+        return render(request,"Deepak/find-the-standard-form-of-hyperbola.html")
+
+def standardForm(request,vx,vy,fx,fy):
+    if request.method=='POST':
+        vx= int(request.POST["vx"])
+        vy= int(request.POST["vy"])
+        fx= int(request.POST["fx"])
+        fy= int(request.POST["fy"])
+        return redirect("/find-an-equation-in-standard-form-for-the-hyperbola-with-vertices-at-{0}-{1}-and-foci-at-{2}-{3}/".format(vx,vy,fx,fy))
+
+    vx = int(vx) 
+    vy = int(vy)
+    fx = int(fx)
+    fy = int(fy)
+    vert_dist = 2*abs(vy-vx)
+    a = vert_dist/2
+    foci_dist = 2*(abs(fy-fx))-vert_dist  ##negative -14
+    e = round(foci_dist/vert_dist,6)
+    print("VALUE",e)
+    # b = 0
+    # if e == 0:
+    #     b = 0
+    # else:
+    b = a*(math.sqrt(abs(e**2-1)))
+    a_sq = math.pow(a,2)
+    b_sq = math.pow(b,2)
+    randList1 = []
+    for i in range(1,2):
+        val = [vx+i,vy+i,fx+i,fy+i]
+        randList1.append(val)
+    randList2 = []
+    for i in range(7,8):
+        val = [vx+i,vy+i,fx+i,fy+i]
+        randList2.append(val)
+    context= {
+        "vx":vx,
+        "vy":vy,
+        "fx":fx,
+        "fy":fy,
+        "vert_dist":vert_dist,
+        "foci_dist":foci_dist,
+        "e":round(e,2),
+        "a_sq":round(a_sq),
+        "b_sq":round(b_sq),
+        "a":round(a),
+        "b":round(b),
+        "id":1,
+        "randList1":randList1,
+        "randList2":randList2
+    }
+    return render(request,"Deepak/find-the-standard-form-of-hyperbola-details.html",context)
+
+def symmetricGraph(request):
+    if request.method=='POST':
+        num= int(request.POST["number"])
+        angle = int(request.POST["angle"])
+        function= request.POST["function"]
+        return redirect("/determine-if-the-graph-is-symmetric-about-the-x-axis-the-y-axis-or-the-origin-r-{0}-{1}-{2}th/".format(num,function,angle))
+    else:
+        id = 0
+        return render(request,"Deepak/Determine-graph-is-symmetric.html")
+
+def graphSymmetricAxis(request,num,function,angle):
+    if request.method=='POST':
+        num= int(request.POST["num"])
+        angle = int(request.POST["angle"])
+        function= request.POST["function"]
+        return redirect("/determine-if-the-graph-is-symmetric-about-the-x-axis-the-y-axis-or-the-origin-r-{0}-{1}-{2}th/".format(num,function,angle))
+
+    num = int(num)
+    angle = int(angle)
+    x = 0
+    if function == "sin":
+        if angle <0:
+            axis = "origin"  
+        else:
+            axis = "y-axis"
+        #if function is sin ... we have to add this condition at HTML Page
+    else:
+        axis ="x-axis"
+    randList1 = []
+    for i in range(1,2):
+        val = [num+i,angle+i]
+        randList1.append(val)
+    randList2 = []
+    for i in range(7,8):
+        val = [num+i,angle+i]
+        randList2.append(val)
+    context={
+        "num":num,
+        "angle":angle,
+        "function":function,
+        "axis":axis,
+        "id":1,
+        "randList1":randList1,
+        "randList2":randList2
+    }
+    return render(request,"Deepak/Determine-graph-is-symmetric-details.html",context)
+
+
+def exactLengthOfACurve(request):
+    if request.method == "POST":
+        numerator = int(request.POST["numerator"])
+        denominator = int(request.POST["denominator"])
+        
+        lower = int(request.POST["lower"])
+        upper= int(request.POST["upper"])
+        if lower>upper:
+            xy = lower
+            lower = upper
+            upper = xy
+        else:
+            lower = lower
+            upper = upper
+        return redirect("/find-the-exact-length-of-the-curve-x-{0}-{1}-y**2-{2}-y-{3}/".format(numerator,denominator,lower,upper))
+    else:
+        return render(request,"Deepak/find-the-exact-length-of-the-curve.html")
+
+def exactLengthOfACurveatY(request,numerator,denominator,lower,upper):
+    if lower>upper:
+        xy = lower
+        lower = upper
+        upper = xy
+    else:
+        lower = lower
+        upper = upper
+    if request.method == "POST":
+        numerator = int(request.POST["numerator"])
+        denominator = int(request.POST["denominator"])
+        
+        lower = int(request.POST["lower"])
+        upper= int(request.POST["upper"])
+        return redirect("/find-the-exact-length-of-the-curve-x-{0}-{1}-y**2-{2}-y-{3}/".format(numerator,denominator,lower,upper))
+    
+    numerator =int(numerator)
+    denominator = int(denominator)
+    lower = int(lower)
+    upper = int(upper)
+    randList1 = []
+    for i in range(1,2):
+        val = (lower +i,upper+i)
+        randList1.append(val)
+    randList2 = []
+    for i in range(7,8):
+        val = (lower +i,upper+i)
+        randList2.append(val)
+
+
+    num = Fraction(numerator,denominator).limit_denominator(10)
+    y = Symbol("y")
+    expr =num*y**2
+    diff_eq = diff(expr)
+    print(diff_eq)
+    sq_diff_eq = (num**2)*y**2
+    print(sq_diff_eq)
+    print()
+    sq_diff_eq_str = str(sq_diff_eq).replace("**2","<sup>2</sup>")
+    print(sq_diff_eq_str)
+    
+    new_expr_1 =sq_diff_eq + 1
+    sqrt_new_expr_1 = 1 + diff_eq
+    #now length of the function
+    upper_expr = str(sqrt_new_expr_1).replace("y",str(upper))
+    lower_expr = str(sqrt_new_expr_1).replace("y",str(lower))
+    res= Fraction(str(sqrt_new_expr_1.subs({y:upper}) - sqrt_new_expr_1.subs({y:lower})))
+    print(res)
+
+
+
+    '''y = Symbol("y")
+    expr = (numerator/denominator)*y**(3/2) - (numerator/denominator)*num*y**(1/2)
+    eq =str(diff(expr))
+    x= findall("([0-9.-]+)",eq)
+    x1,x2 = x[0],x[2]
+    x1= Fraction(str(float(x1)))
+    x2 =Fraction(str(float(x2)))
+    y= Symbol("y")
+    new_expr = (abs(x2)*y + abs(x1)*(1/y) - (2*x1*x2))
+    new_expr_1= 1+ new_expr
+    x2 = round(math.sqrt(abs(x2)),2)
+    x1 =  round(math.sqrt(abs(x1)),2)
+    sqrt_eq = (x2*y**(1/2) +x1*(1/y)**(1/2) - round(math.sqrt((2*x1*x2)+1),1))
+    #now integration..
+    result = ((upper)**(3/2)+(upper)**(1/2)) - ((lower)**3/2)+lower**(1/2)
+
+    '''
+    
+
+    context = {
+        "numerator":numerator,
+        "denominator":denominator,
+        "num":num,
+        "lower":lower,
+        "upper":upper,
+        "diff_eq":diff_eq,
+        "sq_diff_eq":sq_diff_eq,
+        "new_expr_1":new_expr_1,
+        "sqrt_new_expr_1":sqrt_new_expr_1,
+        "upper_expr":upper_expr,
+        "lower_expr":lower_expr,
+        "result":res,
+        "id":1,
+        "randList1":randList1,
+        "randList2":randList2
+    }
+    
+    return render(request,"Deepak/find-the-exact-length-of-the-curve-details.html",context)
+
+
+
+def linearizationFunction(request):
+    if request.method == "POST":
+        a = int(request.POST["a"])
+        return redirect("/find-the-linearization-lx-of-the-function-at-a-fx-x12-a-{}/".format(a))
+    else:
+        id = 0
+        return render(request,"Deepak/find-the-linearization-of-function.html")
+    
+def linearizationFunctionatA(request,a):
+    if request.method == "POST":
+        a = int(request.POST["a"])
+        return redirect("/find-the-linearization-lx-of-the-function-at-a-fx-x12-a-{}/".format(a))
+    a = int(a)
+    fofa = round(math.sqrt(a),2)
+    f_ofa = round((1/2)*(1/fofa),2)
+    xterm = str(f_ofa)+"x"
+    fa = f_ofa*a
+    lofa = fofa - fa
+    linearization_form =str(lofa)+"+"+xterm
+    randList1 = []
+    for i in range(1,2):
+        val = a +i
+        randList1.append(val)
+    randList2 = []
+    for i in range(7,8):
+        val = a+i
+        randList2.append(val)
+    context={
+        "a":a,
+        "fofa":round(fofa,1),
+        "f_ofa":round(f_ofa,1),
+        "xterm":xterm,
+        "fa":round(fa,2),
+        "lofa":round(lofa,2),
+        "linearization_form":linearization_form,
+        "id":1,
+        "randList1":randList1,
+        "randList2":randList2
+    }
+    return render(request,"Deepak/find-the-linearization-of-function-details.html",context)
+
+
+
+def generalSolutionofEquation(request):
+    if request.method == "POST":
+        y_value = int(request.POST["y_value"])
+        y_dash = int(request.POST["y_dash"])
+        return redirect("/find-the-general-solution-of-the-given-higher-order-differential-equation-y{0}-{1}y-y-0/".format(y_value,y_dash))
+    else:
+        return render(request,"Deepak/Find-the-general-solution-of-a-higher-order-equation.html",{"id":0})
+def generalSolutionEq(request,y_value,y_dash):
+    if request.method == "POST":
+        y_value = int(request.POST["y_value"])
+        y_dash = int(request.POST["y_dash"])
+        return redirect("/find-the-general-solution-of-the-given-higher-order-differential-equation-y{0}-{1}y-y-0/".format(y_value,y_dash))
+    from sympy import symbols, Eq, solve
+    from fractions import Fraction
+    from math import sqrt
+    y_value = int(y_value)
+    y_dash = int(y_dash)
+    x = symbols('x')
+    eq1 = Eq(x**y_value - y_dash*x**2 + 1)
+    sol = solve(eq1)
+    if len(sol)>=1:
+        x1 = round(eval(str(sol[0])),1)
+    
+    randList1=[]
+    for i in range(1,2):
+        val = (y_value+i,y_dash+i)
+        randList1.append(val)
+    randList2 = []
+    for i in range(7,8):
+        val = (y_value+i,y_dash+i)
+        randList2.append(val)
+    context={
+        "y_value":y_value,
+        "y_dash":y_dash,
+        "x1":abs(x1),
+        "id":1,
+        "randList1":randList1,
+        "randList2":randList2
+    }
+    return render(request,"Deepak/Find-the-general-solution-of-a-higher-order-equation-details.html",context)
+
+
 ##-------------------------------MADHAV-------------------------------
 # areaOfTheParallelogramWithVertices
 def randomGen(start,end):
     arr1=[]
-    for i in range(0,15):
+    for i in range(0,1):
         temp=randint(start, end)
         if temp not in arr1:
             arr1.append(temp)
@@ -6629,6 +7510,15 @@ def areaOfTheParallelogramWithVertices(request):
             y3 = request.POST.get('y3')
             x4 = request.POST.get('x4')
             y4 = request.POST.get('y4')
+
+            # x1 = str(x1).replace('-','_')
+            # x2 = str(x2).replace('-','_')
+            # x3 = str(x3).replace('-','_')
+            # x4 = str(x4).replace('-','_')
+            # y1 = str(y1).replace('-','_')
+            # y2 = str(y2).replace('-','_')
+            # y3 = str(y3).replace('-','_')
+            # y4 = str(y4).replace('-','_')
 
             return redirect(f'/area-of-the-parallelogram-with-vertices-a-{x1}-{y1}-b-{x2}-{y2}-c-{x3}-{y3}-and-d-{x4}-{y4}')          
 
@@ -6649,6 +7539,14 @@ def negVals(n):
 def areaOfTheParallelogramWithVerticesTail(request, **data):
       
     if request.method=='POST':
+        # x1 = float(str(x1).replace('_','-'))
+        # x2 = float(str(x2).replace('_','-'))
+        # x3 = float(str(x3).replace('_','-'))
+        # x4 = float(str(x4).replace('_','-'))
+        # y1 = float(str(y1).replace('_','-'))
+        # y2 = float(str(y2).replace('_','-'))
+        # y3 = float(str(y3).replace('_','-'))
+        # y4 = float(str(y4).replace('_','-'))
         try:
             x1 = request.POST.get('x1')
             y1 = request.POST.get('y1')
@@ -6658,6 +7556,15 @@ def areaOfTheParallelogramWithVerticesTail(request, **data):
             y3 = request.POST.get('y3')
             x4 = request.POST.get('x4')
             y4 = request.POST.get('y4')
+
+            # x1 = float(str(x1).replace('_','-'))
+            # x2 = float(str(x2).replace('_','-'))
+            # x3 = float(str(x3).replace('_','-'))
+            # x4 = float(str(x4).replace('_','-'))
+            # y1 = float(str(y1).replace('_','-'))
+            # y2 = float(str(y2).replace('_','-'))
+            # y3 = float(str(y3).replace('_','-'))
+            # y4 = float(str(y4).replace('_','-'))
             print("MAINPAGE",x1)
             return redirect(f'/area-of-the-parallelogram-with-vertices-a-{x1}-{y1}-b-{x2}-{y2}-c-{x3}-{y3}-and-d-{x4}-{y4}')        
         except Exception as e:
@@ -6734,6 +7641,16 @@ def areaOfTheParallelogramWithVerticesTail(request, **data):
         point8 = randomGen(70,80)
         relatedP2 = zip(point1,point2,point3,point4,point5,point6,point7,point8)
 
+        a = randomGen(0,5)
+        b = randomGen(5,10)
+        c = randomGen(2,15)
+        d = randomGen(10,40)
+        e = randomGen(5,10)
+        f = randomGen(1,9)
+        g = randomGen(5,15)
+        h = randomGen(10,30)
+        relatedP1 = zip(a,b,c,d,e,f,g,h)
+
         data['step1'] = step1
         data['step2'] = step2
         data['step3'] = step3
@@ -6771,8 +7688,6 @@ def areaOfTheParallelogramWithVerticesTail(request, **data):
 
 
 
-
-
 ##-------------------------------JJJJJJJJJJJJJKKKKKKK-------------------------------
 
 
@@ -6787,6 +7702,15 @@ def coordinatesshapecalculator(request):
         y3 = request.POST['y3']
         x4 = request.POST['x4']
         y4 = request.POST['y4']
+
+        x1 = str(x1).replace('-','_')
+        x2 = str(x2).replace('-','_')
+        x3 = str(x3).replace('-','_')
+        x4 = str(x4).replace('-','_')
+        y1 = str(y1).replace('-','_')
+        y2 = str(y2).replace('-','_')
+        y3 = str(y3).replace('-','_')
+        y4 = str(y4).replace('-','_')        
 
         # return redirect(f'/square-root-of-{aa}-by-{bb}/') 
         # messages.error(request,"I am a message")
@@ -6860,10 +7784,15 @@ def coordinatesshapecalculatordetails(request,x1,y1,x2,y2,x3,y3,x4,y4):
     try:
         print(request)
         # print(messages.error)
-        
-        
+        x1 = str(x1).replace('_','-')
+        x2 = str(x2).replace('_','-')
+        x3 = str(x3).replace('_','-')
+        x4 = str(x4).replace('_','-')
+        y1 = str(y1).replace('_','-')
+        y2 = str(y2).replace('_','-')
+        y3 = str(y3).replace('_','-')
+        y4 = str(y4).replace('_','-')       
             
-
         print(f'{x1=},{y1=},{x2=},{y2=},{x3=},{y3=},{x4=},{y4=}')
 
         if x1[-1] == '-':
@@ -7165,6 +8094,7 @@ def coordinatesshapecalculatordetails(request,x1,y1,x2,y2,x3,y3,x4,y4):
 
     
 
+
 def horizontaltangent(request):
     print(request.POST)
     if request.POST:
@@ -7172,8 +8102,6 @@ def horizontaltangent(request):
 
         return redirect(f'/find-points-on-the-curve-{equat}-where-the-tangent-is-horizontal/')
     return render(request,'Deepak/horizontaltangent.html') 
-
-
 
 
 def detailshorizontaltangent(request, equat):
@@ -7217,7 +8145,7 @@ def detailshorizontaltangent(request, equat):
         print("Value of the derivative : {} ".format(expr_diff.doit()))
 
         #creating latex
-        eq2 =  latex(expr_diff.doit(),0)   
+        eq2 =  latex(expr_diff.doit())   
         print(f'{eq2=}')
 
         
@@ -7316,7 +8244,220 @@ def detailshorizontaltangent(request, equat):
         messages.error(request,'Invalid Inputs') 
         return redirect('/horizontal-tangent-points-on-curve-calculator/')
 
+
+def equationofthetangentplane(request):
+    try:
+        if request.POST:
+            print(request.POST)
+            equat = request.POST["equat"]
+            points = request.POST["points"]
+            print(len(points))
+
+            a,b,c = points.split(',')
+            b=b.strip()
+            c=c.strip()
+            print(f'{a=},{b=},{c=}')
+
+            return redirect(f'/find-an-equation-of-the-tangent-plane-to-the-given-surface-{equat}-at-the-specified-point-{a}-{b}-{c}/')
+
+        return render(request,"Deepak/equationofthetangentplane.html")
+    except:
+        messages.error(request,'Invalid Inputs') 
+        return render(request,"Deepak/equationofthetangentplane.html")
+
+
+def detailequationofthetangentplane(request, equat=None, a=None, b=None, c=None):
+    # try:
+        print(messages)
+        print(f'{a=},{b=},{c=}')
+
+        if a[-1] == '-':
+            
+            a = float(a.rstrip('-'))
+            a1 = 'minus'
+        else:
+            a = float(a)
+            a1 = 'plus'
+
+        if '-' in b:
+            b = b.strip('-')
+            b1 = 'minus'
+        else:
+            b1 = 'plus'
+
+        print(f'{a=},{b=},{c=}')
+
         
+
+        if a1 == 'minus':
+            b = float('-'+ b)
+        else:
+            b = float(b)
+
+        if b1 == 'minus':
+            c = float('-'+ c)
+        else:
+            c = float(c)
+
+        if a == int(a):a = int(a)
+        if b == int(b):b = int(b)
+        if c == int(c):c = int(c)
+        v1,v2,v3 = a, b, c 
+        print(f'{equat=},{v1=},{v2=},{v3=}')
+
+        x, y, z = symbols('x y z')
+        print('#########################################')
+        print(equat)
+        print(f'{v1},{v2},{v3}')
+
+        query=TangentPlane.objects.filter(Q(inputEnter=equat) & Q(input2=f'{v1},{v2},{v3}'))
+        if len(query)!=0:
+                
+            context={
+                        'lpoints':query[0].latex,
+                        'points':query[0].input2,
+                        'finalresult':query[0].finalAnswer,
+                        'lequat':query[0].solutionTitle,
+                        'detaiSteps':query[0].detailStep,
+                        'equat':query[0].inputEnter,
+
+                        "exp1":latex(sympify(2*(x**2)-y**2+5*y)),
+                        "exp2":latex(sympify(4*(x**2)-y**2+2*y)),
+                                
+                        }
+
+                        
+            print("I am Database Database Database")
+            return render(request,'Deepak/detailequationofthetangentplane.html',context)
+
+        lequat = latex(sympify(equat))  
+
+        expr = sympify(equat+'-z')
+        print("Expression : {} ".format(expr))
+        lexpr = latex(sympify(expr))
+
+            #Derivative of expression with respect to x
+        expr_diff = Derivative(expr, x) 
+        print("Derivative of expression with respect to x : {}".format(expr_diff)) 
+            #Value of the derivative
+        print("Value of the derivative : {} ".format(expr_diff.doit()))
+
+        a = expr_diff.doit()
+        la = latex(a)
+
+            #Derivative of expression with respect to y
+        expr_diff = Derivative(expr, y) 
+        print("Derivative of expression with respect to y : {}".format(expr_diff)) 
+            #Value of the derivative
+        print("Value of the derivative : {} ".format(expr_diff.doit()))
+
+        b = expr_diff.doit()
+        lb = latex(b)
+
+            #Derivative of expression with respect to z
+        expr_diff = Derivative(expr, z) 
+        print("Derivative of expression with respect to z : {}".format(expr_diff)) 
+            #Value of the derivative
+        print("Value of the derivative : {} ".format(expr_diff.doit()))
+
+        c = expr_diff.doit()
+        lc = latex(c)
+
+
+        print(f'{a=},{b=},{c=}')
+
+        a = a.subs(x,v1)
+        b = b.subs(y,v2)
+        c = c.subs(z,v3)
+        print(f'{a=},{b=},{c=}')
+
+        result = a*(x-(v1))+b*(y-(v2))+c*(z-(v3))
+        finalresult = solve(Eq(result),z)
+        finalresult = sympify(str(finalresult).replace('[','').replace(']',''))
+
+        result = latex(result)
+        finalresult = latex(finalresult)
+        print(finalresult)
+
+        a = latex(a)
+        b = latex(b)
+        c = latex(c)
+        points = f'{v1},{v2},{v3}'
+            
+        lpoints = latex(sympify(f'{v1},{v2},{v3}'))
+
+        dx = "∂f \over ∂x"
+        dy = "∂f \over ∂y"
+        dz = "∂f \over ∂z"
+
+        detaiSteps = f"""
+        <p>Given z = \({lequat}\)</p>
+
+                <p>We must determine the plane's equation at a particular location \({lpoints}\).</p>
+                <p>Surface: f(x, y, z) = 0</p>
+                <p>Points of tangency: f(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>) = f\({lpoints}\)</p>
+
+    <p>Equation of Tangent Plane:f<sub>x</sub>(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>)(x-x<sub>0</sub>) + f<sub>y</sub>(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>)(y-y<sub>0</sub>) + f<sub>z</sub>(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>)(z-z<sub>0</sub>) = 0</p>
+
+                <p>We have the following function,</p>
+                <p>f(x, y, z) = \({lexpr}\)</p>
+
+            <p>\({dx}\)(\({lexpr}\)) = \({la}\)</p>
+
+
+    <p>f<sub>x</sub> = \({la}\) => f<sub>x</sub>\({lpoints}\) = \({a}\)</p>
+    <p>\({dy}\)(\({lexpr}\)) = \({lb}\)</p>
+    <p>f<sub>y</sub> = \({lb}\) => f<sub>y</sub>\({lpoints}\) = \({b}\)</p>
+    <p>\({dz}\)(\({lexpr}\)) = \({lc}\)</p>
+    <p>f<sub>z</sub> = \({lc}\) => f<sub>z</sub>\({lpoints}\) = \({c}\)</p>
+
+
+    <p>Equation of Tangent Plane:</p>
+    <p>f<sub>x</sub>(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>)(x-x<sub>0</sub>) + f<sub>y</sub>(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>)(y-y<sub>0</sub>) + f<sub>z</sub>(x<sub>0</sub>, y<sub>0</sub>, z<sub>0</sub>)(z-z<sub>0</sub>) = 0</p>
+
+
+    <p>{a}(x-({v1})) + {b}(y-({v2})) + {c}(z-({v3}))</p>
+    <p>\({result}\)</p>
+    <p>z = \({finalresult}\)</p>
+
+    <p style="color: green;">Therefore, the equation of the tangent plane is \({finalresult}\) = 0.</p>
+    
+        
+        """
+        obj=TangentPlane(inputEnter=equat,input2=points, finalAnswer=finalresult,detailStep=detaiSteps,slug=f"/find-an-equation-of-the-tangent-plane-to-the-given-surface-{equat}-at-the-specified-point-{a}-{b}-{c}/",solutionTitle=lequat,latex=lpoints)
+        obj.save()  
+
+        context = {
+            "equat":equat, 
+            "lequat":lequat,
+            # "lexpr":lexpr,
+            # "v1":v1,
+            # "v2":v2,
+            # "v3":v3,
+            "points":points,
+            "lpoints":lpoints,
+            # "la":la,
+            # "lb":lb,
+            # "lc":lc,
+            # "a":a,
+            # "b":b,
+            # "c":c,
+            # "result":result,
+            "finalresult":finalresult,
+            "detaiSteps":detaiSteps,
+
+            "exp1":latex(sympify(2*(x**2)-y**2+5*y)),
+            "exp2":latex(sympify(4*(x**2)-y**2+2*y)),
+
+            
+        }
+        # at the point (2, 1, -3)
+        return render(request,"Deepak/detailequationofthetangentplane.html", context)
+    # except:
+    #     messages.error(request,'Invalid Inputs') 
+    #     return redirect('/equation-of-the-tangent-plane-to-the-given-surface-at-the-specified-point-calculator/')
+
+     
 
 
 
@@ -7341,6 +8482,9 @@ def additiveInverseOfComplexNumberDetails(request, num1, num2):
                 bb=float(request.POST.get('bb'))
         else:
             bb=None
+
+        aa = str(aa).replace('-','_')
+        bb = str(bb).replace('-','_')
 
         return redirect(f'/additive-inverse-of-complex-number-{aa}-{bb}i/')
     
@@ -7394,6 +8538,9 @@ def additiveInverseOfComplexNumber(request):
                 bb=float(request.POST.get('bb'))
         else:
             bb=None
+
+        aa = str(aa).replace('_','-')
+        bb = str(bb).replace('_','-')
 
         return redirect(f'/additive-inverse-of-complex-number-{aa}-{bb}i/') 
       
@@ -7507,4 +8654,178 @@ def findFirstSixTermOfSequenceDetails(request, aa, bb):
     
     return render(request, 'Deepak/find-first-six-term-of-the-sequence-details.html', context)
 
+
+##SURAJ
+def atsequencedomain(request):
+    if request.method=='POST':
+        func=str(request.POST['func'])
+        if '/' in func:
+            func=func.replace('/','÷')
+        return redirect("/given-the-arithmetic-sequence-an-'{}'-what-is-the-domain-for-n".format(func))    
+    else:
+        content={
+            'question':'1+2*(n-1)',
+            'display':'none'
+        }
+        return render(request,'Deepak/atsequence-calculator.html',content)
+def atsequencedomaintail(request,func):
+
+    val=atsequenceutility(func)
+    if val[0].solution=='Syntax Error':
+        content={
+            'question':func,
+            'display':'block'
+        }
+        return render(request,'Deepak/atsequence-calculator.html',content)
+    else:
+        linka=[]
+        for i in range(5):
+            a=random.randint(1,9)
+            b=random.randint(1,9)
+            c=random.randint(1,9)
+            s=str(a)+'+'+str(b)+'*'+'(n-'+str(c)+')'
+            linka.append(s)
+        linkb=[]
+        for i in range(5):
+            a=random.randint(1,9)
+            b=random.randint(1,9)
+            c=random.randint(1,9)
+            s=str(a)+'+'+str(b)+'*'+'(n-'+str(c)+')'
+            linkb.append(s)
+        content={
+        'res':val,
+        'question':val[0].func,
+        'linksa':linka,
+        'linksb':linkb
+        }
+        return render(request,'Deepak/atsequence-calculator-details.html',content)
+
+
+def polarCurve(request):
+    if request.method=='POST':
+        f=str(request.POST['f'])
+        return redirect('/find-a-polar-equation-for-the-curve-represented-by-the-given-eartesian-equation-{}/'.format(f))    
+    else:
+        return render(request,'Deepak/polar-equation-of-curve.html',{'error':'none'})
+
+def polarCurveTail(request,f):
+    try:
+        smpl=list(f.split('='))
+        smpl=smpl[0]+'-('+smpl[1]+')'
+        from latex2sympy2 import latex2sympy, latex2latex
+        eqn=latex2sympy(smpl)
+        print(eqn)
+        
+        smpl=expand(eqn,evaluate=False)
+        smpl = simplify(smpl)
+        cox=smpl.coeff('x')
+        coy=smpl.coeff('y')
+        cons= smpl.func(*[term for term in smpl.args if not term.free_symbols])
+        cons*=(-1)
+        link5a=zip([random.randint(1,9) for i in range(2)],[random.randint(1,9) for i in range(2)],[random.randint(1,9) for i in range(2)])
+        content={
+            
+            'cox':cox,
+            'coy':coy,
+            'cons':cons,
+            'link5a':link5a
+            
+        }
+        return render(request,'Deepak/polar-equation-of-curve-details.html',content)
+    except:
+        messages.error(request, 'Syntax Error.')    
+        return redirect('/polar-equation-of-curve/')  
+        
+
+    
+def tanCurve(request):
+    if request.method=='POST':
+        a=str(request.POST['a']).replace('-','_')
+        b=str(request.POST['b']).replace('-','_')
+        x=str(request.POST['x']).replace('-','_')
+        y=str(request.POST['y']).replace('-','_')
+
+        
+        return redirect('/find-an-equation-of-the-tangent-line-to-the-curve-at-the-given-point-{}-{}-y-{}x-{}x2/'.format(x,y,a,b))    
+    else:
+        return render(request,'Deepak/tan-of-curve.html')
+
+def tanCurveTail(request,a,b,x,y):
+    try:
+        a=float(a.replace('_','-'))
+        b=float(b.replace('_','-'))
+        x=float(x.replace('_','-'))
+        y=float(y.replace('_','-'))
+        yx1=(y)*(-1)
+        xx1=x*(-1)
+        y2=(b)*2
+        y2x=b*x*2
+        m=y2x+a
+        mx=m*xx1
+        my=mx+y
+        link5a=zip([random.randint(1,9) for i in range(2)],[random.randint(1,9) for i in range(2)],[random.randint(1,9) for i in range(2)],[random.randint(1,9) for i in range(2)])
+        content={
+            'a':a,
+            'b':b,
+            'x':x,
+            'y':y,
+            'yx1':yx1,
+            'xx1':xx1,
+            'y2':y2,
+            'y2x':y2x,
+            'm':m,
+            'mx':mx,
+            'my':my,
+            'link5a':link5a
+            
+        }
+        return render(request,'Deepak/tan-of-curve-details.html',content)
+    except:
+        messages.error(request, 'Syntax Error.')    
+        return redirect('/tan-of-curve/')
+
+
+def pointCloseOrigin(request):
+    if request.method=='POST':
+        a=str(request.POST['a']).replace('-','_')
+        b=str(request.POST['b']).replace('-','_')
+
+        return redirect('/find-the-point-on-line-y-{}x-{}-that-is-closest-to-the-origin/'.format(a,b))    
+    else:
+        return render(request,'Deepak/point-closest-to-origin.html',{'error':'none'})
+
+def pointCloseOriginTail(request,a,b):
+    try:
+        a=float(a.replace('_','-'))
+        b=float(b.replace('_','-'))
+        aap1=a*a+1
+        ab=a*b
+        mab=ab*(-1)
+        x1=round((mab/aap1),4)
+        y1=round(((mab*(-1))/aap1)/a,4)
+        point1='0,0'
+        point2=str(x1)+','+str(y1)
+        res=distanceBetweenPoints.objects.filter(point1='('+point1+')',point2='('+point2+')')
+        if res:
+            pass
+        else:
+            distancebtweenpointsdeci(point1,point2)
+            res=distanceBetweenPoints.objects.filter(point1='('+point1+')',point2='('+point2+')')
+
+        link5a=zip([random.randint(1,9) for i in range(2)],[random.randint(1,9) for i in range(2)])
+        content={
+            'a':a,
+            'b':b,
+            'aap1':aap1,
+            'ab':ab,
+            'mab':mab,
+            'x1':x1,
+            'y1':y1,
+            'd':res[0],
+            'link5a':link5a
+        }
+        return render(request,'Deepak/point-closest-to-origin-details.html',content)
+    except:
+        messages.error(request, 'Syntax Error.')    
+        return redirect('/point-closest-to-origin/')
 

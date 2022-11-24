@@ -282,8 +282,21 @@
                             <li>
                                 <a
                                     href="/area-of-the-parallelogram-with-vertices-a-{{point1}}-{{point2}}-b-{{point3}}-{{point4}}-c-{{point5}}-{{point6}}-and-d-{{point7}}-{{point8}}/">
-                                    Area of the Parallelogram with vertices a({{point1}},{{point2}}),
+                                     vertices a({{point1}},{{point2}}),
                                     b({{point3}},{{point4}}), c({{point5}},{{point6}}) and d({{point7}},{{point8}})
+                                </a>
+                            </li>
+                            {%endfor%} 
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul>
+                            {% for a,b,c,d,e,f,g,h in relatedP1 %}
+
+                            <li>
+                                <a href="/area-of-the-parallelogram-with-vertices-a-{{a}}-{{b}}-b-{{c}}-{{d}}-c-{{e}}-{{f}}-and-d-{{g}}-{{h}}/">
+                                    vertices a({{a}},{{b}}),
+                                    b({{c}},{{d}}), c({{e}},{{f}}) and d({{g}},{{h}})
                                 </a>
                             </li>
                             {%endfor%}

@@ -22,7 +22,7 @@
 <!-- CSS ENDS -->
 
 <!-- META DATA STARTS -->
-<title> Square Root of a Fraction Calculator | How to Find a √fraction? - RoundingCalculator.Guru</title>
+<title> Solve the given differential equation by separation of variables - RoundingCalculator.Guru</title>
 <meta name=description
     content=" Calculate the Square Root of a fraction easily using our Square Root of a Fraction Calculator. Avail the process formula to compute √fraction..">
 
@@ -32,7 +32,7 @@
 <!-- FACEBOOK -->
 <meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
 <meta property="og:title"
-    content=" Square Root of a Fraction Calculator | How to Find a √fraction? - RoundingCalculator.Guru" />
+    content=" Solve the given differential equation by separation of variables - RoundingCalculator.Guru" />
 <meta property="og:description"
     content=" Calculate the Square Root of a fraction easily using our Square Root of a Fraction Calculator. Avail the process formula to compute √fraction.. " />
 <meta content="" property="og:site_name" />
@@ -44,7 +44,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
 <meta name="twitter:title"
-    content=" Square Root of a Fraction Calculator | How to Find a √fraction? - RoundingCalculator.Guru" />
+    content=" Solve the given differential equation by separation of variables - RoundingCalculator.Guru" />
 <meta name="twitter:description"
     content=" Calculate the Square Root of a fraction easily using our Square Root of a Fraction Calculator. Avail the process formula to compute √fraction.. " />
 <meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
@@ -52,7 +52,7 @@
 <meta property="twitter:image:width" content="354" />
 <!-- Linkedin -->
 <meta property='og:title'
-    content=" Square Root of a Fraction Calculator | How to Find a √fraction? - RoundingCalculator.Guru" />
+    content=" Solve the given differential equation by separation of variables - RoundingCalculator.Guru" />
 <meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
 <meta property='og:description'
     content=" Calculate the Square Root of a fraction easily using our Square Root of a Fraction Calculator. Avail the process formula to compute √fraction.." />
@@ -229,14 +229,14 @@ display: none;
                         <center>
                             <p> 
                                 <b><span class="frac"><span>dy</span><span class="symbol">/</span><span class="bottom">dx</span></span>  =  e</b>
-                                <sup><input name="xcof" type="number"  id="xcof" {% if xcof %} value="{{ xcof|safe }}" {% else %} value = "5" {% endif %} placeholder="Enter x coefficient" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                <sup><input name="xcof" type="number" min="1" id="xcof" {% if xcof %} value="{{ xcof|safe }}" {% else %} value = "5" {% endif %} placeholder="Enter x coefficient" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                                     maxlength="3" style="width: 58px;">
                                     <span style="padding: 0px 10px 0px 0px;"><b>X</b></span>
                                     <select  aria-label=".form-select example" name="operator">
                                     <option value="+"selected>+</option>
                                     <option value ="-">-</option>
                                     </select>
-                                    <input name="ycof" type="number"  id="ycof" {% if ycof %} value="{{ ycof|safe }}" {% else %} value = "4" {% endif %} placeholder="Enter y coefficient" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                    <input name="ycof" type="number" min="1"  id="ycof" {% if ycof %} value="{{ ycof|safe }}" {% else %} value = "4" {% endif %} placeholder="Enter y coefficient" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                                     maxlength="3" style="width: 58px;">
                                     <span style="padding: 0px 10px 0px 0px;"><b>Y</b></span>
                                 </sup>

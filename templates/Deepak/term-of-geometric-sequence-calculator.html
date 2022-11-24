@@ -107,9 +107,9 @@
                             value="1" {% endif %} placeholder="" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             maxlength="2" style="width: 50px;"></sub> <span style="font-size: 20px;"> = </span>
 
-                            <input name="bb" type="number"  id="bb" onkeypress="return isNumberKey(event)"
-                            required required step="1" min="1" class="bb"  id="bb" {% if bb%} value="{{bb}}" {% else %}
-                            value="30" {% endif %} placeholder="" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            <input name="bb" type="number" id="bb" onkeypress="return isNumberKey(event)" required required
+                            step="1" class="bb" id="bb" {% if bb%} value="{{bb}}" {% else %} value="30" {% endif %} placeholder=""
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             maxlength="4" style="width: 100px;">
                     </p>
                     <p>and , <span style="font-size: 20px;"><b>a</b></span><sub>
@@ -119,7 +119,7 @@
                             maxlength="2" style="width: 50px;"></sub> <span style="font-size: 20px;"> = </span>
 
                             <input name="cc" type="number"  id="cc" onkeypress="return isNumberKey(event)"
-                            required required step="1" min="1" class="cc"  id="cc" {% if cc%} value="{{cc}}" {% else %}
+                            required required step="1"  class="cc"  id="cc" {% if cc%} value="{{cc}}" {% else %}
                             value="102" {% endif %} placeholder="" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                             maxlength="4" style="width: 100px;">
                     </p>

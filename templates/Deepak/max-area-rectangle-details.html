@@ -1,0 +1,152 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+  integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+  type="icon">
+
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS -->
+<title>Find the dimensions of a rectangle with a perimeter {{perim}}m whose area is as large as possible</title>
+<meta name=description 
+    content="How to Find the dimensions of a rectangle with a perimeter of {{perim}} m whose area is as large as possible. Check the method to know the rectangle length, and width.">
+    
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS -->
+
+<!-- FACEBOOK -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="How to Find the dimensions of a rectangle with a perimeter of {{perim}} m whose area is as large as possible. Check the method to know the rectangle length, and width." />
+<meta property="og:description"
+  content="How to Find the dimensions of a rectangle with a perimeter of {{perim}} m whose area is as large as possible. Check the method to know the rectangle length, and width." />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="How to Find the dimensions of a rectangle with a perimeter of {{perim}} m whose area is as large as possible. Check the method to know the rectangle length, and width." />
+<meta name="twitter:description"
+  content="How to Find the dimensions of a rectangle with a perimeter of {{perim}} m whose area is as large as possible. Check the method to know the rectangle length, and width." />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin -->
+<meta property='og:title' content="How to Find the dimensions of a rectangle with a perimeter of {{perim}} m whose area is as large as possible. Check the method to know the rectangle length, and width." />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description'
+  content="How to Find the dimensions of a rectangle with a perimeter of {{perim}} m whose area is as large as possible. Check the method to know the rectangle length, and width." />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+{% endblock %}
+
+{% block content %} 
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h1 class="h1">Find the dimensions of a rectangle with a perimeter {{perim}}m whose area is as large as possible.</h1>
+    </div>
+      <p>Avail the method to find the dimensions of a rectangle with a perimeter {{perim}}m whose area is as large as possible. The maximum area rectangle with perimeter {{perim}} m has {{quatperim}} m as length and {{quatperim}} m as width.</p>
+    
+    <div class="card-body">
+        <form method='POST' action='/max-area-rectangle/'>
+          {% csrf_token %}
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" value={{perim}} id="numa" placeholder="{{perim}}" name='perim' required>
+          </div>
+        <button type="submit" class="btn btn-primary">Calculate</button> 
+        </form>
+    </div>
+    
+        <h3>What is the Length, Width of a Rectangle if Perimeter is {{perim}} m?</h3>
+        <p>Given that,</p>
+        <p>The area of the rectangle is as large as possible.</p>
+        <p>The perimeter of the rectangle = {{perim}} m</p>
+        <p>2(l + b) = {{perim}} m</p>
+        <p>(l + b) = {{halfperim}} m</p>
+        <p>l = ({{halfperim}} - b) — (i)</p>
+        <p>Area A = lb</p>
+        <p>A = ({{halfperim}} - b) b</p>
+        <p>A = {{halfperim}}b - b²</p>
+        <p>dA/dB = {{halfperim}} - 2b</p>
+        <p>For maximum or minimum, </p>
+        <p>dA/db = 0</p>
+        <p>b = {{quatperim}}</p>
+        <p>Now, d²A/db² = -2 < 0</p>
+        <p>Thus, A is maximum at b = {{quatperim}}</p>
+        <p>Hence, area is maximum at l = {{quatperim}}, b = {{quatperim}}</p>
+        <p>The dimensions of a rectangle with a perimeter {{perim}} m whose area is as large as possible are {{quatperim}} m, {{quatperim}} m.</p>
+        
+
+       
+
+        
+        
+        <h3>FAQs on Rectangle Dimensions with a Perimeter of {{perim}} m</h3>
+        <p><strong>1. How do you find the dimensions of a rectangle when given the perimeter and area?</strong></p>
+        <ul>
+          <li><p>We have to rewrite the perimeter as b = P/2 - l.</p></li>
+          <li><p>Place the above equation in the area A = lb = l(p/2 - l).</p></li>
+          <li><p>Solve the quadratic equation to get the dimensions of a rectangle.</p></li>
+        </ul>
+        <p><strong>2. What are the dimensions of a rectangle at maximum and having a perimeter of {{perim}} meters?</strong></p>
+        <p>The dimensions of a rectangle at maximum and having a perimeter of {{perim}} meters are {{quatperim}} m, {{quatperim}} m.</p>
+        <p><strong>3. What is the maximum area of the rectangle if the perimeter is {{perim}} m?</strong></p>
+        <p>The maximum area of the rectangle if the perimeter is {{perim}} m is {{area}} m<sup>2</sup>.</p>
+        <p><strong>4. What is the formula to find the perimeter of a rectangle?</strong></p>
+        <p>The formula to find the perimeter of a rectangle is Perimeter = 2(length + breadth).</p>
+
+        <h3>Related calculations</h3>
+        <div class="d-flex">
+          <div class="w-50">
+            <ul>
+              {% for n in linksa %}
+              <li><a href="/dimension-of-rectangle-with-perimeter-{{n}}m-and-max-area">Dimensions of rectange with max area = {{n}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="w-50">
+            <ul>
+              {% for n in linksb %}
+              <li><a href="/dimension-of-rectangle-with-perimeter-{{n}}m-and-max-area">Dimensions of rectange with max area = {{n}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+
+        
+        
+    </div>
+  </div>
+</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+  crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  -->
+{% endblock %}

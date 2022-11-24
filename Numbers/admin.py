@@ -60,6 +60,10 @@ admin.site.register(fractionofadayinhourCalculator)
 admin.site.register(coordinatesh)
 admin.site.register(remainderofequationCalculator)
 admin.site.register(HorizontalTangent)
-
+admin.site.register(equationofarithmeticsequenceCalculator)
+admin.site.register(equationofnthtermCalculator)
+admin.site.register(findremainderofpowerCalculator)
+admin.site.register(independenteventsCalculator)
+admin.site.register(TangentPlane)
 
 

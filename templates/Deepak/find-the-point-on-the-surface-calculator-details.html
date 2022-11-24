@@ -25,9 +25,9 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 <!-- Meta Title, Description and Canonical URL Starts -->
-<title>Find the points on the surface y<sup>2</sup> = 16 + xz that are closest to the origin | lcmgcf.com</title>
+<title>Find the points on the surface y = {{value}} + xz that are closest to the origin | RoundingOff.Guru</title>
 <meta name="description"
-    content=" Click here to Find the points on the surface y<sup>2</sup> = 16 + xz that are closest to the origin i.e (0, ±4, 0). Use the Lagrange multiplier method to get partial derivatives. " />
+    content=" Click here to Find the points on the surface y = {{value}} + xz that are closest to the origin i.e (0, ±4, 0). Use the Lagrange multiplier method to get partial derivatives. " />
 <link rel="canonical" href="{{request.build_absolute_uri}}">
 
 <!-- Meta Title, Description and Canonical URL ENDS -->
@@ -38,7 +38,7 @@
 <meta property="og:title"
     content="Find the points on the surface that are closest to the origin calculator | Free Calculator to find the points on the surface that are closest to the origin " />
 <meta property="og:description"
-    content=" Click here to Find the points on the surface y<sup>2</sup> = 16 + xz that are closest to the origin i.e (0, ±4, 0). Use the Lagrange multiplier method to get partial derivatives." />
+    content=" Click here to Find the points on the surface y = {{value}} + xz that are closest to the origin i.e (0, ±4, 0). Use the Lagrange multiplier method to get partial derivatives." />
 <meta content="" property="og:site_name" />
 <meta content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" property="og:image" />
 <meta property="og:image:type" content="image/png" />
@@ -51,7 +51,7 @@
 <meta name="twitter:title"
     content="Find the points on the surface that are closest to the origin calculator | Free Calculator to find the points on the surface that are closest to the origin" />
 <meta name="twitter:description"
-    content=" Click here to Find the points on the surface y<sup>2</sup> = 16 + xz that are closest to the origin i.e (0, ±4, 0). Use the Lagrange multiplier method to get partial derivatives.  " />
+    content=" Click here to Find the points on the surface y = {{value}} + xz that are closest to the origin i.e (0, ±4, 0). Use the Lagrange multiplier method to get partial derivatives.  " />
 <meta name="twitter:image:src"
     content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
 <meta property="twitter:image:height" content="435" />
@@ -62,7 +62,7 @@
 <meta property='og:title' content="Find the points on the surface that are closest to the origin calculator | Free Calculator to find the points on the surface that are closest to the origin " />
 <meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
 <meta property='og:description'
-    content=" Click here to Find the points on the surface y<sup>2</sup> = 16 + xz that are closest to the origin i.e (0, ±4, 0). Use the Lagrange multiplier method to get partial derivatives.  ." />
+    content=" Click here to Find the points on the surface y = {{value}} + xz that are closest to the origin i.e (0, ±4, 0). Use the Lagrange multiplier method to get partial derivatives.  ." />
 <meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
 <!-- end of linkedin CONFIGURATIONS ENDS -->
 <!-- OPEN GRAPH CONFIGURATION ENDS -->
@@ -217,29 +217,29 @@ display: none;
             <h1 class="h1">Find the points on the surface y<sup>2</sup> = {{value}} + xz that are closest to the origin</h1>
         </div>
         <div class="card-body">
-            <p><span style="font-weight: 400;">Learn how to Find the points on the surface y<sup>2</sup> = {{value}} + xz that are closest to the origin with the help of our detailed solution below. 
+            <p>Learn how to Find the points on the surface y<sup>2</sup> = {{value}} + xz that are closest to the origin with the help of our detailed solution below. 
                 You will understand how to use the Lagrange multipliers to find the closest points easily. You can cross check your answers with our free <a href = "/point-on-the-surface-that-is-closest-to-the-point/">Point on Surface Calculator</a></span>
             </p>
             <div class="card-body">
                 <form action="" method="POST" id="my_form">
                     {% csrf_token %}
                     <div>
-                        <span style="padding: 0px 10px;"><strong>y<sup>2</sup> =</strong></span>
-                        <input name="value" type="number" class="form" id="value" onkeypress="return isNumberKey(event)"
-                            required required step="1" min="1" {% if value %} value="{{value}}" {% else %} value="{{value}}" {% endif %} placeholder="" 
-                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                            maxlength="4">
-                            <input size="2" style="text-align: center;" disabled readonly value="+ xz">
+                        <p align="center"><span style="padding: 0px 10px;"><strong>y<sup>2</sup> =</strong></span>
+                            <input name="value" type="number" class="form" id="value" onkeypress="return isNumberKey(event)"
+                                required required step="1" min="1" {% if value %} value="{{value}}" {% else %} value="16" {% endif %} placeholder="" 
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                maxlength="4" style="width: 90px;">
+                                <input size="2" style="text-align: center;" disabled readonly value="+ xz"></p>
                     </div>
 
 
                     <div class=" center col mt-2 ">
-                        <button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                   <center>     <button type="submit" class="btn btn-primary" name="f1">Calculate</button></center>
                         
                     </div>
                 </form> <br>
             
-            <h3>Examples of Find the points on the surface that are closest to the origin</h3> <br>
+            <p>Examples of Find the points on the surface that are closest to the origin</p>
             <div class="container">
                 <div class="row">
 
@@ -249,7 +249,7 @@ display: none;
 
                             <li>
                                 <a href="/find-the-points-on-the-surface-y2-{{a}}-xz-that-are-closest-to-the-origin/">
-                                    Find the points on the surface y<sup>2</sup>={{a}}+xz that are closest to the origin
+                                    Find  points on  surface y<sup>2</sup>={{a}}+xz that are closest to  origin
                                 </a>
                             </li>
                             {%endfor%}
@@ -262,7 +262,7 @@ display: none;
 
                             <li>
                                 <a href="/find-the-points-on-the-surface-y2-{{a}}-xz-that-are-closest-to-the-origin/">
-                                    Find the points on the surface y<sup>2</sup>={{a}}+xz that are closest to the origin
+                                    Find  points on  surface y<sup>2</sup>={{a}}+xz that are closest to  origin
                                 </a>
                             </li>
                             {%endfor%}
@@ -289,17 +289,17 @@ display: none;
 
 
             <div class="card-body">
-                <p><strong>Find the points on the surface y<sup>2</sup> = {{value}} + xz that are closest to the origin?</strong></p>
-                <p><strong>Solution:</strong></p>
-                <p><strong>Given that, </strong></p>
-                <p><span style="font-weight: 400;">y<sup>2</sup> = {{value}} + xz</span></p>
-                <p><span style="font-weight: 400;">To start, we must recall the equation that is used to find the distance between the origin of a surface and an arbitrary point on it. 
+                <p>Find the points on the surface y<sup>2</sup> = {{value}} + xz that are closest to the origin?</p>
+             
+                <p>Given that, </p>
+                <p>y<sup>2</sup> = {{value}} + xz</p>
+                <p>To start, we must recall the equation that is used to find the distance between the origin of a surface and an arbitrary point on it. 
                     d(x, y, z) = √(x² + y² + z²)
-                    </span></p>
+                    </p>
 
-                <p><span style="font-weight: 400;">Now, we must use the Lagrange multipliers to get the next equation, which we will have to find the partial derivatives for. 
+                <p>Now, we must use the Lagrange multipliers to get the next equation, which we will have to find the partial derivatives for. 
                     L(x, y, z, λ) = x² + y² + z² + λ(y² - {{value}} - xz)
-                </span></p>
+                </p>
                 <p>Lx = 2x - λz</p>
                 <p>Ly = 2y + 2yλ</p>
                 <p>Lz = 2z - λx</p>
@@ -323,20 +323,19 @@ display: none;
                 <p>y = ±{{y}}</p>
                 <p>Finally, we can determine the coordinates of the points on the surface y<sup>2</sup> = {{val}} + xz that are closest to the origin. They are 
                     <strong>(0, ±{{y}}, 0)</strong>. </p>
-                
+                    <hr>
                 <h3><strong>FAQs on Find the points on the surface y<sup>2</sup> = {{value}} + xz that are closest to the origin</strong></h3>
-            
             <p><strong>Q1. </strong><strong>What are the points on the surface y<sup>2</sup> = {{val}} + xz that are closest to the origin?</strong></p>
-            <p><strong>Ans:</strong><span style="font-weight: 400;"> The coordinates of the points are (0, ±{{y}}, 0).</span>
+            <p> The coordinates of the points are (0, ±{{y}}, 0).
             
             <p><strong>Q2. </strong><strong>What is the distance between the origin of a surface and an arbitrary point on it?</strong></p>
-            <p><strong>Ans: </strong><span style="font-weight: 400;">The distance is determined by the equation: d(x, y, z) = √(x^2 + y^2 + z^2).</span></p>
+            <p>The distance is determined by the equation: d(x, y, z) = √(x^2 + y^2 + z^2).</p>
             <p><strong>Q3. </strong><strong>How to find the points on the surface y<sup>2</sup> = {{val}} + xz that are closest to the origin?</strong></p>
-            <p><strong>Ans:</strong>First, get the equation for finding the distance between a point and the origin of a surface. Then, minimize it to the surface's equation. After this, use the Lagrange multipliers to find the partial derivatives with respect to each variable. Next, equate each partial derivate to 0. Calculate the critical points, and find the values of all the variables, then use them to find y from the surface's equation. 
+            <p>First, get the equation for finding the distance between a point and the origin of a surface. Then, minimize it to the surface's equation. After this, use the Lagrange multipliers to find the partial derivatives with respect to each variable. Next, equate each partial derivate to 0. Calculate the critical points, and find the values of all the variables, then use them to find y from the surface's equation. 
                 Once you do, you will get the points. 
             </p>
             <p><strong>Q4. What is a Lagrange multiplier?</strong></p>
-            <p><strong>Ans: </strong><span style="font-weight: 400;">The Lagrange multiplier method will help you calculate the minima or maxima of a function that has many variables. For example, λ is a Lagrange multiplier.</span></p>
+            <p>The Lagrange multiplier method will help you calculate the minima or maxima of a function that has many variables. For example, λ is a Lagrange multiplier.</p>
             </div>
 
                 </div>

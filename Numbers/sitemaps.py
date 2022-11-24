@@ -759,6 +759,73 @@ class HorizontalTangent_SiteMap(Sitemap):
         return obj.date_modified
 
 
+class equationofarithmeticsequenceCalculator_SiteMap(Sitemap):
+    changefreq = "monthly"
+    priority = 0.9
+    limit=5000
+    def items(self):
+        return equationofarithmeticsequenceCalculator.objects.all()
+    
+    def location(self, obj):
+        return obj.slug
+    
+    def lastmod(self, obj):
+        return obj.date_modified
+
+class equationofnthtermCalculator_SiteMap(Sitemap):
+    changefreq = "monthly"
+    priority = 0.9
+    limit=5000
+    def items(self):
+        return equationofnthtermCalculator.objects.all()
+    
+    def location(self, obj):
+        return obj.slug
+    
+    def lastmod(self, obj):
+        return obj.date_modified
+
+
+class findremainderofpowerCalculator_SiteMap(Sitemap):
+    changefreq = "monthly"
+    priority = 0.9
+    limit=5000
+    def items(self):
+        return findremainderofpowerCalculator.objects.all()
+    
+    def location(self, obj):
+        return obj.slug
+    
+    def lastmod(self, obj):
+        return obj.date_modified
+
+class independenteventsCalculator_SiteMap(Sitemap):
+    changefreq = "monthly"
+    priority = 0.9
+    limit=5000
+    def items(self):
+        return independenteventsCalculator.objects.all()
+    
+    def location(self, obj):
+        return obj.slug
+    
+    def lastmod(self, obj):
+        return obj.date_modified
+    
+class TangentPlane_SiteMap(Sitemap):
+    changefreq = "monthly"
+    priority = 0.9
+    limit=5000
+    def items(self):
+        return TangentPlane.objects.all()
+    
+    def location(self, obj):
+        return obj.slug
+    
+    def lastmod(self, obj):
+        return obj.date_modified
+
+
 
 numbers={
      'percent-to-decimal-calculator-sitemap':percenttToDecimalCalculator_SiteMap,
@@ -816,7 +883,12 @@ numbers={
      'fraction-of-a-day-in-hour-calculator-Calculator-sitemap':fractionofadayinhourCalculator_SiteMap,
      'coordinates-shape-calculator-Calculator-sitemap':coordinatesh_SiteMap, 
      'find-remainder-of-equation-Calculator-sitemap':remainderofequationCalculator_SiteMap,
-     'horizontal-tangent-points-on-curve-Calculator-sitemap':coordinatesh_SiteMap, 
+     'horizontal-tangent-points-on-curve-Calculator-sitemap':HorizontalTangent_SiteMap,
+     'equation-of-arithmetic-sequence-Calculator-sitemap':equationofarithmeticsequenceCalculator_SiteMap, 
+     'equation-of-nth-term-of-arithmetic-sequence-Calculator-sitemap':equationofnthtermCalculator_SiteMap,
+     'find-remainder-of-power-Calculator-sitemap':findremainderofpowerCalculator_SiteMap, 
+     'independent-events-Calculator-sitemap':independenteventsCalculator_SiteMap, 
+     'equation-of-the-tangent-plane-to-the-given-surface-at-the-specified-point-Calculator-sitemap':TangentPlane_SiteMap, 
      
 }
 

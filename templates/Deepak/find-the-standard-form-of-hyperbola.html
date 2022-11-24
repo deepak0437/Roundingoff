@@ -1,0 +1,152 @@
+{%extends 'base/numbers_base3.html'%}
+
+{%load static%}
+{%block meta%}
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://roundingcalculator.guru/static/images/logo/Rounding-Calculator-icon.svg"
+    type="icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+<!-- CSS STARTS -->
+{%block css%}
+<link rel="stylesheet" href="https://roundingcalculator.guru/static/style2.css?ez_used_css_s=14">
+{%endblock%}
+<!-- CSS ENDS -->
+
+<!-- META DATA STARTS -->
+<title>Find an equation in standard form for the hyperbola with vertices at (0, ± 2) and foci at (0, ± 11)
+</title>
+<meta name=description content="Get the steps on How to Find an equation in standard form for the hyperbola with vertices at (0, ± 2) and foci at (0, ± 11)?">
+
+<link rel="canonical" href="{{request.build_absolute_uri}}">
+<!-- META DATA ENDS -->
+
+<!-- FACEBOOK -->
+<meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
+<meta property="og:title" content="Find an equation in standard form for the hyperbola with vertices at (0, ± 2) and foci at (0, ± 11)" />
+<meta property="og:description" content="Get the steps on How to Find an equation in standard form for the hyperbola with vertices at (0, ± 2) and foci at (0, ± 11)?" />
+<meta content="" property="og:site_name" />
+<meta content="/static/images/logo/rounding-calculator.png" property="og:image" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:width" content="354" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
+<meta name="twitter:title" content="Find an equation in standard form for the hyperbola with vertices at (0, ± 2) and foci at (0, ± 11)" />
+<meta name="twitter:description" content="Get the steps on How to Find an equation in standard form for the hyperbola with vertices at (0, ± 2) and foci at (0, ± 11)?" />
+<meta name="twitter:image:src" content="/static/images/logo/rounding-calculator.png" />
+<meta property="twitter:image:height" content="435" />
+<meta property="twitter:image:width" content="354" />
+<!-- Linkedin -->
+<meta property='og:title' content="Find an equation in standard form for the hyperbola with vertices at (0, ± 2) and foci at (0, ± 11)" />
+<meta property='og:image' content="/static/images/logo/rounding-calculator.png" />
+<meta property='og:description' content="Get the steps on How to Find an equation in standard form for the hyperbola with vertices at (0, ± 2) and foci at (0, ± 11)?" />
+<meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
+
+{% endblock %}
+
+{% block content %}
+
+
+{%if go_to %}
+<a href="{{go_to}}" id="ddd"></a>
+{%endif%}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('ddd').click();
+    });
+</script>
+<style>
+ 
+</style>
+
+
+<div class="container">
+    <div class="card c1">
+        <div class="card-header">
+            <h1 class="h1">
+                Find an equation in standard form for the hyperbola with vertices at (0, ± 2) and foci at (0, ± 11).</h1>
+        </div>
+        <div class="card-body">
+            <p><span style="font-weight: 400;">
+                Hyperbola refers to a two-branched open curve determined by the intersection of a plane and both halves of a double cone. The standard form of a hyperbola equation centered at the origin with vertices (±a,0) ( ± a, 0 ) and co-vertices (0±b) ( 0 ± b ) is (x-h)<sup>2</sup>/a<sup>2</sup> - (y - k)<sup>2</sup>/b<sup>2</sup>=1. Check the detailed solution to Find an equation in standard form for the hyperbola with vertices at (0, ± 2) and foci at (0, ± 11). 
+            </span>
+            </p>
+            <div class="card-body">
+                <form action="" method="POST" id="my_form">
+                    {% csrf_token %}
+                    <div style="text-align:center">
+                        <label>Vertex:</label>
+                        <div class="form-group">
+                            <span><strong>x = </strong></span>
+                            <input name="vx" type="number" class="form" id="value"  value="0" placeholder="" 
+                            style="width: 15%;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="4">
+                            <span><strong>y = </strong></span>
+                            <input name="vy" type="number" class="form" id="value" value="2" placeholder="" 
+                            style="width: 15%;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="4">
+                        </div>
+                        <label>Foci:</label>
+                        <div class="form-group">
+                            <span><strong>x = </strong></span>
+                            <input name="fx" type="number" class="form" id="value" value="0" placeholder="" 
+                            style="width: 15%;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="4">
+                            <span><strong>y = </strong></span>
+                            <input name="fy" type="number" class="form" id="value" value="11" placeholder="" 
+                            style="width: 15%;" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="4">
+                        </div>
+
+                    <div class=" center col mt-2 ">
+                        <button type="submit" class="btn btn-primary" name="f1">Calculate</button>
+                        
+                    </div>
+                </form> <br>
+            </div>
+            
+            </div>
+            
+            <h3><strong>FAQs on Standard Form for the Hyperbola</strong></h3>
+            
+            <p><strong>Q1. </strong><strong>How do you find the standard equation of a hyperbola given foci and vertices?</strong></p>
+            <p><strong>Ans:</strong><span style="font-weight: 400;">The standard equation of a hyperbola is (x-h)<sup>2</sup>/a<sup>2</sup> - (y - k)<sup>2</sup>/b<sup>2</sup>=1, substitute the given foci and vertices values in the formula to get the answer.</span>
+            
+            <p><strong>Q2. </strong><strong>What is the hyperbola equation with vertices (0, ± 2) and foci at (0, ± 11)?</strong></p>
+            <p><strong>Ans: </strong><span style="font-weight: 400;">The hyperbola equation with vertices (0, ± 2) and foci at (0, ± 11) is y<sup>2</sup>/4 - x<sup>2</sup>/77 = 1.</span></p>
+            <p><strong>Q3. </strong><strong>How many standard forms are there in a hyperbola?</strong></p>
+            <p><strong>Ans:</strong><span>There are two standard Hyperbola equations. These equations are given as x<sup>2</sup>/a<sup>2</sup> - y<sup>2</sup>/b<sup>2</sup>=1 and(x-h)<sup>2</sup>/a<sup>2</sup> - (y - k)<sup>2</sup>/b<sup>2</sup>=1 for a hyperbola with the transverse axis as the x-axis and the conjugate axis as the y-axis.</span></p>
+            <p><strong>Q4. What is foci of hyperbola formula?</strong></p>
+            <p><strong>Ans: </strong><span style="font-weight: 400;">The foci of hyperbola formula is c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup>.</span></p>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+{% endblock %}

@@ -25,9 +25,9 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 <!-- Meta Title, Description and Canonical URL Starts -->
-<title>What is the Square Root of {{aa}} Squared? </title>
+<title>Find the point on the parabola y2 = {{xcof}}x that is closest to the point ({{x1}},{{y1}})</title>
 <meta name="description"
-    content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}. " />
+    content="Use slope formula to find the point on the parabola y2 = {{xcof}}x that is closest to the point ({{x1}},{{y1}}). The Result of ({{x}},{{y}}) is the point on the parabola y2 = {{xcof}}x that is closest to the point ({{x1}},{{y1}})." />
 <link rel="canonical" href="{{request.build_absolute_uri}}">
 <!-- Meta Title, Description and Canonical URL ENDS -->
 
@@ -35,7 +35,7 @@
 <!--  FACEBOOK CONFIGURATION STARTS  -->
 <meta content="https://www.facebook.com/OnlineCalculator-Guru-131572098650589/" property="og:url" />
 <meta property="og:title"
-    content="Square Root of a Number Squared  Calculator | Free Calculator to find Square Root of a Number Squared " />
+    content="Find the point on the parabola y2 = {{xcof}}x that is closest to the point ({{x1}},{{y1}}) " />
 <meta property="og:description"
     content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}." />
 <meta content="" property="og:site_name" />
@@ -48,9 +48,9 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="https://twitter.com/onlinecalculator" />
 <meta name="twitter:title"
-    content="Square Root of a Number Squared  Calculator | Free Calculator to find Square Root of a Number Squared " />
+    content="Find the point on the parabola y2 = {{xcof}}x that is closest to the point ({{x1}},{{y1}})" />
 <meta name="twitter:description"
-    content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}.  " />
+    content="Use slope formula to find the point on the parabola y2 = {{xcof}}x that is closest to the point ({{x1}},{{y1}}). The Result of ({{x}},{{y}}) is the point on the parabola y2 = {{xcof}}x that is closest to the point ({{x1}},{{y1}})." />
 <meta name="twitter:image:src"
     content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
 <meta property="twitter:image:height" content="435" />
@@ -58,10 +58,10 @@
 <!-- TWITTER CARD CONFIGURATION ENDS  -->
 <!--  LINKEDIN CONFIGURATION STARTS-->
 <tittle></tittle>
-<meta property='og:title' content="Square Root of a Number Squared  Calculator | Square Root of a Number Squared " />
+<meta property='og:title' content="Find the point on the parabola y2 = {{xcof}}x that is closest to the point ({{x1}},{{y1}})" />
 <meta property='og:image' content="https://onlinecalculator.guru/static/images/Chemistry/ohms-law-calculator.jpeg" />
 <meta property='og:description'
-    content="  Learn how to determine the square root of {{aa}} squared by reading our detailed steps and example. Check how √({{aa}}^2) is {{aa}}.  ." />
+    content="  Use slope formula to find the point on the parabola y2 = {{xcof}}x that is closest to the point ({{x1}},{{y1}}). The Result of ({{x}},{{y}}) is the point on the parabola y<sup>2</sup> = {{xcof}}x that is closest to the point ({{x1}},{{y1}})." />
 <meta property='og:url' content="https://www.linkedin.com/in/onlinecalculator/" />
 <!-- end of linkedin CONFIGURATIONS ENDS -->
 <!-- OPEN GRAPH CONFIGURATION ENDS -->
@@ -82,34 +82,41 @@
 <div class="container" style="height: auto !important;">
     <div class="card c1">
         <div class="card-header">
-            <h1 class="h1">Find the point on the parabola y<sup>2</sup> = {{xcof}}x that is closest to the point ({{x1}},{{y1}}) | lcmgcf.com</h1>
+            {% if id == 1 %}
+            <h1 class="h1">Find the point on the parabola y<sup>2</sup> = {{xcof}}x that is closest to the point ({{x1}},{{y1}}).</h1>
 
+            {% else %}
+            <h1 class="h1">Find the point on the parabola from equation  that is closest to the given point .</h1>
+
+            {% endif %}
         </div>
         <div class="card-body"></div>
         <p><span style="font-weight: 400;">
-            Use slope formula to find the point on the parabola y<sup>2</sup> = {{xcof}}x that is closest to the point ({{x1}},{{y1}}). The Result of ({{x}},{{y}}) is the point on the parabola y<sup>2</sup> = {{xcof}}x that is closest to the point ({{x1}},{{y1}}).
+            Curious about which point on the parabola y^2 = {{xcof}}x is closest to the point ({{x1}}, {{y1}})? Well, we are here to save the day! In this article, we will be showing you how to calculate the coordinates of the point. So, the point p on the parabola y^2 = {{xcof}}x closest to the point ({{x1}}, {{y1}}) is ({{x}}, {{y}}) and read the detailed solution below to learn more. 
+            {% if id == 1 %}
             <a href="/point-on-the-parabola-closest-to-a-point/">Point on the Parabola closest to a Point</a> is an online tool that is
                 used to find the point on the parabola closest to a point in a simply way.</span></p>
+            {% endif %}
         <div class="card-body">
             <form action="" method="POST" id="my_form">
                 {% csrf_token %}
                 <div>
                     <center>
                         <p> <b><span>Equation of the Parabola: Y<sup>2</sup> = </span></b><input name="xcof" type="number" class="form" id="xcof"
-                                onkeypress="return isNumberKey(event)" required step="1" min="1"{% if xcof %} value="{{xcof}}" {% else %} value="2" {% endif %} placeholder="Enter the x-coefficient"
+                                onkeypress="return isNumberKey(event)" required step="1" min="1"{% if xcof %} value="{{xcof}}" {% else %} value="2" {% endif %} 
                                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                                maxlength="6"> <span style="padding: 0px 0px;"><strong>x</strong> </span>
+                                maxlength="2" style="width: 60px;"> <span style="padding: 0px 0px;"><strong>x</strong> </span>
                         </p>
                         <p>
                             <b><span>Point: </span></b>
                             <strong> x </strong>
                             <!--this needs to be updated for now make it to read only-->
-                            <input name="x1" readonly type="number" class="form" id="x1" onkeypress="return isNumberKey(event)" required step="1" min="1"{% if x1 %} value="{{ x1 }}" {% else %} value="1" {% endif %} placeholder="Enter the x-coefficient"
+                            <input name="x1" readonly type="number" class="form" id="x1" onkeypress="return isNumberKey(event)" required step="1" min="1"{% if x1 %} value="{{ x1 }}" {% else %} value="1" {% endif %} 
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                            maxlength="6"> 
+                            maxlength="2" style="width: 60px;"> 
                             <strong> y </strong>
-                            <input name="y1" type="number" class="form" id="y1" onkeypress="return isNumberKey(event)" required step="1" min="1"{% if y1 %} value="{{ y1 }}" {% else %} value="4" {% endif %} placeholder="Enter the x-coefficient"
-                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"maxlength="6">
+                            <input name="y1" type="number" class="form" id="y1" onkeypress="return isNumberKey(event)" required step="1" min="1"{% if y1 %} value="{{ y1 }}" {% else %} value="4" {% endif %} 
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"maxlength="2" style="width: 60px;">
                         </p>
                     </center>
                 </div>
@@ -122,16 +129,16 @@
             </form> <br>
 
             {% if id == 1 %}
-            <h3>Examples of closest point on the Parabola </h3> <br>
+            <p>Examples of closest point on the Parabola </p>
             <div class="container">
                 <div class="row">
 
                     <div class="col">
                         <ul>
-                            {% for a in randList1 %}
+                            {% for a,b in dict1 %}
                             <li>
-                                <a href="/find-the-point-on-the-parabola-y2-{{ xcof }}x-that-is-closest-to-the-point-{{a}}/">
-                                    Closest point of the parabola y<sup>2</sup>={{xcof}}x to the point {{a}}
+                                <a href="/find-the-point-on-the-parabola-y2-{{ xcof }}x-that-is-closest-to-the-point-1-{{b}}/">
+                                    Closest point of the parabola y<sup>2</sup>={{xcof}}x to the point( 1,{{b}})
                                 </a>
                             </li>
                             {%endfor%}
@@ -140,10 +147,10 @@
 
                     <div class="col">
                         <ul>
-                            {% for a in randList2 %}
+                            {% for a,b in dict2 %}
                             <li>
-                                <a href="/find-the-point-on-the-parabola-y2-{{ xcof }}x-that-is-closest-to-the-point-{{a}}/">
-                                    Closest point of the parabola y<sup>2</sup>={{xcof}}x to the point {{a}}
+                                <a href="/find-the-point-on-the-parabola-y2-{{ xcof }}x-that-is-closest-to-the-point-1-{{b}}/">
+                                    Closest point of the parabola y<sup>2</sup>={{xcof}}x to the point( 1,{{b}})
                                 </a>
                             </li>
                             {%endfor%}
@@ -203,12 +210,6 @@
             <p>The coordinates of the closest point  on the parabola y<sup>2</sup>={{xcof}}x are ({{x}}, {{y}}). </p>
             <p><strong>2. How to find the point on the parabola y<sup>2</sup>={{xcof}}x that is closest to the point ({{x}}, {{y}})?</strong></p>
             <p>First, we need to find the slope of the normal that passes through the point. Then, use the point-slope formula to get the values of x and y. These values are the coordinates of the point.</p>
-        {% else %}
-            <!-- <h3>FAQs on Find the point on the parabola y<sup>2</sup>=2x that is closest to the point (1, 4)</h3>
-            <p><strong>1. What is the point on the parabola y<sup>2</sup>=2x that is closest to (1, 4)?</strong></p>
-            <p>The coordinates of the closest point  on the parabola y<sup>2</sup>=2x are (2, 2). </p>
-            <p><strong>2. How to find the point on the parabola y<sup>2</sup>=2x that is closest to the point (2, 2)?</strong></p>
-            <p>First, we need to find the slope of the normal that passes through the point. Then, use the point-slope formula to get the values of x and y. These values are the coordinates of the point.</p> -->
         {% endif %}
         </div>
     </div>

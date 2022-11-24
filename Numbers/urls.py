@@ -149,8 +149,8 @@ urlpatterns = [
     path('<aa>-plus-<bb>-percent/',numberpluspercent, name = "numberpluspercent1"),
 
 ###################NEW ONE###############################
-    path('arithmetic-sequence-domain-calculator/',atsequencedomain,name='atsequencedomain'), ##ERROR  ##SURAJ
-    path("given-the-arithmetic-sequence-an-'<str:func>'-what-is-the-domain-for-n/",atsequencedomaintail,name='atsequencedomain'),
+    # path('arithmetic-sequence-domain-calculator/',atsequencedomain,name='atsequencedomain'), ##ERROR  ##SURAJ
+    # path("given-the-arithmetic-sequence-an-'<str:func>'-what-is-the-domain-for-n/",atsequencedomaintail,name='atsequencedomain'),
 
     path('sum-of-geometric-sequence-calculator/',sumofgeometricsequencecalculator,name='sumofgeometricsequence'), ##DEEPAK
     path("what-is-the-sum-of-the-geometric-sequence-<aa>-if-there-are-<int:bb>-terms/",sumofgeometricsequence,name='sumofgeometricsequence1'),
@@ -162,7 +162,7 @@ urlpatterns = [
     path("what-is-the-<int:aa>-term-of-the-arithmetic-sequence-where-a1-<bb>-and-a<int:yy>-<cc>/",arithmeticsequenceterm,name='arithmeticsequenceterm1'),
 
     path('term-of-geometric-sequence-calculator/',geometricsequencetermcalculator,name='geometricsequenceterm'),#NA  ##DEEPAK
-    path("what-is-the-<int:aa>-term-of-the-geometric-sequence-where-a1-<int:bb>-and-a<int:yy>-<int:cc>/",geometricsequenceterm,name='geometricsequenceterm1'),
+    path("what-is-the-<int:aa>-term-of-the-geometric-sequence-where-a1-<bb>-and-a<int:yy>-<cc>/",geometricsequenceterm,name='geometricsequenceterm1'),
 
     path('fraction-of-a-day-in-hour-calculator/',fractionofadayinhourcalculator,name='fractionofadayinhour'), ##DEEPAK
     path("what-fraction-of-a-day-is-<int:aa>-hours/",fractionofadayinhour,name='fractionofadayinhour1'),
@@ -180,25 +180,79 @@ urlpatterns = [
     path('when-the-coordinates-<x1>-<y1>-<x2>-<y2>-<x3>-<y3>-<x4>-<y4>-are-joined-which-shape-is-formed/',coordinatesshapecalculatordetails),
 
     path('point-on-the-parabola-closest-to-a-point/',pointOnTheParabolaCalculator, name='point on the Parabola'), ##SUNIL
-    path("find-the-point-on-the-parabola-y2-<int:xcof>x-that-is-closest-to-the-point-<str:x1>-<str:y1>/",closestPoint, name = "closestPoint"),
+    path('find-the-point-on-the-parabola-y2-<int:xcof>x-that-is-closest-to-the-point-<str:x1>-<str:y1>/',closestPoint, name = "closestPoint"),
     
     path('point-on-the-surface-that-is-closest-to-the-point/',pointOnTheSurfaceCalculator, name='point on the Surface'),  ##SUNIL
     path("find-the-points-on-the-surface-y2-<int:val>-xz-that-are-closest-to-the-origin/",closestOrigin, name = "closestOrigin"),
 
-    path('additive-inverse-of-complex-number-calculator/', additiveInverseOfComplexNumber, name='additiveInverse'),
+    path('additive-inverse-of-complex-number-calculator/', additiveInverseOfComplexNumber, name='additiveInverse'),   ##ABHINANDAN
     path('additive-inverse-of-complex-number-<int:num1>-<int:num2>i/', additiveInverseOfComplexNumberDetails, name='additiveInverseDetail'),
     
-    path('find-first-six-term-of-the-sequence/', findFirstSixTermOfSequence, name='first6thTerm'),
+    path('find-first-six-term-of-the-sequence/', findFirstSixTermOfSequence, name='first6thTerm'),   ##ABHINANDAN
     path('find-first-six-term-of-the-sequence-a1=<str:aa>-an=<str:bb>an-1/', findFirstSixTermOfSequenceDetails, name='first6thTermDetails'),
-
-    path('find-remainder-of-equation-calculator/', remainderofequationcalculator, name='remainderofequation'),
+ 
+    path('find-remainder-of-equation-calculator/', remainderofequationcalculator, name='remainderofequation'),   ##DEEPAK
     path('find-the-remainder-when-fx-<str:aa>-x3-<str:bb>-x2-<str:cc>-x-<str:dd>-is-divided-by-x-<str:ee>/', remainderofequation, name='remainderofequation1'),
 
-    path("horizontal-tangent-points-on-curve-calculator/",horizontaltangent, name='horizontaltangent'),
+    path("horizontal-tangent-points-on-curve-calculator/",horizontaltangent, name='horizontaltangent'),  ##JK
     path('find-points-on-the-curve-<equat>-where-the-tangent-is-horizontal/',detailshorizontaltangent),
+    
+    path("equation-of-the-tangent-plane-to-the-given-surface-at-the-specified-point-calculator/",equationofthetangentplane, name = "equationofthetangentplane" ),  ##JK
+    path("find-an-equation-of-the-tangent-plane-to-the-given-surface-<equat>-at-the-specified-point-<a>-<b>-<c>/",detailequationofthetangentplane, name = "equationofthetangentplane" ),
 
-    path('point-on-the-cone-that-is-closest-to-the-point/',pointOnTheConeCalculator, name='point on the cone'),
+    path('point-on-the-cone-that-is-closest-to-the-point/',pointOnTheConeCalculator, name='point on the cone'),   ##SUNIL
     path("find-the-points-on-the-cone-z2-x2-y2-that-are-closest-to-the-point-<int:xval>-<int:yval>-<int:zval>/",closestPoints, name = "closestPoints"),
+
+    path('equation-of-arithmetic-sequence-calculator/',equationofarithmeticsequencecalculator,name='equationofarithmeticsequence'),##DEEPAK
+    path("find-an-equation-for-the-nth-term-of-the-arithmetic-sequence-<aa>/",equationofarithmeticsequence,name='equationofarithmeticsequence1'),
+
+    path('standard-equation-of-hyperbola/',standardEqautionOfHyperbola, name='standardEquationFrom'),   ##SUNIL
+    path("find-an-equation-in-standard-form-for-the-hyperbola-with-vertices-at-<int:vx>-<int:vy>-and-foci-at-<int:fx>-<int:fy>/",standardForm, name = "standarForm"),
+
+    path('symmetric-graph-on-axis/',symmetricGraph, name='symmetricGraph'),  ##SUNIL
+    path("determine-if-the-graph-is-symmetric-about-the-x-axis-the-y-axis-or-the-origin-r-<int:num>-<str:function>-<int:angle>th/",graphSymmetricAxis, name = "graphSymmetricAxis"),
+
+    path('exact-length-of-a-curve/',exactLengthOfACurve, name='exactLengthOfACurve'),   ##SUNIL
+    path("find-the-exact-length-of-the-curve-x-<int:numerator>-<int:denominator>-y**2-<int:lower>-y-<int:upper>/",exactLengthOfACurveatY, name = "exactLengthOfACurveatY"),
+
+    path('linearization-of-a-function/',linearizationFunction, name='linearizationFunction'),  ##SUNIL
+    path("find-the-linearization-lx-of-the-function-at-a-fx-x12-a-<int:a>/",linearizationFunctionatA, name = "linearizationFunctionatA"),
+
+    path('general-solution-of-higer-order-equation/',generalSolutionofEquation, name='generalSolutionofEquation'),  ##SUNIL
+    path("find-the-general-solution-of-the-given-higher-order-differential-equation-y<int:y_value>-<int:y_dash>y-y-0/",generalSolutionEq, name = "generalSolutionEq"),
+
+    path('equation-of-nth-term-of-arithmetic-sequence-calculator/',equationofnthtermcalculator,name='equationofnthterm'),  ##DEEPAK
+    path("find-an-equation-for-nth-term-of-the-arithmetic-sequence-a<int:xx>-<str:aa>-a<int:yy>-<str:bb>/",equationofnthterm,name='equationofnthterm1'),
+
+    path('find-remainder-of-power-calculator/',findremainderofpowercalculator,name='findremainderofpower'),  ##DEEPAK  #ERROR ##NA
+    path("find-the-remainder-when-<int:aa>-is-divided-by-<int:bb>/",findremainderofpower,name='findremainderofpower1'),
+
+    path('independent-events-calculator/',independenteventscalculator, name = "independentevents"),  ##DEEPAK
+    path('if-a-and-b-are-independent-events-with-P(A)-<aa>-and-P(B)-<bb>-then-P(A∪B)-is/',independentevents, name = "independentevents1"),
+
+    ##ABHINANDAN
+    path('find-the-center-vertices-and-foci-of-the-eclipse/', findCenterVerticesFociOfEclipse, name='eclipseSolution'),
+    path('find-the-center-vertices-and-foci-of-the-eclipse-<str:aa>x2-<str:bb>y2-<str:cc>/', findCenterVerticesFociOfEclipseDetails, name='eclipseSolutionDetails'),
+    
+    path('find-a-cartesian-equation-for-the-curve-and-identify-it/', cartesianEquationForTheCurveAndIidentify, name='cartesianEquation'),
+    path('find-a-cartesian-equation-for-the-curve-and-identify-it-r-<str:aa>-tan8-sec8/', cartesianEquationForTheCurveAndIidentifyDetails, name='cartesianEquationDetails'),
+
+    #SURAJ
+    path('arithmetic-sequence-domain-calculator/',atsequencedomain,name='atsequencedomain'),##ERROR
+    path("given-the-arithmetic-sequence-an-'<str:func>'-what-is-the-domain-for-n",atsequencedomaintail,name='atsequencedomain'),
+    #left for revise "all arithmatic sequence have domain of n as Naturals"
+
+    path('polar-equation-of-curve/',polarCurve,name='polarCurve'),
+    path("find-a-polar-equation-for-the-curve-represented-by-the-given-eartesian-equation-<str:f>/",polarCurveTail,name='polarCurveTail'),
+
+    path('tan-of-curve/',tanCurve,name='tanCurve'),
+    path("find-an-equation-of-the-tangent-line-to-the-curve-at-the-given-point-<str:x>-<str:y>-y-<str:a>x-<str:b>x2/",tanCurveTail,name='tanCurveTail'),
+    
+    path('point-closest-to-origin/',pointCloseOrigin,name='pointCloseOrigin'),
+    path("find-the-point-on-line-y-<str:a>x-<str:b>-that-is-closest-to-the-origin/",pointCloseOriginTail,name='pointCloseOriginTail'),
+
+    path('probability-of-two-independent-events/', probatwoindependent, name='probabilityoftwoindependentevents'),
+    path('if-a-and-b-are-independent-events-with-p-a-<A>-and-p-b-<B>-then-p-a-b-will-be/', probatwoindependentdetails, name="probabilityoftwoindependentevents-details"),
 
 ]
  

@@ -238,7 +238,7 @@
                 geometric sequence where a<sub>1</sub> = {{bb}} and a<sub>{{yy}}</sub> = {{cc}} by using <a
                     href="/term-of-geometric-sequence-calculator/">sum of the geometric sequence calculator</a>.</p>
 
-            <form action="" method="POST" id="my_form">
+            <form action="/term-of-geometric-sequence-calculator/" method="POST" id="my_form">
                 {% csrf_token %}
 
                 <div class="form-floating mb-3">
@@ -278,7 +278,7 @@
                 </div>
             </form> <br>
             <!-- <span class="frac"><span>{{cc}}</span><span class="symbol">/</span><span class="bottom">{{aa}}</span></span> -->
-             <p>Examples of Sum of geometric sequence upto N terms </p> <br>
+             <p>Examples of Sum of geometric sequence upto N terms </p>
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -294,18 +294,19 @@
                             {%endfor%}
                         </ul>
                     </div>
-                    <!-- <div class="col">
+                    <div class="col">
                         <ul>
-                            {% for a in randList2 %}
+                            {% for a,b,c,d in dict1 %}
 
                             <li>
-                                <a href="/how-to-convert-{{a}}-to-binary/">
-                                    What is {{a}} to Binary
+                                <a href="/what-is-the-{{a}}-term-of-the-geometric-sequence-where-a1-{{b}}-and-a{{c}}-{{d}}/">
+                                    What is the {{a}} term of the geometric sequence where a<sub>1</sub> = {{b}} 
+                                    and a<sub>{{c}}</sub> = {{d}}
                                 </a>
                             </li>
                             {%endfor%}
                         </ul>
-                    </div> -->
+                    </div>
                 </div>
 
 
